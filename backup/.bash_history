@@ -1,62 +1,3 @@
-mongo
-code .
-python3 -m venv google_token
-source google_token/bin/activate
-pip install google.oauth2
-pip install google-auth
-pip install requests
-pip install itsdangerous
-uvicorn -m google_token_auth:app --reload
-uvicorn google_token_auth:app --reload
-pip install itsdangerous
-uvicorn google_token_auth:app --reload
-pip install SessionMiddleware
-pip install itsdangerous
-uvicorn google_token_auth:app --reload
-pip3 install itsdangerous
-python3 -m pip install itsdangerous
-sudo apt update itsdangerous
-sudo apt upgrade itsdangerous
-uvicorn google_token_auth:app --reload
-pip uninstall itsdangerous
-pip install itsdangerous
-uvicorn google_token_auth:app --reload
-python -m pip install – upgrade pip
-python -m pip install --upgrade pip
-pip install itsdangerous
-pip uninstall itsdangerous
-pip install -U itsdangerous
-uvicorn google_token_auth:app --reload
-/bin/python3 /home/vinay/Desktop/Code/google_auth/google_token_auth.py
-pip install SessionMiddleware
-source /home/vinay/Desktop/Code/google_auth/google_token/bin/activate
-/home/vinay/Desktop/Code/google_auth/google_token/bin/python /home/vinay/Desktop/Code/google_auth/google_token_auth.py
-pip install uvicorn
-/home/vinay/Desktop/Code/google_auth/google_token/bin/python /home/vinay/Desktop/Code/google_auth/google_token_auth.py
-pip install fastapi
-/home/vinay/Desktop/Code/google_auth/google_token/bin/python /home/vinay/Desktop/Code/google_auth/google_token_auth.py
-pip install authlib
-/home/vinay/Desktop/Code/google_auth/google_token/bin/python /home/vinay/Desktop/Code/google_auth/google_token_auth.py
-pip install httpx
-/home/vinay/Desktop/Code/google_auth/google_token/bin/python /home/vinay/Desktop/Code/google_auth/google_token_auth.py
-source /home/vinay/Desktop/Code/google_auth/google_token/bin/activate
-uvicorn google_token_auth:app --reload
-source /home/vinay/Desktop/Code/google_auth/google_token/bin/activate
-/home/vinay/Desktop/Code/google_auth/google_token/bin/python /home/vinay/Desktop/Code/google_auth/google_token_auth.py
-pip install Request
-uvicorn google_token_auth:app --reload
-source /home/vinay/Desktop/Code/google_auth/google_token/bin/activate
-source /home/vinay/Desktop/Code/google_auth/google_token/bin/activate
-uvicorn google_token_auth:app --reload
-source /home/vinay/Desktop/Code/google_auth/google_token/bin/activate
-uvicorn new:app --reload
-source /home/vinay/Desktop/Code/google_auth/google_token/bin/activate
-uvicorn new:app --reload
-source /home/vinay/Desktop/Code/google_auth/google_token/bin/activate
-uvicorn google_token_auth:app --reload
-source /home/vinay/Desktop/Code/google_auth/google_token/bin/activate
-git init
-pip install git
 pip install github
 git
 git init
@@ -1998,3 +1939,62 @@ code .
 /bin/python3 /home/vinay/Desktop/Code/data_set/data_set_code/new_req.py
 python3 concat.py
 code .
+ls
+cd Desktop/
+ls
+cd  Code/
+ls
+git clone https://github.com/vinay107-vini/backup.git
+gitstatus
+git clone https://github.com/vinay107-vini/backup.git
+https://github.com/vinay107-vini/sam.git
+git clone https://github.com/vinay107-vini/sam.git
+ls
+cd sam
+ls
+git status
+git add .
+git commit -m "backup"
+git branch
+git push origin
+git push
+git clone https://github.com/vinay107-vini/backup.git
+ls
+git clone https://github.com/vinay107-vini/asdfgh.git
+ls
+cd asdfgh/
+git status
+git add .
+git commit -m "back"
+git status
+git add backup
+git status
+git add .
+git status
+ls
+git status
+git add backup
+git clone https://github.com/vinay107-vini/sam.git
+git status
+git add .
+git status
+git add .
+git status
+git add .
+git status
+git add .
+git push
+git status
+git branch
+git add .
+git status
+git commit -m "new"
+git push
+git status
+git push
+git clone https://github.com/vinay107-vini/new_back.git
+git status
+ls
+cd new_back/
+git status
+git add .
