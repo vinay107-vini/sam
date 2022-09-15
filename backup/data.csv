@@ -1,0 +1,23 @@
+Filename,Buggy/Deleted,Fixed/Added
+"test_case.txt
+",-hello there,
+"test_case.txt
+",-how are you,+yes
+"test_case.txt
+",-wewertyuio,+no
+"test_case.txt
+",-wertyuiop,
+,,+234567876543
+,,+asdfghjkjhgfdsq
+,,+wewertyuio
+,,+wertyuiop
+"test_case.txt
+",-i'm good,
+"test_case.txt
+",-how about you,
+,,+how about you
+"test_case.txt
+",-how are you,+how are you
+,,+i'm good
+,,+hello there
+,,+how are you

@@ -1,0 +1,12 @@
+Filename,Buggy/Deleted,Fixed/Added
+"data.txt
+",-boeing,+boeing
+,,+cfm engines
+"data.txt
+",-airbus,+airbus
+,,+boeing
+,,+recosense
+,,+aiplex
+,,+indecomm
+,,+soft tech
+,,+airbus

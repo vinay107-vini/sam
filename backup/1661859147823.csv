@@ -1,0 +1,721 @@
+Filename,Buggy/Deleted,Fixed/Added
+".pre-commit-config.yaml
+",-    rev: v2.6.0,+    rev: v2.7.1
+".pre-commit-config.yaml
+",-    rev: v2.29.1,+    rev: v2.31.0
+".pre-commit-config.yaml
+",-    rev: v4.0.1,+    rev: v4.1.0
+".pre-commit-config.yaml
+",-    rev: v0.31.0,+    rev: v0.32.0
+".pre-commit-config.yaml
+",-    rev: v2.29.0,+    rev: v2.29.1
+".pre-commit-config.yaml
+",-    rev: v2.2.0,+    rev: v2.2.1
+".pre-commit-config.yaml
+",-    rev: v2.1.0,+    rev: v2.2.0
+".pre-commit-config.yaml
+",-    rev: v2.4.0,+    rev: v4.0.1
+".pre-commit-config.yaml
+",-  - repo: https://gitlab.com/pycqa/flake8,+  - repo: https://github.com/PyCQA/flake8
+".pre-commit-config.yaml
+",-    rev: 3.8.0,+    rev: 4.0.1
+".pre-commit-config.yaml
+",-    rev: v0.30.0,+    rev: v0.31.0
+".pre-commit-config.yaml
+",-    rev: v2.4.1,+    rev: v2.29.0
+".pre-commit-config.yaml
+",-    rev: v2.3.0,+    rev: v2.6.0
+".pre-commit-config.yaml
+",-    rev: v2.0.1,+    rev: v2.1.0
+"README.md
+",-- https://blog.hanchon.live/guides/google-login-with-fastapi/,+- [Guide 1 - Google OAuth Login with FastAPI](https://blog.hanchon.live/guides/google-login-with-fastapi/)
+"README.md
+",-- https://blog.hanchon.live/guides/jwt-tokens-and-fastapi/,+- [Guide 2 - Google OAuth and FastAPI JWT](https://blog.hanchon.live/guides/google-login-with-fastapi-and-jwt/)
+"README.md
+",-- https://blog.hanchon.live/guides/jwt-tokens-and-fastapi/,+- [Guide 3 - JWT blacklist and refresh tokens](https://blog.hanchon.live/guides/jwt-tokens-and-fastapi/)
+"README.md
+",-This is an example following the tutorial on https://blog.hanchon.live/guides/jwt-tokens-and-fastapi/,+This is an example following the tutorials:
+"README.md
+",-- Run the app: `python main.py`,+- https://blog.hanchon.live/guides/google-login-with-fastapi/
+,,+- https://blog.hanchon.live/guides/jwt-tokens-and-fastapi/
+,,+- https://blog.hanchon.live/guides/jwt-tokens-and-fastapi/
+,,+- Run the app:
+,,+    - Guide 1: `python run.py`
+,,+    - Guide 2 and 3: `python main.py`
+"auth.py
+","-        return JSONResponse({'result': True, 'access_token': create_token(user_data['email'])})",+from datetime import datetime
+"jwt.py
+","-        payload = jwt.decode(token, API_SECRET_KEY, algorithms=[API_ALGORITHM])",+from apps.jwt import create_refresh_token
+,,+from apps.jwt import decode_token
+,,+        return JSONResponse({
+,,"+            'result': True,"
+,,"+            'access_token': create_token(user_data['email']),"
+,,"+            'refresh_token': create_refresh_token(user_data['email']),"
+,,+        })
+,,+    raise CREDENTIALS_EXCEPTION
+,,+
+,,+
+,,+@auth_app.post('/refresh')
+,,+async def refresh(request: Request):
+,,+    try:
+,,+        # Only accept post requests
+,,+        if request.method == 'POST':
+,,+            form = await request.json()
+,,+            if form.get('grant_type') == 'refresh_token':
+,,+                token = form.get('refresh_token')
+,,+                payload = decode_token(token)
+,,+                # Check if token is not expired
+,,+                if datetime.utcfromtimestamp(payload.get('exp')) > datetime.utcnow():
+,,+                    email = payload.get('sub')
+,,+                    # Validate email
+,,+                    if valid_email_from_db(email):
+,,+                        # Create and return token
+,,"+                        return JSONResponse({'result': True, 'access_token': create_token(email)})"
+,,+
+,,+    except Exception:
+,,+        raise CREDENTIALS_EXCEPTION
+,,+REFRESH_TOKEN_EXPIRE_MINUTES = 60 * 24 * 30
+,,+def create_refresh_token(email):
+,,+    expires = timedelta(minutes=REFRESH_TOKEN_EXPIRE_MINUTES)
+,,"+    return create_access_token(data={'sub': email}, expires_delta=expires)"
+,,+
+,,+
+,,+def decode_token(token):
+,,"+    return jwt.decode(token, API_SECRET_KEY, algorithms=[API_ALGORITHM])"
+,,+
+,,+
+,,+        payload = decode_token(token)
+,,"+                                window.localStorage.setItem('refresh', req.response[""refresh_token""]);"
+,,+
+,,"+                <button onClick='fetch(""http://127.0.0.1:7000/auth/refresh"",{"
+,,"+                    method: ""POST"","
+,,+                    headers:{
+,,"+                        ""Authorization"": ""Bearer "" + window.localStorage.getItem(""jwt"")"
+,,"+                    },"
+,,+                    body:JSON.stringify({
+,,"+                        grant_type:\""refresh_token\"","
+,,"+                        refresh_token:window.localStorage.getItem(\""refresh\"")"
+,,+                        })
+,,+                }).then((r)=>r.json()).then((msg)=>{
+,,+                    console.log(msg);
+,,"+                    if (msg[""result""] === true) {"
+,,"+                        window.localStorage.setItem(""jwt"", msg[""access_token""]);"
+,,+                    }
+,,+                    });'>
+,,+                Refresh
+,,+                </button>
+,,+
+,,+python-multipart==0.0.5
+"README.md
+",-This is an example following the tutorial on https://blog.hanchon.live/guides/google-login-with-fastapi-and-jwt/,+This is an example following the tutorial on https://blog.hanchon.live/guides/jwt-tokens-and-fastapi/
+"main.py
+","-    return HTMLResponse('<body><a href=""/auth/login"">Log In</button></body>')","+    return HTMLResponse('<body><a href=""/auth/login"">Log In</a></body>')"
+,,+blacklist_db.txt
+,,+def init_blacklist_file():
+,,"+    open('blacklist_db.txt', 'a').close()"
+,,+    return True
+,,+
+,,+
+,,+def add_blacklist_token(token):
+,,"+    with open('blacklist_db.txt', 'a') as file:"
+,,"+        file.write(f'{token},')"
+,,+    return True
+,,+
+,,+
+,,+def is_token_blacklisted(token):
+,,+    with open('blacklist_db.txt') as file:
+,,+        content = file.read()
+,,"+        array = content[:-1].split(',')"
+,,+        for value in array:
+,,+            if value == token:
+,,+                return True
+,,+
+,,+    return False
+,,+from apps.db import is_token_blacklisted
+,,+
+,,+    if is_token_blacklisted(token):
+,,+        raise CREDENTIALS_EXCEPTION
+,,+
+,,+
+,,+async def get_current_user_token(token: str = Depends(oauth2_scheme)):
+,,+    _ = await get_current_user_email(token)
+,,+    return token
+,,+from fastapi import Depends
+,,+from fastapi.responses import JSONResponse
+,,+from apps.db import add_blacklist_token
+,,+from apps.db import init_blacklist_file
+,,+from apps.jwt import CREDENTIALS_EXCEPTION
+,,+from apps.jwt import get_current_user_token
+,,+@app.get('/logout')
+,,+def logout(token: str = Depends(get_current_user_token)):
+,,+    if add_blacklist_token(token):
+,,+        return JSONResponse({'result': True})
+,,+    raise CREDENTIALS_EXCEPTION
+,,+
+,,+
+,,+# bc128a56441dcf055d055bdda4cfbbafb35a5fcd
+,,+
+,,"+                <button onClick='fetch(""http://127.0.0.1:7000/logout"",{"
+,,+                    headers:{
+,,"+                        ""Authorization"": ""Bearer "" + window.localStorage.getItem(""jwt"")"
+,,"+                    },"
+,,+                }).then((r)=>r.json()).then((msg)=>{
+,,+                    console.log(msg);
+,,"+                    if (msg[""result""] === true) {"
+,,"+                        window.localStorage.removeItem(""jwt"");"
+,,+                    }
+,,+                    });'>
+,,+                Logout
+,,+                </button>
+,,+    init_blacklist_file()
+"main.py
+","-                <button onClick=""send()"">Get FastAPI JTW Token</button>",
+"run.py
+",-import os,"+                <button onClick=""send()"">Get FastAPI JWT Token</button>"
+"run.py
+",-,
+"run.py
+",-import uvicorn,
+"run.py
+",-from authlib.integrations.starlette_client import OAuth,
+"run.py
+",-from authlib.integrations.starlette_client import OAuthError,
+"run.py
+",-from fastapi import FastAPI,
+"run.py
+",-from fastapi import Request,
+"run.py
+",-from starlette.config import Config,
+"run.py
+",-from starlette.middleware.sessions import SessionMiddleware,
+"run.py
+",-from starlette.responses import HTMLResponse,
+"run.py
+",-from starlette.responses import RedirectResponse,
+"run.py
+",-,
+"run.py
+",-# Create the APP,
+"run.py
+",-app = FastAPI(),
+"run.py
+",-,
+"run.py
+",-# OAuth settings,
+"run.py
+",-GOOGLE_CLIENT_ID = os.environ.get('GOOGLE_CLIENT_ID') or None,
+"run.py
+",-GOOGLE_CLIENT_SECRET = os.environ.get('GOOGLE_CLIENT_SECRET') or None,
+"run.py
+",-if GOOGLE_CLIENT_ID is None or GOOGLE_CLIENT_SECRET is None:,
+"run.py
+",-    raise BaseException('Missing env variables'),
+"run.py
+",-,
+"run.py
+",-# Set up OAuth,
+"run.py
+","-config_data = {'GOOGLE_CLIENT_ID': GOOGLE_CLIENT_ID, 'GOOGLE_CLIENT_SECRET': GOOGLE_CLIENT_SECRET}",
+"run.py
+",-starlette_config = Config(environ=config_data),
+"run.py
+",-oauth = OAuth(starlette_config),
+"run.py
+",-oauth.register(,
+"run.py
+","-    name='google',",
+"run.py
+","-    server_metadata_url='https://accounts.google.com/.well-known/openid-configuration',",
+"run.py
+","-    client_kwargs={'scope': 'openid email profile'},",
+"run.py
+",-),
+"run.py
+",-,
+"run.py
+",-# Set up the middleware to read the request session,
+"run.py
+",-SECRET_KEY = os.environ.get('SECRET_KEY') or None,
+"run.py
+",-if SECRET_KEY is None:,
+"run.py
+",-    raise 'Missing SECRET_KEY',
+"run.py
+","-app.add_middleware(SessionMiddleware, secret_key=SECRET_KEY)",
+"run.py
+",-,
+"run.py
+",-,
+"run.py
+",-@app.get('/'),
+"run.py
+",-def public(request: Request):,
+"run.py
+",-    user = request.session.get('user'),
+"run.py
+",-    if user:,
+"run.py
+",-        name = user.get('name'),
+"run.py
+",-        return HTMLResponse(f'<p>Hello {name}!</p><a href=/logout>Logout</a>'),
+"run.py
+",-    return HTMLResponse('<a href=/login>Login</a>'),
+"run.py
+",-,
+"run.py
+",-,
+"run.py
+",-@app.route('/logout'),
+"run.py
+",-async def logout(request: Request):,
+"run.py
+","-    request.session.pop('user', None)",
+"run.py
+",-    return RedirectResponse(url='/'),
+"run.py
+",-,
+"run.py
+",-,
+"run.py
+",-@app.route('/login'),
+"run.py
+",-async def login(request: Request):,
+"run.py
+",-    redirect_uri = request.url_for('auth')  # This creates the url for our /auth endpoint,
+"run.py
+","-    return await oauth.google.authorize_redirect(request, redirect_uri)",
+"run.py
+",-,
+"run.py
+",-,
+"run.py
+",-@app.route('/auth'),
+"run.py
+",-async def auth(request: Request):,
+"run.py
+",-    try:,
+"run.py
+",-        access_token = await oauth.google.authorize_access_token(request),
+"run.py
+",-    except OAuthError:,
+"run.py
+",-        return RedirectResponse(url='/'),
+"run.py
+","-    user_data = await oauth.google.parse_id_token(request, access_token)",
+"run.py
+",-    request.session['user'] = dict(user_data),
+"run.py
+",-    return RedirectResponse(url='/'),
+"run.py
+",-,
+"run.py
+",-,
+"run.py
+",-if __name__ == '__main__':,
+"run.py
+","-    uvicorn.run(app, port=7000)",
+"README.md
+",-This is an example following the tutorial on https://blog.hanchon.live/guides/google-login-with-fastapi/,+This is an example following the tutorial on https://blog.hanchon.live/guides/google-login-with-fastapi-and-jwt/
+,,+    - export API_SECRET_KEY=...
+"api.py
+",-    return {'message': 'api_app'},+from fastapi import Depends
+"auth.py
+",-from fastapi import HTTPException,+from apps.jwt import get_current_user_email
+"auth.py
+",-from fastapi import status,+
+"auth.py
+",-    redirect_uri = request.url_for('auth')  # This creates the url for our /auth endpoint,+    return {'message': 'unprotected api_app endpoint'}
+"auth.py
+",-        raise HTTPException(,+
+"auth.py
+","-            status_code=status.HTTP_401_UNAUTHORIZED,",+
+"auth.py
+","-            detail='Could not validate credentials',",+@api_app.get('/protected')
+"auth.py
+","-            headers={'WWW-Authenticate': 'Bearer'},",+def test2(current_email: str = Depends(get_current_user_email)):
+"auth.py
+",-        ),+    return {'message': 'protected api_app endpoint'}
+"auth.py
+",-    # TODO: validate email in our database and generate JWT token,+from apps.jwt import create_token
+"auth.py
+",-    # TODO: return the JWT token to the user so it can make requests to our /api endpoint,+from apps.jwt import CREDENTIALS_EXCEPTION
+"auth.py
+",-    return JSONResponse(dict(user_data)),+from apps.jwt import valid_email_from_db
+"main.py
+",-    return {'message': 'main_app'},+# Frontend URL:
+,,+FRONTEND_URL = os.environ.get('FRONTEND_URL') or 'http://127.0.0.1:7000/token'
+,,+
+,,+    redirect_uri = FRONTEND_URL  # This creates the url for our /auth endpoint
+,,+        raise CREDENTIALS_EXCEPTION
+,,+    if valid_email_from_db(user_data['email']):
+,,"+        return JSONResponse({'result': True, 'access_token': create_token(user_data['email'])})"
+,,+    raise CREDENTIALS_EXCEPTION
+,,+import os
+,,+from datetime import datetime
+,,+from datetime import timedelta
+,,+
+,,+import jwt
+,,+from fastapi import Depends
+,,+from fastapi import HTTPException
+,,+from fastapi import status
+,,+from fastapi.security import OAuth2PasswordBearer
+,,+
+,,+# Create a fake db:
+,,+FAKE_DB = {'guillermo.paoletti@gmail.com': {'name': 'Guillermo Paoletti'}}
+,,+
+,,+
+,,+# Helper to read numbers using var envs
+,,+def cast_to_number(id):
+,,+    temp = os.environ.get(id)
+,,+    if temp is not None:
+,,+        try:
+,,+            return float(temp)
+,,+        except ValueError:
+,,+            return None
+,,+    return None
+,,+
+,,+
+,,+# Configuration
+,,+API_SECRET_KEY = os.environ.get('API_SECRET_KEY') or None
+,,+if API_SECRET_KEY is None:
+,,+    raise BaseException('Missing API_SECRET_KEY env var.')
+,,+API_ALGORITHM = os.environ.get('API_ALGORITHM') or 'HS256'
+,,+API_ACCESS_TOKEN_EXPIRE_MINUTES = cast_to_number('API_ACCESS_TOKEN_EXPIRE_MINUTES') or 15
+,,+
+,,+# Token url (We should later create a token url that accepts just a user and a password to use swagger)
+,,+oauth2_scheme = OAuth2PasswordBearer(tokenUrl='/auth/token')
+,,+
+,,+# Error
+,,+CREDENTIALS_EXCEPTION = HTTPException(
+,,"+    status_code=status.HTTP_401_UNAUTHORIZED,"
+,,"+    detail='Could not validate credentials',"
+,,"+    headers={'WWW-Authenticate': 'Bearer'},"
+,,+)
+,,+
+,,+
+,,+# Create token internal function
+,,"+def create_access_token(*, data: dict, expires_delta: timedelta = None):"
+,,+    to_encode = data.copy()
+,,+    if expires_delta:
+,,+        expire = datetime.utcnow() + expires_delta
+,,+    else:
+,,+        expire = datetime.utcnow() + timedelta(minutes=15)
+,,+    to_encode.update({'exp': expire})
+,,"+    encoded_jwt = jwt.encode(to_encode, API_SECRET_KEY, algorithm=API_ALGORITHM)"
+,,+    return encoded_jwt
+,,+
+,,+
+,,+# Create token for an email
+,,+def create_token(email):
+,,+    access_token_expires = timedelta(minutes=API_ACCESS_TOKEN_EXPIRE_MINUTES)
+,,"+    access_token = create_access_token(data={'sub': email}, expires_delta=access_token_expires)"
+,,+    return access_token
+,,+
+,,+
+,,+def valid_email_from_db(email):
+,,+    return email in FAKE_DB
+,,+
+,,+
+,,+async def get_current_user_email(token: str = Depends(oauth2_scheme)):
+,,+    try:
+,,"+        payload = jwt.decode(token, API_SECRET_KEY, algorithms=[API_ALGORITHM])"
+,,+        email: str = payload.get('sub')
+,,+        if email is None:
+,,+            raise CREDENTIALS_EXCEPTION
+,,+    except jwt.PyJWTError:
+,,+        raise CREDENTIALS_EXCEPTION
+,,+
+,,+    if valid_email_from_db(email):
+,,+        return email
+,,+
+,,+    raise CREDENTIALS_EXCEPTION
+,,+from fastapi import Request
+,,+from fastapi.responses import HTMLResponse
+,,"+    return HTMLResponse('<body><a href=""/auth/login"">Log In</button></body>')"
+,,+
+,,+
+,,+@app.get('/token')
+,,+async def token(request: Request):
+,,+    return HTMLResponse('''
+,,+                <script>
+,,+                function send(){
+,,+                    var req = new XMLHttpRequest();
+,,+                    req.onreadystatechange = function() {
+,,+                        if (req.readyState === 4) {
+,,+                            console.log(req.response);
+,,"+                            if (req.response[""result""] === true) {"
+,,"+                                window.localStorage.setItem('jwt', req.response[""access_token""]);"
+,,+                            }
+,,+                        }
+,,+                    }
+,,+                    req.withCredentials = true;
+,,+                    req.responseType = 'json';
+,,"+                    req.open(""get"", ""/auth/token?""+window.location.search.substr(1), true);"
+,,"+                    req.send("""");"
+,,+
+,,+                }
+,,+                </script>
+,,"+                <button onClick=""send()"">Get FastAPI JTW Token</button>"
+,,+
+,,"+                <button onClick='fetch(""http://127.0.0.1:7000/api/"").then("
+,,+                    (r)=>r.json()).then((msg)=>{console.log(msg)});'>
+,,+                Call Unprotected API
+,,+                </button>
+,,"+                <button onClick='fetch(""http://127.0.0.1:7000/api/protected"").then("
+,,+                    (r)=>r.json()).then((msg)=>{console.log(msg)});'>
+,,+                Call Protected API without JWT
+,,+                </button>
+,,"+                <button onClick='fetch(""http://127.0.0.1:7000/api/protected"",{"
+,,+                    headers:{
+,,"+                        ""Authorization"": ""Bearer "" + window.localStorage.getItem(""jwt"")"
+,,"+                    },"
+,,+                }).then((r)=>r.json()).then((msg)=>{console.log(msg)});'>
+,,+                Call Protected API wit JWT
+,,+                </button>
+,,+            ''')
+,,+PyJWT==2.0.1
+"README.md
+",-- Run the app: `python run.py`,+- Run the app: `python main.py`
+,,+from fastapi import FastAPI
+,,+
+,,+api_app = FastAPI()
+,,+
+,,+
+,,+@api_app.get('/')
+,,+def test():
+,,+    return {'message': 'api_app'}
+,,+import os
+,,+
+,,+from authlib.integrations.starlette_client import OAuth
+,,+from authlib.integrations.starlette_client import OAuthError
+,,+from fastapi import FastAPI
+,,+from fastapi import HTTPException
+,,+from fastapi import Request
+,,+from fastapi import status
+,,+from starlette.config import Config
+,,+from starlette.middleware.sessions import SessionMiddleware
+,,+from starlette.responses import JSONResponse
+,,+
+,,+# Create the auth app
+,,+auth_app = FastAPI()
+,,+
+,,+# OAuth settings
+,,+GOOGLE_CLIENT_ID = os.environ.get('GOOGLE_CLIENT_ID') or None
+,,+GOOGLE_CLIENT_SECRET = os.environ.get('GOOGLE_CLIENT_SECRET') or None
+,,+if GOOGLE_CLIENT_ID is None or GOOGLE_CLIENT_SECRET is None:
+,,+    raise BaseException('Missing env variables')
+,,+
+,,+# Set up OAuth
+,,"+config_data = {'GOOGLE_CLIENT_ID': GOOGLE_CLIENT_ID, 'GOOGLE_CLIENT_SECRET': GOOGLE_CLIENT_SECRET}"
+,,+starlette_config = Config(environ=config_data)
+,,+oauth = OAuth(starlette_config)
+,,+oauth.register(
+,,"+    name='google',"
+,,"+    server_metadata_url='https://accounts.google.com/.well-known/openid-configuration',"
+,,"+    client_kwargs={'scope': 'openid email profile'},"
+,,+)
+,,+
+,,+# Set up the middleware to read the request session
+,,+SECRET_KEY = os.environ.get('SECRET_KEY') or None
+,,+if SECRET_KEY is None:
+,,+    raise 'Missing SECRET_KEY'
+,,"+auth_app.add_middleware(SessionMiddleware, secret_key=SECRET_KEY)"
+,,+
+,,+
+,,+@auth_app.route('/login')
+,,+async def login(request: Request):
+,,+    redirect_uri = request.url_for('auth')  # This creates the url for our /auth endpoint
+,,"+    return await oauth.google.authorize_redirect(request, redirect_uri)"
+,,+
+,,+
+,,+@auth_app.route('/token')
+,,+async def auth(request: Request):
+,,+    try:
+,,+        access_token = await oauth.google.authorize_access_token(request)
+,,+    except OAuthError:
+,,+        raise HTTPException(
+,,"+            status_code=status.HTTP_401_UNAUTHORIZED,"
+,,"+            detail='Could not validate credentials',"
+,,"+            headers={'WWW-Authenticate': 'Bearer'},"
+,,+        )
+,,"+    user_data = await oauth.google.parse_id_token(request, access_token)"
+,,+    # TODO: validate email in our database and generate JWT token
+,,+    # TODO: return the JWT token to the user so it can make requests to our /api endpoint
+,,+    return JSONResponse(dict(user_data))
+,,+import uvicorn
+,,+from fastapi import FastAPI
+,,+
+,,+from apps.api import api_app
+,,+from apps.auth import auth_app
+,,+
+,,+app = FastAPI()
+,,"+app.mount('/auth', auth_app)"
+,,"+app.mount('/api', api_app)"
+,,+
+,,+
+,,+@app.get('/')
+,,+async def root():
+,,+    return {'message': 'main_app'}
+,,+
+,,+
+,,+if __name__ == '__main__':
+,,"+    uvicorn.run(app, port=7000)"
+,,+.venv
+,,+.vscode
+,,+run.sh
+,,+__pycache__/
+,,+*.py[cod]
+,,+*$py.class
+,,+# See https://pre-commit.com for more information
+,,+# See https://pre-commit.com/hooks.html for more hooks
+,,+repos:
+,,+  - repo: https://github.com/pre-commit/pre-commit-hooks
+,,+    rev: v2.4.0
+,,+    hooks:
+,,+      - id: trailing-whitespace
+,,+      - id: end-of-file-fixer
+,,+      - id: check-yaml
+,,+      - id: check-added-large-files
+,,+      - id: requirements-txt-fixer
+,,+      - id: double-quote-string-fixer
+,,+
+,,+  - repo: https://gitlab.com/pycqa/flake8
+,,+    rev: 3.8.0
+,,+    hooks:
+,,+      - id: flake8
+,,+        additional_dependencies: [flake8-typing-imports==1.6.0]
+,,+
+,,+  - repo: https://github.com/pre-commit/mirrors-yapf
+,,+    rev: v0.30.0
+,,+    hooks:
+,,+      - id: yapf
+,,+
+,,+  - repo: https://github.com/asottile/pyupgrade
+,,+    rev: v2.4.1
+,,+    hooks:
+,,+      - id: pyupgrade
+,,+        args: [--py36-plus]
+,,+
+,,+  - repo: https://github.com/asottile/reorder_python_imports
+,,+    rev: v2.3.0
+,,+    hooks:
+,,+      - id: reorder-python-imports
+,,+        args: [--py3-plus]
+,,+
+,,+  - repo: https://github.com/asottile/add-trailing-comma
+,,+    rev: v2.0.1
+,,+    hooks:
+,,+      - id: add-trailing-comma
+,,+        args: [--py36-plus]
+,,+# FastAPI and Google Login (OAuth)
+,,+This is an example following the tutorial on https://blog.hanchon.live/guides/google-login-with-fastapi/
+,,+
+,,+## Requirements:
+,,+- Python3.6+
+,,+
+,,+## How to run the example:
+,,+- Create a virtualenv `python3 -m venv .venv`
+,,+- Activate the virtualenv `. .venv/bin/activate`
+,,+- Install the requirements `pip install -r requirements.txt`
+,,+- Set up the env vars:
+,,+    - export GOOGLE_CLIENT_ID=...
+,,+    - export GOOGLE_CLIENT_SECRET=...
+,,+    - export SECRET_KEY=...
+,,+- Run the app: `python run.py`
+,,+Authlib==0.15.3
+,,+certifi==2020.12.5
+,,+cffi==1.14.5
+,,+click==7.1.2
+,,+cryptography==3.4.7
+,,+fastapi==0.63.0
+,,+h11==0.12.0
+,,+httpcore==0.12.3
+,,+httpx==0.17.1
+,,+idna==3.1
+,,+itsdangerous==1.1.0
+,,+pycparser==2.20
+,,+pydantic==1.8.1
+,,+rfc3986==1.4.0
+,,+sniffio==1.2.0
+,,+starlette==0.13.6
+,,+typing-extensions==3.7.4.3
+,,+uvicorn==0.13.4
+,,+import os
+,,+
+,,+import uvicorn
+,,+from authlib.integrations.starlette_client import OAuth
+,,+from authlib.integrations.starlette_client import OAuthError
+,,+from fastapi import FastAPI
+,,+from fastapi import Request
+,,+from starlette.config import Config
+,,+from starlette.middleware.sessions import SessionMiddleware
+,,+from starlette.responses import HTMLResponse
+,,+from starlette.responses import RedirectResponse
+,,+
+,,+# Create the APP
+,,+app = FastAPI()
+,,+
+,,+# OAuth settings
+,,+GOOGLE_CLIENT_ID = os.environ.get('GOOGLE_CLIENT_ID') or None
+,,+GOOGLE_CLIENT_SECRET = os.environ.get('GOOGLE_CLIENT_SECRET') or None
+,,+if GOOGLE_CLIENT_ID is None or GOOGLE_CLIENT_SECRET is None:
+,,+    raise BaseException('Missing env variables')
+,,+
+,,+# Set up OAuth
+,,"+config_data = {'GOOGLE_CLIENT_ID': GOOGLE_CLIENT_ID, 'GOOGLE_CLIENT_SECRET': GOOGLE_CLIENT_SECRET}"
+,,+starlette_config = Config(environ=config_data)
+,,+oauth = OAuth(starlette_config)
+,,+oauth.register(
+,,"+    name='google',"
+,,"+    server_metadata_url='https://accounts.google.com/.well-known/openid-configuration',"
+,,"+    client_kwargs={'scope': 'openid email profile'},"
+,,+)
+,,+
+,,+# Set up the middleware to read the request session
+,,+SECRET_KEY = os.environ.get('SECRET_KEY') or None
+,,+if SECRET_KEY is None:
+,,+    raise 'Missing SECRET_KEY'
+,,"+app.add_middleware(SessionMiddleware, secret_key=SECRET_KEY)"
+,,+
+,,+
+,,+@app.get('/')
+,,+def public(request: Request):
+,,+    user = request.session.get('user')
+,,+    if user:
+,,+        name = user.get('name')
+,,+        return HTMLResponse(f'<p>Hello {name}!</p><a href=/logout>Logout</a>')
+,,+    return HTMLResponse('<a href=/login>Login</a>')
+,,+
+,,+
+,,+@app.route('/logout')
+,,+async def logout(request: Request):
+,,"+    request.session.pop('user', None)"
+,,+    return RedirectResponse(url='/')
+,,+
+,,+
+,,+@app.route('/login')
+,,+async def login(request: Request):
+,,+    redirect_uri = request.url_for('auth')  # This creates the url for our /auth endpoint
+,,"+    return await oauth.google.authorize_redirect(request, redirect_uri)"
+,,+
+,,+
+,,+@app.route('/auth')
+,,+async def auth(request: Request):
+,,+    try:
+,,+        access_token = await oauth.google.authorize_access_token(request)
+,,+    except OAuthError:
+,,+        return RedirectResponse(url='/')
+,,"+    user_data = await oauth.google.parse_id_token(request, access_token)"
+,,+    request.session['user'] = dict(user_data)
+,,+    return RedirectResponse(url='/')
+,,+
+,,+
+,,+if __name__ == '__main__':
+,,"+    uvicorn.run(app, port=7000)"
+,,+[autopep8]
+,,+max_line_length = 120
+,,+[flake8]
+,,+max_line_length = 120
+,,+[yapf]
+,,+column_limit = 120
+,,+based_on_style = pep8

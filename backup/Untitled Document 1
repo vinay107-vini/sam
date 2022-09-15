@@ -1,0 +1,4 @@
+import MongoClient
+client=MongoClient()
+db=client.rptutorials
+tutorial=db.tutorial

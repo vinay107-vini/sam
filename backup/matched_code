@@ -1,0 +1,85 @@
+src-train.txt
+
+Node beginNode=block.getBeginNode(); 
+
+ConnectionPool connectionPool=destination.getConnectionPool(); 
+
+GrTypeDefinition clazz=(GrTypeDefinition)context.getScope(); 
+
+StringBuffer buffer=new StringBuffer(sericeCounterName.toString()); 
+
+ClusterMetadata metadata=cluster.getMetadata(); 
+
+final WorkingMemory workingMemory=ruleBase.newStatefulSession(); 
+
+HistoryRecord r=(HistoryRecord)it.next(); 
+
+JCheckBox formatPhoneNumber=new JCheckBox("",ConfigurationManager.isNormalizePhoneNumber()); 
+
+Integer contentLength=ctx.getOriginContentLength(); 
+
+Integer painelStatus=parser.nextInt(); 
+
+JetExpression lhs=(JetExpression)assignment.getLeft().copy(); 
+
+String conf=nodeEnvironment.configFile().toString(); 
+
+String tempDataPathString=tempNoCluster.toAbsolutePath().toString(); 
+
+MapActivity activity=(MapActivity)fragment.getActivity(); 
+
+final StringBuffer replacement=new StringBuffer(tag.getText()); 
+
+Double value=iterator.next(); 
+
+Integer value=iterator.next(); 
+
+T msgObj=messageClass.newInstance(); 
+
+StringBuffer output=new StringBuffer(inName.length()); 
+
+Long value=iterator.next(); 
+
+DirectCallTargetNode directCall=(DirectCallTargetNode)invoke.callTarget(); 
+
+Object key=keys.next(); 
+
+final WebPageDetail wd=detailIterator.next(); 
+
+String key=(String)next.getKey(); 
+
+String classpath=getClasspath().toString(); 
+
+private String requestCacheKey=UUID.randomUUID().toString(); 
+
+FSIndexInput clone=(FSIndexInput)super.clone(); 
+
+Long count=itr.next(); 
+
+TypeDefinition declaringType=methodDescription.getDeclaringType(); 
+
+IndexReader reader=writer.getReader(); 
+
+Object item=provider.read(); 
+
+StringBuffer ret=new StringBuffer(internalName.length()); 
+
+String tempClusterPathString=tempPath.toAbsolutePath().toString(); 
+
+LocalVideo localVideo=(LocalVideo)contentContainer.getContent(); 
+
+String text=status.getMessage(); 
+
+NonPersistentSiteTheadLocalCache cache=NonPersistentSiteTheadLocalCache.getSitesCache(); 
+
+LegacyLifecycle lifecycle=(LegacyLifecycle)it.next(); 
+
+ErrorHandlerFactory builder=routeContext.getRoute().getErrorHandlerBuilder(); 
+
+W data=function.apply(entry.getValue()); 
+
+final LabelProvider mainLabelProvider=(LabelProvider)viewer.getLabelProvider(); 
+
+Float value=iterator.next(); 
+
+
