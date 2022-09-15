@@ -1,0 +1,25 @@
+Filename,Buggy/Deleted,Fixed/Added
+Canvas.java,text = sb.toString();,if (sb != null ) text = sb.toString();
+Canvas.java,int trimWidth = region.getWidth();,if (region != null ) int trimWidth = region.getWidth();
+Canvas.java,int trimHeight = region.getHeight();,if (region != null ) int trimHeight = region.getHeight();
+Canvas.java,int trimX = region.getX();,if (region != null ) int trimX = region.getX();
+Canvas.java,int trimY = region.getY();,if (region != null ) int trimY = region.getY();
+ContextBuilder.java,Set<IElement> set = elementsByClass.get(element.getClass());,if (elementsByClass != null ) Set<IElement> set = elementsByClass.get(element.getClass());
+Line.java,PointWithDiff nextPoint = candidates.pollFirst();,if (candidates != null ) PointWithDiff nextPoint = candidates.pollFirst();
+TestAxis.java,canvas = render.render(builder.build());,if (render != null ) canvas = render.render(builder.build());
+TestAxis.java,s = canvas.getText();,if (canvas != null ) s = canvas.getText();
+TestFullPlott.java,builder = render.newBuilder();,if (render != null ) builder = render.newBuilder();
+TestFullPlott.java,canvas = render.render(builder.build());,if (render != null ) canvas = render.render(builder.build());
+TestFullPlott.java,s = canvas.getText();,if (canvas != null ) s = canvas.getText();
+TestFullPlott.java,builder = render.newBuilder();,if (render != null ) builder = render.newBuilder();
+TestFullPlott.java,canvas = render.render(builder.build());,if (render != null ) canvas = render.render(builder.build());
+TestFullPlott.java,s = canvas.getText();,if (canvas != null ) s = canvas.getText();
+TestFullPlott.java,builder = render.newBuilder();,if (render != null ) builder = render.newBuilder();
+TestFullPlott.java,canvas = render.render(builder.build());,if (render != null ) canvas = render.render(builder.build());
+TestFullPlott.java,s = canvas.getText();,if (canvas != null ) s = canvas.getText();
+TestFullPlott.java,builder = render.newBuilder();,if (render != null ) builder = render.newBuilder();
+TestFullPlott.java,canvas = render.render(builder.build());,if (render != null ) canvas = render.render(builder.build());
+TestFullPlott.java,s = canvas.getText();,if (canvas != null ) s = canvas.getText();
+TestPlot.java,builder = render.newBuilder();,if (render != null ) builder = render.newBuilder();
+TestPlot.java,canvas = render.render(builder.build());,if (render != null ) canvas = render.render(builder.build());
+TestPlot.java,s = canvas.getText();,if (canvas != null ) s = canvas.getText();

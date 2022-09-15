@@ -1,0 +1,7 @@
+Filename,Buggy/Deleted,Fixed/Added
+SnowflakeIDGenImpl.java,initFlag = holder.init();,if (holder != null ) initFlag = holder.init();
+SnowflakeIDGenImpl.java,initFlag = holder.init();,if (holder != null ) initFlag = holder.init();
+SnowflakeZookeeperHolder.java,boolean exists = LeafconfFile.exists();,if (LeafconfFile != null ) boolean exists = LeafconfFile.exists();
+SnowflakeZookeeperHolder.java,boolean mkdirs = LeafconfFile.getParentFile().mkdirs();,if (LeafconfFile != null ) boolean mkdirs = LeafconfFile.getParentFile().mkdirs();
+Utils.java,InetAddress addr = InetAddress.getLocalHost();,if (InetAddress != null ) InetAddress addr = InetAddress.getLocalHost();
+Utils.java,ip = addr.getHostAddress();,if (addr != null ) ip = addr.getHostAddress();

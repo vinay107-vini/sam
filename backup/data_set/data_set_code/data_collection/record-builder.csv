@@ -1,0 +1,20 @@
+Filename,Buggy/Deleted,Fixed/Added
+InternalRecordBuilderProcessor.java,var witherClassName = witherClassNameBuilder.build().toString();,if (witherClassNameBuilder != null ) var witherClassName = witherClassNameBuilder.build().toString();
+RecordBuilderProcessor.java,var metaData = RecordBuilderOptions.build(processingEnv.getOptions());,if (RecordBuilderOptions != null ) var metaData = RecordBuilderOptions.build(processingEnv.getOptions());
+RecordBuilderProcessor.java,var classesMirrors = ElementUtils.getClassesAttribute(classes.get());,if (ElementUtils != null ) var classesMirrors = ElementUtils.getClassesAttribute(classes.get());
+InternalRecordInterfaceProcessor.java,var stripped = name.substring(prefix.length());,if (name != null ) var stripped = name.substring(prefix.length());
+RecordBuilderProcessor.java,var metaData = RecordBuilderOptions.build(processingEnv.getOptions());,if (RecordBuilderOptions != null ) var metaData = RecordBuilderOptions.build(processingEnv.getOptions());
+RecordBuilderProcessor.java,var metaData = RecordBuilderOptions.build(processingEnv.getOptions());,if (RecordBuilderOptions != null ) var metaData = RecordBuilderOptions.build(processingEnv.getOptions());
+ElementUtils.java,String name = typeElement.getEnclosingElement().toString();,if (typeElement != null ) String name = typeElement.getEnclosingElement().toString();
+InternalRecordBuilderProcessor.java,"String methodName = getWithMethodName(component, metaData.withClassMethodPrefix());","if (metaData != null ) String methodName = getWithMethodName(component, metaData.withClassMethodPrefix());"
+InternalRecordBuilderProcessor.java,var baseName = recordClassType.name() + metaData.suffix();,if (metaData != null ) var baseName = recordClassType.name() + metaData.suffix();
+RecordBuilderProcessor.java,var messager = processingEnv.getMessager();,if (processingEnv != null ) var messager = processingEnv.getMessager();
+RecordBuilderProcessor.java,var comment = metaData.fileComment();,if (metaData != null ) var comment = metaData.fileComment();
+RecordBuilderProcessor.java,JavaFile javaFile = javaFileBuilder.build();,if (javaFileBuilder != null ) JavaFile javaFile = javaFileBuilder.build();
+RecordBuilderProcessor.java,"message = message + "": "" + e.getMessage();","if (e != null ) message = message + "": "" + e.getMessage();"
+RecordBuilderProcessor.java,"var recordClassType = ElementUtils.getClassType(record, record.getTypeParameters());","if (record != null ) var recordClassType = ElementUtils.getClassType(record, record.getTypeParameters());"
+RecordBuilderProcessor.java,var baseName = recordClassType.name() + metaData.suffix();,if (metaData != null ) var baseName = recordClassType.name() + metaData.suffix();
+RecordBuilderProcessor.java,String name = recordComponents.get(index).name();,if (recordComponents != null ) String name = recordComponents.get(index).name();
+RecordBuilderProcessor.java,var codeBuilder = CodeBlock.builder();,if (CodeBlock != null ) var codeBuilder = CodeBlock.builder();
+RecordBuilderProcessor.java,String name = recordComponent.name();,if (recordComponent != null ) String name = recordComponent.name();
+RecordBuilderProcessor.java,JavaFileObject sourceFile = filer.createSourceFile(builderClassType.name());,if (filer != null ) JavaFileObject sourceFile = filer.createSourceFile(builderClassType.name());

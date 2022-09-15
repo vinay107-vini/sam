@@ -1,0 +1,4 @@
+Filename,Buggy/Deleted,Fixed/Added
+ExprStreamImpl.java,final SubqueryInfo outer = QueryStreamImpl.getSubqueryInfo();,if (QueryStreamImpl != null ) final SubqueryInfo outer = QueryStreamImpl.getSubqueryInfo();
+ExprStreamImpl.java,final QueryInfo outer = QueryStreamImpl.getQueryInfo();,if (QueryStreamImpl != null ) final QueryInfo outer = QueryStreamImpl.getQueryInfo();
+QueryTest.java,this.cb = this.qsb.getCriteriaBuilder();,if (this != null ) this.cb = this.qsb.getCriteriaBuilder();

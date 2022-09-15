@@ -1,0 +1,4240 @@
+commit 01db061505662ad6da55e360e76c791caca17d45
+Author: Shashi Raj <34605595+shashirajraja@users.noreply.github.com>
+Date:   Sun Apr 3 12:19:00 2022 +0530
+
+    Update UserRegisterServlet.java
+
+diff --git a/OnlineBookStore/servlets/UserRegisterServlet.java b/OnlineBookStore/servlets/UserRegisterServlet.java
+index 1e0e86f..ee6df57 100644
+--- a/OnlineBookStore/servlets/UserRegisterServlet.java
++++ b/OnlineBookStore/servlets/UserRegisterServlet.java
+@@ -23,7 +23,7 @@ public class UserRegisterServlet extends GenericServlet {
+ 		try {
+ 			Connection con = DBConnection.getCon();
+ 			PreparedStatement ps = con
+-					.prepareStatement("insert into " + IUserContants.TABLE_USERS + "  values(?,?,?,?,?,?,?)");
++					.prepareStatement("insert into " + IUserContants.TABLE_USERS + "  values(?,?,?,?,?,?,?,?)");
+ 			ps.setString(1, uName);
+ 			ps.setString(2, pWord);
+ 			ps.setString(3, fName);
+@@ -31,7 +31,7 @@ public class UserRegisterServlet extends GenericServlet {
+ 			ps.setString(5, addr);
+ 			ps.setString(6, phNo);
+ 			ps.setString(7, mailId);
+-			//ps.setInt(8, 2);
++			ps.setInt(8, 2);
+ 			int k = ps.executeUpdate();
+ 			if (k == 1) {
+ 				RequestDispatcher rd = req.getRequestDispatcher("Sample.html");
+@@ -46,4 +46,4 @@ public class UserRegisterServlet extends GenericServlet {
+ 			e.printStackTrace();
+ 		}
+ 	}
+-}
+\ No newline at end of file
++}
+
+commit 8c685c737896297eb22614b0821cdb470431325a
+Merge: ae81489 35d289f
+Author: Shashi Raj <34605595+shashirajraja@users.noreply.github.com>
+Date:   Sun Feb 27 13:49:11 2022 +0530
+
+    Merge pull request #19 from shashirajraja/dependabot/maven/org.postgresql-postgresql-42.3.3
+    
+    Bump postgresql from 42.2.25 to 42.3.3
+
+commit 35d289f123e2830c96afed55d6a1c1baeb92abce
+Author: dependabot[bot] <49699333+dependabot[bot]@users.noreply.github.com>
+Date:   Wed Feb 16 01:19:13 2022 +0000
+
+    Bump postgresql from 42.2.25 to 42.3.3
+    
+    Bumps [postgresql](https://github.com/pgjdbc/pgjdbc) from 42.2.25 to 42.3.3.
+    - [Release notes](https://github.com/pgjdbc/pgjdbc/releases)
+    - [Changelog](https://github.com/pgjdbc/pgjdbc/blob/master/CHANGELOG.md)
+    - [Commits](https://github.com/pgjdbc/pgjdbc/compare/REL42.2.25...REL42.3.3)
+    
+    ---
+    updated-dependencies:
+    - dependency-name: org.postgresql:postgresql
+      dependency-type: direct:production
+    ...
+    
+    Signed-off-by: dependabot[bot] <support@github.com>
+
+diff --git a/pom.xml b/pom.xml
+index 4047bd2..841cf72 100644
+--- a/pom.xml
++++ b/pom.xml
+@@ -29,7 +29,7 @@
+   	<dependency>
+   		<groupId>org.postgresql</groupId>
+   		<artifactId>postgresql</artifactId>
+-  		<version>42.2.25</version>
++  		<version>42.3.3</version>
+   	</dependency>
+   	
+   	
+
+commit ae814897adb9fa98038456fd3d6fd7a54f7191af
+Merge: 93ad50f 35efe37
+Author: Shashi Raj <34605595+shashirajraja@users.noreply.github.com>
+Date:   Wed Feb 2 11:22:11 2022 +0530
+
+    Merge pull request #16 from shashirajraja/dependabot/maven/org.postgresql-postgresql-42.2.25
+    
+    Bump postgresql from 42.2.8 to 42.2.25
+
+commit 35efe37fbe76c99591072c99ed4e34d7f6ef4333
+Author: dependabot[bot] <49699333+dependabot[bot]@users.noreply.github.com>
+Date:   Wed Feb 2 00:57:37 2022 +0000
+
+    Bump postgresql from 42.2.8 to 42.2.25
+    
+    Bumps [postgresql](https://github.com/pgjdbc/pgjdbc) from 42.2.8 to 42.2.25.
+    - [Release notes](https://github.com/pgjdbc/pgjdbc/releases)
+    - [Changelog](https://github.com/pgjdbc/pgjdbc/blob/master/CHANGELOG.md)
+    - [Commits](https://github.com/pgjdbc/pgjdbc/compare/REL42.2.8...REL42.2.25)
+    
+    ---
+    updated-dependencies:
+    - dependency-name: org.postgresql:postgresql
+      dependency-type: direct:production
+    ...
+    
+    Signed-off-by: dependabot[bot] <support@github.com>
+
+diff --git a/pom.xml b/pom.xml
+index afc438c..4047bd2 100644
+--- a/pom.xml
++++ b/pom.xml
+@@ -29,7 +29,7 @@
+   	<dependency>
+   		<groupId>org.postgresql</groupId>
+   		<artifactId>postgresql</artifactId>
+-  		<version>42.2.8</version>
++  		<version>42.2.25</version>
+   	</dependency>
+   	
+   	
+
+commit 93ad50fb4da5924f851da683b6802df37c4ce450
+Author: Shashi Raj <34605595+shashirajraja@users.noreply.github.com>
+Date:   Sun Oct 17 12:21:30 2021 +0530
+
+    Update README.md
+
+diff --git a/README.md b/README.md
+index bc29857..cbb6edc 100644
+--- a/README.md
++++ b/README.md
+@@ -1,4 +1,5 @@
+ # <a href="https://shashirajraja.github.io/onlinebookstore/WebContent/index.html" target="_blank"> OnlineBookStore </a> Website Using Java 
++![onlinebookstore](https://user-images.githubusercontent.com/34605595/137615096-8447d32d-bddc-4f13-a8ed-3c0f4dd5e04e.png)
+ #### To View First Front Page Design of this website <a href="https://shashirajraja.github.io/onlinebookstore/WebContent/index.html" target="_blank">Click Here</a><br>
+ <span style="color:blue">**This Website is built for following purpose:-**</span>
+ - For Selling books online.
+@@ -7,7 +8,6 @@
+ - User Friendly.
+ - For Implemention of Generic Servlets in Java.
+ - This is a Mini-project developed using Java, Jdbc, And Generic Servlets.
+-![image](https://user-images.githubusercontent.com/34605595/137615096-8447d32d-bddc-4f13-a8ed-3c0f4dd5e04e.png)
+ 
+ <span style="color:blue">**Admin Have Following Access for this online store site:-**</span>
+ - Add New Books.
+
+commit 3090be560d116c083eb4bd46908cebd9a9ca4094
+Author: Shashi Raj <34605595+shashirajraja@users.noreply.github.com>
+Date:   Sun Oct 17 12:19:20 2021 +0530
+
+    Update README.md
+
+diff --git a/README.md b/README.md
+index f51f821..bc29857 100644
+--- a/README.md
++++ b/README.md
+@@ -7,6 +7,7 @@
+ - User Friendly.
+ - For Implemention of Generic Servlets in Java.
+ - This is a Mini-project developed using Java, Jdbc, And Generic Servlets.
++![image](https://user-images.githubusercontent.com/34605595/137615096-8447d32d-bddc-4f13-a8ed-3c0f4dd5e04e.png)
+ 
+ <span style="color:blue">**Admin Have Following Access for this online store site:-**</span>
+ - Add New Books.
+
+commit 12f04a23e5183129546416688525bf1e5b294f6e
+Author: Shashi Raj <34605595+shashirajraja@users.noreply.github.com>
+Date:   Sun May 9 14:32:33 2021 +0530
+
+    Update README.md
+
+diff --git a/README.md b/README.md
+index 4108697..f51f821 100644
+--- a/README.md
++++ b/README.md
+@@ -53,7 +53,7 @@ Note:- This is a Sample Project, So we have used only Generic Servlet and not ta
+ 
+ STEP 1: Open MySQL Command Prompt or MySQL Workbench
+ 
+-STEP 2: Login to the root user as : ```mysql -u <username> -p <password>```
++STEP 2: Login to the administrator user as : ```mysql -u <username> -p``` (Enter Password if asked)
+ 
+ STEP 3 :Copy paste the following MySql Commands:
+ ```MySQL
+@@ -63,7 +63,8 @@ use onlinebookstore;
+ 
+ create table books(barcode varchar(100) primary key, name varchar(100), author varchar(100), price int, quantity int);
+ 
+-create table users(username varchar(100) primary key,password varchar(100), firstname varchar(100),lastname varchar(100),address text, phone varchar(100),mailid varchar(100),usertype int);
++create table users(username varchar(100) primary key,password varchar(100), firstname varchar(100),
++    lastname varchar(100),address text, phone varchar(100),mailid varchar(100),usertype int);
+ 
+ insert into books values('10101','Programming in C','James k Wick',500,5);
+ insert into books values('10102','Learn Java','Scott Mayers',150,13);
+@@ -83,7 +84,7 @@ Step 0: Open Eclipse Enterprise Edition. [Install, if not already installed.]
+ 
+ Step 1: Click On File > Import > Git > Projects From Git > Clone Uri  > Paste The Repository Url as: ```https://github.com/shashirajraja/onlinebookstore.git```> Select J2EE Branch > Next > Next > Finish
+ 
+-Step 2: Right Click On Project > Build Path > Configure Build Path > Libraries > Remove and Update Any Libraries if having Red Mark > Finish.
++Step 2: Go inside ```OnlineBookStore > constants > IDatabase.java``` and update the value of USER_NAME and PASSWORD according to your installed mysql admin user credentials
+ 
+ Step 3: [Only If Tomcat Server is not configured in Eclipse] : Right Click On Project > Run As > Run On Server > Select Tomcat V8.0 > (Select Tomcat V8.0 Installation Location If Asked) Next > Add onlinebookstore > Finish
+ 
+
+commit 77c433b2c2d53fec73f1d3a8ab9d7355e2940013
+Author: Shashi Raj <34605595+shashirajraja@users.noreply.github.com>
+Date:   Sun May 9 12:02:50 2021 +0530
+
+    Update README.md
+
+diff --git a/README.md b/README.md
+index 858cd85..4108697 100644
+--- a/README.md
++++ b/README.md
+@@ -77,7 +77,7 @@ insert into users values('shashi','shashi','Shashi','Raj','Bihar','1236547089','
+ commit;
+ ```
+ 
+-### ========== Importing and Running The Project Through Eclipse EE ===============
++### ======== Importing and Running The Project Through Eclipse EE ===========
+ 
+ Step 0: Open Eclipse Enterprise Edition. [Install, if not already installed.]
+ 
+
+commit 54b775f07f20e37c233367d12dfe47abd689f858
+Author: Shashi Raj <34605595+shashirajraja@users.noreply.github.com>
+Date:   Sun May 9 11:58:22 2021 +0530
+
+    Update README.md
+
+diff --git a/README.md b/README.md
+index 9cc4bee..858cd85 100644
+--- a/README.md
++++ b/README.md
+@@ -1,6 +1,5 @@
+-# OnlineBookStore Website Using Java 
+-### <a href="https://shashirajraja.github.io/onlinebookstore/WebContent/index.html" target="_blank">Online Book Store</a>
+-#### To View Front End Design of this website <a href="https://shashirajraja.github.io/onlinebookstore/WebContent/index.html" target="_blank">Click Here</a><br>
++# <a href="https://shashirajraja.github.io/onlinebookstore/WebContent/index.html" target="_blank"> OnlineBookStore </a> Website Using Java 
++#### To View First Front Page Design of this website <a href="https://shashirajraja.github.io/onlinebookstore/WebContent/index.html" target="_blank">Click Here</a><br>
+ <span style="color:blue">**This Website is built for following purpose:-**</span>
+ - For Selling books online.
+ - Maintaining books selling history.
+@@ -32,21 +31,72 @@
+ - <a href="https://shashirajraja.github.io/onlinebookstore/WebContent/index.html" target="_blank">Click Here for Front End View</a>
+ 
+ 2. Back-End Development
+-- Java.
+-- JDBC.
+-- Servlet.
+-- Oracle.
+-- Maven Support.
++- Java [JDK 8+]
++- JDBC
++- Servlet
++- MySQL
++- Apache Maven
+ 
+ 3. Database used.
+-- Sql/MySql.
++- MySql
+ 
+-### Database Creation:
++### ==== Software And Tools Required ====
++- MySQL
++- Eclipse [Enterprise Edition]
++- Java [JDK 8+]
++- Tomcat v8.0+
++- Apache Maven
+ 
+-Go to the Folder named <a href="https://github.com/shashirajraja/onlinebookstore/blob/gh-pages/Dummy_Database.md">Dummy_Database.md</a> and copy and paste the mysql command for making the database tables and fill some dummy database.
++Note:- This is a Sample Project, So we have used only Generic Servlet and not taken care for Security.
+ 
++### =============== Dummy Database Initialization =====================
++
++STEP 1: Open MySQL Command Prompt or MySQL Workbench
++
++STEP 2: Login to the root user as : ```mysql -u <username> -p <password>```
++
++STEP 3 :Copy paste the following MySql Commands:
++```MySQL
++create database onlinebookstore;
++
++use onlinebookstore;
++
++create table books(barcode varchar(100) primary key, name varchar(100), author varchar(100), price int, quantity int);
++
++create table users(username varchar(100) primary key,password varchar(100), firstname varchar(100),lastname varchar(100),address text, phone varchar(100),mailid varchar(100),usertype int);
++
++insert into books values('10101','Programming in C','James k Wick',500,5);
++insert into books values('10102','Learn Java','Scott Mayers',150,13);
++insert into books values('10103','Database Knowledge','Charles Pettzoid',124,360);
++insert into books values('10104','Let us c++','Steve Macclen',90,111);
++insert into books values('10105','Success Key','Shashi Raj',5000,15);
++insert into users values('User','Password','First','User','My Home','42502216225','User@gmail.com',2);
++insert into users values('Admin','Admin','Mr.','Admin','Haldia WB','9584552224521','admin@gmail.com',1);
++insert into users values('shashi','shashi','Shashi','Raj','Bihar','1236547089','shashi@gmail.com',2);
++
++commit;
++```
++
++### ========== Importing and Running The Project Through Eclipse EE ===============
++
++Step 0: Open Eclipse Enterprise Edition. [Install, if not already installed.]
++
++Step 1: Click On File > Import > Git > Projects From Git > Clone Uri  > Paste The Repository Url as: ```https://github.com/shashirajraja/onlinebookstore.git```> Select J2EE Branch > Next > Next > Finish
++
++Step 2: Right Click On Project > Build Path > Configure Build Path > Libraries > Remove and Update Any Libraries if having Red Mark > Finish.
++
++Step 3: [Only If Tomcat Server is not configured in Eclipse] : Right Click On Project > Run As > Run On Server > Select Tomcat V8.0 > (Select Tomcat V8.0 Installation Location If Asked) Next > Add onlinebookstore > Finish
++
++Step 4: In The Server Tab > Double Click On Tomcat Server > Ports > Change The Port Number For Http/1.1 To 8083 > Close And Save
++
++Step 5: Right Click On Project > Run As > Run On Server > Select Tomcat v8.0 > Next > Add All> Done
++
++Step 6: Check Running The Site At  <a href="http://localhost:8083/onlinebookstore/">http://localhost:8083/onlinebookstore/</a>
++
++Step 7: Default Username And Password For Admin Is "Admin" And "Admin"
++
++Step 8: Default Username And Password For User Is "shashi" And "shashi"
+ 
+-Note:- This is a basic Project so we have not think about the security and we have only implemented this project using the generic servlet
+ 
+ #### "Suggestions and project Improvements are Invited!"
+ 
+
+commit 33a359b4a37f32192fe60dcc86b4e8e2e1971769
+Author: Shashi Raj <34605595+shashirajraja@users.noreply.github.com>
+Date:   Wed Feb 17 21:22:13 2021 +0530
+
+    Update README.md
+
+diff --git a/README.md b/README.md
+index 9892502..9cc4bee 100644
+--- a/README.md
++++ b/README.md
+@@ -1,6 +1,6 @@
+ # OnlineBookStore Website Using Java 
+-### <a href="https://shashirajraja.github.io/onlinebookstore/WebContent/index.html">Online Book Store</a>
+-#### To View Front End Design of this website <a href="https://shashirajraja.github.io/onlinebookstore/WebContent/index.html">Click Here</a><br>
++### <a href="https://shashirajraja.github.io/onlinebookstore/WebContent/index.html" target="_blank">Online Book Store</a>
++#### To View Front End Design of this website <a href="https://shashirajraja.github.io/onlinebookstore/WebContent/index.html" target="_blank">Click Here</a><br>
+ <span style="color:blue">**This Website is built for following purpose:-**</span>
+ - For Selling books online.
+ - Maintaining books selling history.
+@@ -29,7 +29,7 @@
+ - Html.
+ - Css.
+ - Javascript.
+-- <a href="https://shashirajraja.github.io/onlinebookstore/WebContent/index.html">Click Here for Front End View</a>
++- <a href="https://shashirajraja.github.io/onlinebookstore/WebContent/index.html" target="_blank">Click Here for Front End View</a>
+ 
+ 2. Back-End Development
+ - Java.
+
+commit ecb6dff8ab4e723a66dd715e928bc6e19a10f053
+Author: Shashi Raj <34605595+shashirajraja@users.noreply.github.com>
+Date:   Wed Feb 17 21:20:31 2021 +0530
+
+    Updated Website Front End Design Link to Readme
+
+diff --git a/README.md b/README.md
+index f935ec5..9892502 100644
+--- a/README.md
++++ b/README.md
+@@ -1,5 +1,6 @@
+ # OnlineBookStore Website Using Java 
+-### Online Book Store
++### <a href="https://shashirajraja.github.io/onlinebookstore/WebContent/index.html">Online Book Store</a>
++#### To View Front End Design of this website <a href="https://shashirajraja.github.io/onlinebookstore/WebContent/index.html">Click Here</a><br>
+ <span style="color:blue">**This Website is built for following purpose:-**</span>
+ - For Selling books online.
+ - Maintaining books selling history.
+@@ -28,6 +29,7 @@
+ - Html.
+ - Css.
+ - Javascript.
++- <a href="https://shashirajraja.github.io/onlinebookstore/WebContent/index.html">Click Here for Front End View</a>
+ 
+ 2. Back-End Development
+ - Java.
+
+commit 93a8c9d509e797a17f5961e1b90e6b2e4a7a3581
+Merge: 1530761 5c0550d
+Author: Shashi Raj <34605595+shashirajraja@users.noreply.github.com>
+Date:   Wed Feb 17 20:12:29 2021 +0530
+
+    Merge pull request #11 from Sushobh94/patch-1
+    
+    Update README.md
+
+commit 5c0550da855904ac4a19f4de3526ddc406f72adf
+Author: Sushobh94 <72578643+Sushobh94@users.noreply.github.com>
+Date:   Fri Oct 9 02:03:27 2020 +0530
+
+    Update README.md
+
+diff --git a/README.md b/README.md
+index 6755da5..f935ec5 100644
+--- a/README.md
++++ b/README.md
+@@ -1,43 +1,43 @@
+ # OnlineBookStore Website Using Java 
+ ### Online Book Store
+ <span style="color:blue">**This Website is built for following purpose:-**</span>
+-- For Selling books online
+-- Maintaining books selling history
+-- Adding and managing books
+-- User Friendly
+-- For Implemention of Generic Servlets in Java
+-- This is a Mini-project developed using Java, Jdbc, And Generic Servlets
++- For Selling books online.
++- Maintaining books selling history.
++- Adding and managing books.
++- User Friendly.
++- For Implemention of Generic Servlets in Java.
++- This is a Mini-project developed using Java, Jdbc, And Generic Servlets.
+ 
+ <span style="color:blue">**Admin Have Following Access for this online store site:-**</span>
+-- Add New Books
+-- View Books Available
+-- Remove Books
+-- Increase Books Amount
++- Add New Books.
++- View Books Available.
++- Remove Books.
++- Increase Books Amount.
+ 
+ <span style="color:blue">**Users Have Following Access for this online store site:-**</span>
+-- Create New Account or Register
+-- Login
+-- View Available Books
+-- Select Books to Buy
+-- Select Books Quantity
+-- Buy Books
+-- Get Payment Receipt
++- Create New Account or Register.
++- Login.
++- View Available Books.
++- Select Books to Buy.
++- Select Books Quantity.
++- Buy Books.
++- Get Payment Receipt.
+ 
+ ### Technologies used:-
+ 1. Front-End Development:
+-- Html
+-- Css
+-- Javascript
++- Html.
++- Css.
++- Javascript.
+ 
+ 2. Back-End Development
+-- Java
+-- JDBC
+-- Servlet
+-- Oracle
+-- Maven Support
+-
+-3. Database used
+-- Sql/MySql
++- Java.
++- JDBC.
++- Servlet.
++- Oracle.
++- Maven Support.
++
++3. Database used.
++- Sql/MySql.
+ 
+ ### Database Creation:
+ 
+
+commit 153076191650ae84d447f9f841dcf2366e418b9e
+Merge: 9ec56e6 2dd23f6
+Author: Shashi Raj <34605595+shashirajraja@users.noreply.github.com>
+Date:   Thu Jul 2 10:08:17 2020 +0530
+
+    Merge pull request #7 from shashirajraja/dependabot/maven/mysql-mysql-connector-java-8.0.16
+    
+    Bump mysql-connector-java from 5.1.45 to 8.0.16
+
+commit 2dd23f668854bf818cfa872bbb0929e59d7dfe01
+Author: dependabot[bot] <49699333+dependabot[bot]@users.noreply.github.com>
+Date:   Thu Jul 2 01:11:25 2020 +0000
+
+    Bump mysql-connector-java from 5.1.45 to 8.0.16
+    
+    Bumps [mysql-connector-java](https://github.com/mysql/mysql-connector-j) from 5.1.45 to 8.0.16.
+    - [Release notes](https://github.com/mysql/mysql-connector-j/releases)
+    - [Changelog](https://github.com/mysql/mysql-connector-j/blob/release/8.0/CHANGES)
+    - [Commits](https://github.com/mysql/mysql-connector-j/compare/5.1.45...8.0.16)
+    
+    Signed-off-by: dependabot[bot] <support@github.com>
+
+diff --git a/pom.xml b/pom.xml
+index 3334161..afc438c 100644
+--- a/pom.xml
++++ b/pom.xml
+@@ -36,7 +36,7 @@
+ 	<dependency>
+ 	    <groupId>mysql</groupId>
+ 	    <artifactId>mysql-connector-java</artifactId>
+-	    <version>5.1.45</version>
++	    <version>8.0.16</version>
+ 	</dependency>
+   	
+   
+
+commit 9ec56e6505f581ebd5bc538e3904b4d60ec22d53
+Author: Shashi Raj <shashiraj.972@gmail.com>
+Date:   Fri Jun 12 20:13:30 2020 +0530
+
+    web.xml updated
+
+diff --git a/WebContent/WEB-INF/web.xml b/WebContent/WEB-INF/web.xml
+index 5d12165..52f3017 100644
+--- a/WebContent/WEB-INF/web.xml
++++ b/WebContent/WEB-INF/web.xml
+@@ -1,78 +1,70 @@
+ <?xml version="1.0" encoding="UTF-8"?>
+-<web-app>
+-	<servlet>
+-		<servlet-name>AdminLoginServlet</servlet-name>
+-		<servlet-class>servlets.AdminLoginServlet</servlet-class>
+-	</servlet>
+-	<servlet-mapping>
+-		<servlet-name>AdminLoginServlet</servlet-name>
+-		<url-pattern>/adminlog</url-pattern>
+-	</servlet-mapping>
+-
+-	<servlet>
+-		<servlet-name>UserLoginServlet</servlet-name>
+-		<servlet-class>servlets.UserLoginServlet</servlet-class>
+-	</servlet>
+-	<servlet-mapping>
+-		<servlet-name>UserLoginServlet</servlet-name>
+-		<url-pattern>/userlog</url-pattern>
+-	</servlet-mapping>
+-
+-	<servlet>
+-		<servlet-name>UserRegisterServlet</servlet-name>
+-		<servlet-class>servlets.UserRegisterServlet</servlet-class>
+-	</servlet>
+-	<servlet-mapping>
+-		<servlet-name>UserRegisterServlet</servlet-name>
+-		<url-pattern>/userreg</url-pattern>
+-	</servlet-mapping>
+-
+-	<servlet>
+-		<servlet-name>RemoveBookServlet</servlet-name>
+-		<servlet-class>servlets.RemoveBookServlet</servlet-class>
+-	</servlet>
+-	<servlet-mapping>
+-		<servlet-name>RemoveBookServlet</servlet-name>
+-		<url-pattern>/remove</url-pattern>
+-	</servlet-mapping>
+-
+-	<servlet>
+-		<servlet-name>AddBookServlet</servlet-name>
+-		<servlet-class>servlets.AddBookServlet</servlet-class>
+-	</servlet>
+-	<servlet-mapping>
+-		<servlet-name>AddBookServlet</servlet-name>
+-		<url-pattern>/addbook</url-pattern>
+-	</servlet-mapping>
+-
+-	<servlet>
+-		<servlet-name>ViewBookServlet</servlet-name>
+-		<servlet-class>servlets.ViewBookServlet</servlet-class>
+-	</servlet>
+-	<servlet-mapping>
+-		<servlet-name>ViewBookServlet</servlet-name>
+-		<url-pattern>/viewbook</url-pattern>
+-	</servlet-mapping>
+-
+-	<servlet>
+-		<servlet-name>BuyBooksServlet</servlet-name>
+-		<servlet-class>servlets.BuyBooksServlet</servlet-class>
+-	</servlet>
+-	<servlet-mapping>
+-		<servlet-name>BuyBooksServlet</servlet-name>
+-		<url-pattern>/buybook</url-pattern>
+-	</servlet-mapping>
+-
+-	<servlet>
+-		<servlet-name>ReceiptServlet</servlet-name>
+-		<servlet-class>servlets.ReceiptServlet</servlet-class>
+-	</servlet>
+-	<servlet-mapping>
+-		<servlet-name>ReceiptServlet</servlet-name>
+-		<url-pattern>/buys</url-pattern>
+-	</servlet-mapping>
+-
+-	<welcome-file-list>
+-		<welcome-file>index.html</welcome-file>
+-	</welcome-file-list>
++<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:web="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd">
++  <servlet>
++    <servlet-name>AdminLoginServlet</servlet-name>
++    <servlet-class>servlets.AdminLoginServlet</servlet-class>
++  </servlet>
++  <servlet-mapping>
++    <servlet-name>AdminLoginServlet</servlet-name>
++    <url-pattern>/adminlog</url-pattern>
++  </servlet-mapping>
++  <servlet>
++    <servlet-name>UserLoginServlet</servlet-name>
++    <servlet-class>servlets.UserLoginServlet</servlet-class>
++  </servlet>
++  <servlet-mapping>
++    <servlet-name>UserLoginServlet</servlet-name>
++    <url-pattern>/userlog</url-pattern>
++  </servlet-mapping>
++  <servlet>
++    <servlet-name>UserRegisterServlet</servlet-name>
++    <servlet-class>servlets.UserRegisterServlet</servlet-class>
++  </servlet>
++  <servlet-mapping>
++    <servlet-name>UserRegisterServlet</servlet-name>
++    <url-pattern>/userreg</url-pattern>
++  </servlet-mapping>
++  <servlet>
++    <servlet-name>RemoveBookServlet</servlet-name>
++    <servlet-class>servlets.RemoveBookServlet</servlet-class>
++  </servlet>
++  <servlet-mapping>
++    <servlet-name>RemoveBookServlet</servlet-name>
++    <url-pattern>/remove</url-pattern>
++  </servlet-mapping>
++  <servlet>
++    <servlet-name>AddBookServlet</servlet-name>
++    <servlet-class>servlets.AddBookServlet</servlet-class>
++  </servlet>
++  <servlet-mapping>
++    <servlet-name>AddBookServlet</servlet-name>
++    <url-pattern>/addbook</url-pattern>
++  </servlet-mapping>
++  <servlet>
++    <servlet-name>ViewBookServlet</servlet-name>
++    <servlet-class>servlets.ViewBookServlet</servlet-class>
++  </servlet>
++  <servlet-mapping>
++    <servlet-name>ViewBookServlet</servlet-name>
++    <url-pattern>/viewbook</url-pattern>
++  </servlet-mapping>
++  <servlet>
++    <servlet-name>BuyBooksServlet</servlet-name>
++    <servlet-class>servlets.BuyBooksServlet</servlet-class>
++  </servlet>
++  <servlet-mapping>
++    <servlet-name>BuyBooksServlet</servlet-name>
++    <url-pattern>/buybook</url-pattern>
++  </servlet-mapping>
++  <servlet>
++    <servlet-name>ReceiptServlet</servlet-name>
++    <servlet-class>servlets.ReceiptServlet</servlet-class>
++  </servlet>
++  <servlet-mapping>
++    <servlet-name>ReceiptServlet</servlet-name>
++    <url-pattern>/buys</url-pattern>
++  </servlet-mapping>
++  <welcome-file-list>
++    <welcome-file>index.html</welcome-file>
++  </welcome-file-list>
+ </web-app>
+\ No newline at end of file
+
+commit 0edb59e4c6051ca2b68f2d4f1321bb11bc849979
+Author: Shashi Raj <shashiraj.972@gmail.com>
+Date:   Mon Jan 13 15:40:13 2020 +0530
+
+    #Bug for pull request #5 Fixed
+
+diff --git a/.classpath b/.classpath
+index de6f619..2d2034a 100644
+--- a/.classpath
++++ b/.classpath
+@@ -1,17 +1,17 @@
+-<?xml version="1.0" encoding="UTF-8"?>
+-<classpath>
+-	<classpathentry kind="src" path="OnlineBookStore"/>
+-	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.7">
+-		<attributes>
+-			<attribute name="module" value="true"/>
+-			<attribute name="maven.pomderived" value="true"/>
+-		</attributes>
+-	</classpathentry>
+-	<classpathentry kind="con" path="org.eclipse.m2e.MAVEN2_CLASSPATH_CONTAINER">
+-		<attributes>
+-			<attribute name="maven.pomderived" value="true"/>
+-			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
+-		</attributes>
+-	</classpathentry>
+-	<classpathentry kind="output" path="build/classes"/>
+-</classpath>
++<?xml version="1.0" encoding="UTF-8"?>
++<classpath>
++	<classpathentry kind="src" path="OnlineBookStore"/>
++	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.7">
++		<attributes>
++			<attribute name="module" value="true"/>
++			<attribute name="maven.pomderived" value="true"/>
++		</attributes>
++	</classpathentry>
++	<classpathentry kind="con" path="org.eclipse.m2e.MAVEN2_CLASSPATH_CONTAINER">
++		<attributes>
++			<attribute name="maven.pomderived" value="true"/>
++			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
++		</attributes>
++	</classpathentry>
++	<classpathentry kind="output" path="build/classes"/>
++</classpath>
+diff --git a/OnlineBookStore/constants/IDatabase.java b/OnlineBookStore/constants/IDatabase.java
+new file mode 100644
+index 0000000..b14fd4c
+--- /dev/null
++++ b/OnlineBookStore/constants/IDatabase.java
+@@ -0,0 +1,10 @@
++package constants;
++
++public class IDatabase {
++
++	public static final String DRIVER_NAME = "com.mysql.jdbc.Driver";
++	public static final String CONNECTION_STRING = "jdbc:mysql://localhost:3306/onlinebookstore";
++	public static final String USER_NAME = "root";
++	public static final String PASSWORD = "root";
++
++}
+diff --git a/setup/CreateDatastore.sql b/setup/CreateDatastore.sql
+index 0aa04e2..1b78ba7 100644
+--- a/setup/CreateDatastore.sql
++++ b/setup/CreateDatastore.sql
+@@ -4,7 +4,7 @@ CREATE DATABASE onlinebookstore;
+ 
+ CREATE TABLE books 
+   ( 
+-     barcode   VARCHAR(100) NOT NULL, 
++     barcode   VARCHAR(100) PRIMARY KEY, 
+      name      TEXT NOT NULL, 
+      author    VARCHAR(100) NOT NULL, 
+      price     INT, 
+@@ -13,7 +13,7 @@ CREATE TABLE books
+   
+   CREATE TABLE users
+   ( 
+-     username  VARCHAR(100) NOT NULL, 
++     username  VARCHAR(100) PRIMARY KEY, 
+      password  VARCHAR(100) NOT NULL, 
+      firstname VARCHAR(100) NOT NULL, 
+      lastname  VARCHAR(100) NOT NULL, 
+
+commit 4d332bcfac027ef8c1ccf50a5f4a34b4ac653196
+Author: Shashi Raj <34605595+shashirajraja@users.noreply.github.com>
+Date:   Thu Nov 14 00:53:57 2019 +0530
+
+    Database Link Added
+
+diff --git a/README.md b/README.md
+index 68ef697..6755da5 100644
+--- a/README.md
++++ b/README.md
+@@ -39,6 +39,11 @@
+ 3. Database used
+ - Sql/MySql
+ 
++### Database Creation:
++
++Go to the Folder named <a href="https://github.com/shashirajraja/onlinebookstore/blob/gh-pages/Dummy_Database.md">Dummy_Database.md</a> and copy and paste the mysql command for making the database tables and fill some dummy database.
++
++
+ Note:- This is a basic Project so we have not think about the security and we have only implemented this project using the generic servlet
+ 
+ #### "Suggestions and project Improvements are Invited!"
+
+commit 78d978fb88e5987d44137c69647ab0c9f972a3d8
+Author: Shashi Raj <34605595+shashirajraja@users.noreply.github.com>
+Date:   Fri Nov 8 11:59:59 2019 +0530
+
+    Update Dummy Database
+
+diff --git a/Dummy_Database.md b/Dummy_Database.md
+index 5e1dfdf..f3f9ceb 100644
+--- a/Dummy_Database.md
++++ b/Dummy_Database.md
+@@ -2,6 +2,7 @@
+ 
+ 
+ create database onlinebookstore;
++
+ use onlinebookstore;
+ 
+ create table books(barcode varchar(100) primary key, name varchar(100), author varchar(100), price int, quantity int);
+@@ -18,8 +19,6 @@ insert into books values('10104','Let us c++','Steve Macclen',90,111);
+ 
+ insert into books values('10105','Success Key','Shashi Raj',5000,15);
+ 
+-
+-
+ insert into users values('User','Password','First','User','My Home','42502216225','User@gmail.com',2);
+ 
+ insert into users values('Admin','Admin','Mr.','Admin','Haldia WB','9584552224521','admin@gmail.com',1);
+
+commit b09968e7dc17567757f00d5f9a848d30231d12c2
+Author: Shashi Raj <34605595+shashirajraja@users.noreply.github.com>
+Date:   Fri Nov 8 11:58:48 2019 +0530
+
+    Dummy Database Updated
+
+diff --git a/Dummy_Database b/Dummy_Database.md
+similarity index 99%
+rename from Dummy_Database
+rename to Dummy_Database.md
+index 49d29af..5e1dfdf 100644
+--- a/Dummy_Database
++++ b/Dummy_Database.md
+@@ -25,3 +25,5 @@ insert into users values('User','Password','First','User','My Home','42502216225
+ insert into users values('Admin','Admin','Mr.','Admin','Haldia WB','9584552224521','admin@gmail.com',1);
+ 
+ insert into users values('shashi','shashi','Shashi','Raj','Bihar','1236547089','shashi@gmail.com',2);
++
++commit;
+
+commit 718ab80b0ff677a7a469175e2400a07ec44f62bd
+Author: Shashi Raj <34605595+shashirajraja@users.noreply.github.com>
+Date:   Fri Nov 8 11:53:47 2019 +0530
+
+    Database Creation in MySql
+
+diff --git a/Dummy_Database b/Dummy_Database
+new file mode 100644
+index 0000000..49d29af
+--- /dev/null
++++ b/Dummy_Database
+@@ -0,0 +1,27 @@
++### Copy and Paste the following MYSQL commands to make a dummy database for this Project :
++
++
++create database onlinebookstore;
++use onlinebookstore;
++
++create table books(barcode varchar(100) primary key, name varchar(100), author varchar(100), price int, quantity int);
++
++create table users(username varchar(100) primary key,password varchar(100), firstname varchar(100),lastname varchar(100),address text, phone varchar(100),mailid varchar(100),usertype int);
++
++insert into books values('10101','Programming in C','James k Wick',500,5);
++
++insert into books values('10102','Learn Java','Scott Mayers',150,13);
++
++insert into books values('10103','Database Knowledge','Charles Pettzoid',124,360);
++
++insert into books values('10104','Let us c++','Steve Macclen',90,111);
++
++insert into books values('10105','Success Key','Shashi Raj',5000,15);
++
++
++
++insert into users values('User','Password','First','User','My Home','42502216225','User@gmail.com',2);
++
++insert into users values('Admin','Admin','Mr.','Admin','Haldia WB','9584552224521','admin@gmail.com',1);
++
++insert into users values('shashi','shashi','Shashi','Raj','Bihar','1236547089','shashi@gmail.com',2);
+
+commit b91b163ac356a423b7b308efca96fc793da4a582
+Author: Shashi Raj <34605595+shashirajraja@users.noreply.github.com>
+Date:   Thu Nov 7 19:44:36 2019 +0530
+
+    Readme Updated
+
+diff --git a/README.md b/README.md
+index 8a0c7b2..68ef697 100644
+--- a/README.md
++++ b/README.md
+@@ -1,15 +1,48 @@
+-# Online Book Store
+-<b style="color:red font-size:30px">Welcome to Online Book Store</b><br/><br/>
+-This is a sample made under small mini-project for the online book store.<br/>
+-Under this project we have provided the facilities to search for books available in the book store ,anyone can get the details of the book and its price. <br/>
+-The users are also provided a profile any anyone can register login and access the onlinebookstore from anywhere. The user will not be allowed to access the website if he logs out from the store<br/>
+-We have also provided the facilities to select the books anyone wants to buy and also select the quantity of books to be buy. <br/> After clicking  the final button the books is purchased and the books quantity decreases from the store<br/>
+-We provide a final receipt to the user as the books buyed detail and price paid for further uses.<br/>
+-To update the book details and quantity and to add more books, we have made our website admin friendly by which the bookstore owner can easily login into the account and updates the details of the books</br>
+-Both the user and admin are provide the profile facility where the details of the user or admin are stored and may be updated or changed by logging in<br/>
+-This much is only the start of this  project and i am working hard for this  project<br/>
+-Suggestions are invited!<br/>
++# OnlineBookStore Website Using Java 
++### Online Book Store
++<span style="color:blue">**This Website is built for following purpose:-**</span>
++- For Selling books online
++- Maintaining books selling history
++- Adding and managing books
++- User Friendly
++- For Implemention of Generic Servlets in Java
++- This is a Mini-project developed using Java, Jdbc, And Generic Servlets
++
++<span style="color:blue">**Admin Have Following Access for this online store site:-**</span>
++- Add New Books
++- View Books Available
++- Remove Books
++- Increase Books Amount
++
++<span style="color:blue">**Users Have Following Access for this online store site:-**</span>
++- Create New Account or Register
++- Login
++- View Available Books
++- Select Books to Buy
++- Select Books Quantity
++- Buy Books
++- Get Payment Receipt
++
++### Technologies used:-
++1. Front-End Development:
++- Html
++- Css
++- Javascript
++
++2. Back-End Development
++- Java
++- JDBC
++- Servlet
++- Oracle
++- Maven Support
++
++3. Database used
++- Sql/MySql
++
++Note:- This is a basic Project so we have not think about the security and we have only implemented this project using the generic servlet
++
++#### "Suggestions and project Improvements are Invited!"
+ 
+ <bold>Thanks a lot</bold><br/>
+-                                                                                                        Team Leader<br/>
++                                                                                                        Project Leader<br/>
+                                                                                                          <b>Shashi Raj</b>
+
+commit 05de44d435b198e643a2f84928c3ffa473e9fa91
+Author: Shashi Raj <shashiraj.972@gmail.com>
+Date:   Thu Nov 7 18:13:54 2019 +0530
+
+    #Bug Fixed
+    Books Quantity Decrement problem After Books Purchase is Fixed Now
+
+diff --git a/OnlineBookStore/servlets/ReceiptServlet.java b/OnlineBookStore/servlets/ReceiptServlet.java
+index e717a60..da14b95 100644
+--- a/OnlineBookStore/servlets/ReceiptServlet.java
++++ b/OnlineBookStore/servlets/ReceiptServlet.java
+@@ -23,7 +23,7 @@ public class ReceiptServlet extends GenericServlet {
+ 					"<div class=\"tab\">\r\n" + "		<table>\r\n" + "			<tr>\r\n" + "				\r\n"
+ 							+ "				<th>Book Code</th>\r\n" + "				<th>Book Name</th>\r\n"
+ 							+ "				<th>Book Author</th>\r\n" + "				<th>Book Price</th>\r\n"
+-							+ "				<th>Quantity</th><br/>\r\n" + "			</tr>");
++							+ "				<th>Quantity</th><br/>\r\n" + "				<th>Amount</th><br/>\r\n" + "			</tr>");
+ 			double total = 0.0;
+ 			while (rs.next()) {
+ 				int bPrice = rs.getInt(IBookConstants.COLUMN_PRICE);
+@@ -49,14 +49,17 @@ public class ReceiptServlet extends GenericServlet {
+ 						pw.println("<td>" + bName + "</td>");
+ 						pw.println("<td>" + bAuthor + "</td>");
+ 						pw.println("<td>" + bPrice + "</td>");
+-						pw.println("<td>" + quantity + "</td></tr>");
+-						total = total + bPrice * quantity;
++						pw.println("<td>" + quantity + "</td>");
++						int amount = bPrice * quantity;
++						total = total + amount;
++						pw.println("<td>" + amount + "</td></tr>");
+ 						bQty = bQty - quantity;
++						System.out.println(bQty);
+ 						PreparedStatement ps1 = con.prepareStatement("update " + IBookConstants.TABLE_BOOK + " set "
+ 								+ IBookConstants.COLUMN_QUANTITY + "=? where " + IBookConstants.COLUMN_BARCODE + "=?");
+ 						ps1.setInt(1, bQty);
+ 						ps1.setString(2, bCode);
+-						ps1.executeQuery();
++						ps1.executeUpdate();
+ 					}
+ 				} catch (Exception e) {
+ 				}
+diff --git a/WebContent/RemoveBooks.html b/WebContent/RemoveBooks.html
+index 4ab4b0d..51d0b89 100644
+--- a/WebContent/RemoveBooks.html
++++ b/WebContent/RemoveBooks.html
+@@ -94,7 +94,7 @@
+ 	
+ 	<div class="tab">
+ 	<form action="remove" method="post">
+-		Book Code: <input type="text" name="bar_code">
++		Book Code: <input type="text" name="barcode">
+ 			<input type="submit" value="Remove Book">
+ 	</form>
+ 	</div>
+
+commit 0c688cf10cba27a4b603fe51257ce80cc9cb8589
+Author: Shashi Raj <shashiraj.972@gmail.com>
+Date:   Thu Nov 7 17:32:00 2019 +0530
+
+    Book Removal Problem Solved
+
+diff --git a/OnlineBookStore/servlets/RemoveBookServlet.java b/OnlineBookStore/servlets/RemoveBookServlet.java
+index 7d8b6d9..f0ada86 100644
+--- a/OnlineBookStore/servlets/RemoveBookServlet.java
++++ b/OnlineBookStore/servlets/RemoveBookServlet.java
+@@ -11,7 +11,7 @@ public class RemoveBookServlet extends GenericServlet {
+ 	public void service(ServletRequest req, ServletResponse res) throws IOException, ServletException {
+ 		PrintWriter pw = res.getWriter();
+ 		res.setContentType("text/html");
+-		String bkid = req.getParameter("book_code");
++		String bkid = req.getParameter("barcode");
+ 		try {
+ 			Connection con = DBConnection.getCon();
+ 			PreparedStatement ps = con.prepareStatement(
+diff --git a/WebContent/RemoveBooks.html b/WebContent/RemoveBooks.html
+index 51d0b89..4ab4b0d 100644
+--- a/WebContent/RemoveBooks.html
++++ b/WebContent/RemoveBooks.html
+@@ -94,7 +94,7 @@
+ 	
+ 	<div class="tab">
+ 	<form action="remove" method="post">
+-		Book Code: <input type="text" name="barcode">
++		Book Code: <input type="text" name="bar_code">
+ 			<input type="submit" value="Remove Book">
+ 	</form>
+ 	</div>
+
+commit 710dd9ab31c32670b0657d30b7b7a222b2d07593
+Author: Shashi Raj <shashiraj.972@gmail.com>
+Date:   Thu Nov 7 17:04:00 2019 +0530
+
+    MySql Connector Added
+
+diff --git a/OnlineBookStore/servlets/AdminLoginServlet.java b/OnlineBookStore/servlets/AdminLoginServlet.java
+index 7b8ab6d..1a651e3 100644
+--- a/OnlineBookStore/servlets/AdminLoginServlet.java
++++ b/OnlineBookStore/servlets/AdminLoginServlet.java
+@@ -1,6 +1,8 @@
+ package servlets;
+ 
+ import javax.servlet.*;
++import javax.servlet.http.Cookie;
++import javax.servlet.http.HttpSession;
+ 
+ import constants.IOnlineBookStoreConstants;
+ import sql.IUserContants;
+@@ -24,6 +26,9 @@ public class AdminLoginServlet extends GenericServlet {
+ 			ResultSet rs = ps.executeQuery();
+ 			if (rs.next()) {
+ 				RequestDispatcher rd = req.getRequestDispatcher("Sample.html");
++				
++				Cookie ck = new Cookie("usertype","admin");
++				
+ 				rd.include(req, res);
+ 				pw.println("<div class=\"tab\">Admin login Successful</div>");
+ 				pw.println("<div class=\"tab\"><br/><a href=\"AddBook.html\">ADD BOOKS</a><br/></div>");
+diff --git a/OnlineBookStore/servlets/DBConnection.java b/OnlineBookStore/servlets/DBConnection.java
+index 1d30628..9311a0f 100644
+--- a/OnlineBookStore/servlets/DBConnection.java
++++ b/OnlineBookStore/servlets/DBConnection.java
+@@ -1,17 +1,38 @@
+ package servlets;
+ import java.sql.*;
++import java.util.ResourceBundle;
++
++import constants.IDatabase;
++
+ public class DBConnection {
+ 	private static Connection con;
++	
+ 	private DBConnection(){};
++	
+ 	static {
++		
+ 		try {
+-			Class.forName("org.postgresql.Driver");
+-			con = DriverManager.getConnection("jdbc:postgresql://127.0.0.1:5432/onlinebookstore","postgres","postgres");
+-		}//End of try
++			
++			Class.forName(IDatabase.DRIVER_NAME);
++			
++		}
+ 		catch(Exception e)
+ 		{
+ 			e.printStackTrace();
+ 		}
++		
++		try {
++			
++			con = DriverManager.getConnection(IDatabase.CONNECTION_STRING, IDatabase.USER_NAME, IDatabase.PASSWORD);
++		
++		}
++		catch (SQLException e) {
++
++			e.printStackTrace();
++		
++		}
++		
++		
+ 	}//End of static block
+ 	
+ 	public static Connection getCon()
+diff --git a/WebContent/index.html b/WebContent/index.html
+index a3d7340..4a9c014 100644
+--- a/WebContent/index.html
++++ b/WebContent/index.html
+@@ -94,7 +94,7 @@
+ 		<a href="index.html">Logout</a>
+ 	</div>
+ 	
+-	<table class="tab brown hd">
++	<table class="tab brown hd" bgcolor="black">
+ 		<tr>
+ 			<td>Login or Signup Below</td>
+ 		</tr>
+diff --git a/pom.xml b/pom.xml
+index e8409c4..3334161 100644
+--- a/pom.xml
++++ b/pom.xml
+@@ -25,11 +25,21 @@
+     </plugins>
+   </build>
+   <dependencies>
++  	
+   	<dependency>
+   		<groupId>org.postgresql</groupId>
+   		<artifactId>postgresql</artifactId>
+   		<version>42.2.8</version>
+   	</dependency>
++  	
++  	
++	<dependency>
++	    <groupId>mysql</groupId>
++	    <artifactId>mysql-connector-java</artifactId>
++	    <version>5.1.45</version>
++	</dependency>
++  	
++  
+   	<dependency>
+   		<groupId>javax.servlet</groupId>
+   		<artifactId>javax.servlet-api</artifactId>
+
+commit 1015838d6236681eee5655117636eda4d1156430
+Author: Shashi Raj <shashiraj.972@gmail.com>
+Date:   Thu Nov 7 15:06:38 2019 +0530
+
+    UserLogin Page Mistakes Updated
+
+diff --git a/WebContent/UserLogin.html b/WebContent/UserLogin.html
+index aa67c4a..c37afbc 100644
+--- a/WebContent/UserLogin.html
++++ b/WebContent/UserLogin.html
+@@ -104,7 +104,7 @@
+ 			<td>
+ 				<form action="userlog" method="post">
+ 					Username: <input type="text" name="username"><br/><br/>
+-					Password: <input type="password" name="password><br/><br/>
++					Password: <input type="password" name="password"><br/><br/>
+ 					<input type="submit" value=" LOGIN AS USER ">
+ 				</form>
+ 			</td>
+
+commit ac66a6b3dca0510e3e01eec02395966ef3e073fb
+Merge: 3797143 1b4b4c6
+Author: Shashi Raj <34605595+shashirajraja@users.noreply.github.com>
+Date:   Sun Oct 27 10:45:24 2019 +0530
+
+    Merge pull request #1 from ajay109458/gh-pages
+    
+    Addons Updated
+
+commit 1b4b4c68c4ede676834ce62eb2d1f014fe3489a7
+Author: ajay109458 <ajay.yadav109458@gmail.com>
+Date:   Thu Oct 24 17:10:23 2019 +0530
+
+    online book store
+
+diff --git a/.classpath b/.classpath
+new file mode 100644
+index 0000000..de6f619
+--- /dev/null
++++ b/.classpath
+@@ -0,0 +1,17 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<classpath>
++	<classpathentry kind="src" path="OnlineBookStore"/>
++	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.7">
++		<attributes>
++			<attribute name="module" value="true"/>
++			<attribute name="maven.pomderived" value="true"/>
++		</attributes>
++	</classpathentry>
++	<classpathentry kind="con" path="org.eclipse.m2e.MAVEN2_CLASSPATH_CONTAINER">
++		<attributes>
++			<attribute name="maven.pomderived" value="true"/>
++			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
++		</attributes>
++	</classpathentry>
++	<classpathentry kind="output" path="build/classes"/>
++</classpath>
+diff --git a/.gitignore b/.gitignore
+new file mode 100644
+index 0000000..99d2bb1
+--- /dev/null
++++ b/.gitignore
+@@ -0,0 +1,2 @@
++/target/
++/build/
+diff --git a/.project b/.project
+new file mode 100644
+index 0000000..6b6cf63
+--- /dev/null
++++ b/.project
+@@ -0,0 +1,37 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<projectDescription>
++	<name>onlinebookstore</name>
++	<comment></comment>
++	<projects>
++	</projects>
++	<buildSpec>
++		<buildCommand>
++			<name>org.eclipse.jdt.core.javabuilder</name>
++			<arguments>
++			</arguments>
++		</buildCommand>
++		<buildCommand>
++			<name>org.eclipse.wst.common.project.facet.core.builder</name>
++			<arguments>
++			</arguments>
++		</buildCommand>
++		<buildCommand>
++			<name>org.eclipse.wst.validation.validationbuilder</name>
++			<arguments>
++			</arguments>
++		</buildCommand>
++		<buildCommand>
++			<name>org.eclipse.m2e.core.maven2Builder</name>
++			<arguments>
++			</arguments>
++		</buildCommand>
++	</buildSpec>
++	<natures>
++		<nature>org.eclipse.m2e.core.maven2Nature</nature>
++		<nature>org.eclipse.jem.workbench.JavaEMFNature</nature>
++		<nature>org.eclipse.wst.common.modulecore.ModuleCoreNature</nature>
++		<nature>org.eclipse.wst.common.project.facet.core.nature</nature>
++		<nature>org.eclipse.jdt.core.javanature</nature>
++		<nature>org.eclipse.wst.jsdt.core.jsNature</nature>
++	</natures>
++</projectDescription>
+diff --git a/.settings/.jsdtscope b/.settings/.jsdtscope
+new file mode 100644
+index 0000000..92e666d
+--- /dev/null
++++ b/.settings/.jsdtscope
+@@ -0,0 +1,12 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<classpath>
++	<classpathentry excluding="**/bower_components/*|**/node_modules/*|**/*.min.js" kind="src" path="WebContent"/>
++	<classpathentry kind="con" path="org.eclipse.wst.jsdt.launching.JRE_CONTAINER"/>
++	<classpathentry kind="con" path="org.eclipse.wst.jsdt.launching.WebProject">
++		<attributes>
++			<attribute name="hide" value="true"/>
++		</attributes>
++	</classpathentry>
++	<classpathentry kind="con" path="org.eclipse.wst.jsdt.launching.baseBrowserLibrary"/>
++	<classpathentry kind="output" path=""/>
++</classpath>
+diff --git a/.settings/org.eclipse.jdt.core.prefs b/.settings/org.eclipse.jdt.core.prefs
+new file mode 100644
+index 0000000..d9c67f2
+--- /dev/null
++++ b/.settings/org.eclipse.jdt.core.prefs
+@@ -0,0 +1,11 @@
++eclipse.preferences.version=1
++org.eclipse.jdt.core.compiler.codegen.inlineJsrBytecode=enabled
++org.eclipse.jdt.core.compiler.codegen.targetPlatform=1.7
++org.eclipse.jdt.core.compiler.compliance=1.7
++org.eclipse.jdt.core.compiler.problem.assertIdentifier=error
++org.eclipse.jdt.core.compiler.problem.enablePreviewFeatures=disabled
++org.eclipse.jdt.core.compiler.problem.enumIdentifier=error
++org.eclipse.jdt.core.compiler.problem.forbiddenReference=warning
++org.eclipse.jdt.core.compiler.problem.reportPreviewFeatures=ignore
++org.eclipse.jdt.core.compiler.release=disabled
++org.eclipse.jdt.core.compiler.source=1.7
+diff --git a/.settings/org.eclipse.m2e.core.prefs b/.settings/org.eclipse.m2e.core.prefs
+new file mode 100644
+index 0000000..f897a7f
+--- /dev/null
++++ b/.settings/org.eclipse.m2e.core.prefs
+@@ -0,0 +1,4 @@
++activeProfiles=
++eclipse.preferences.version=1
++resolveWorkspaceProjects=true
++version=1
+diff --git a/.settings/org.eclipse.wst.common.component b/.settings/org.eclipse.wst.common.component
+new file mode 100644
+index 0000000..e1401cd
+--- /dev/null
++++ b/.settings/org.eclipse.wst.common.component
+@@ -0,0 +1,9 @@
++<?xml version="1.0" encoding="UTF-8"?><project-modules id="moduleCoreId" project-version="1.5.0">
++    <wb-module deploy-name="onlinebookstore-0.0.1-SNAPSHOT">
++        <wb-resource deploy-path="/" source-path="/target/m2e-wtp/web-resources"/>
++        <wb-resource deploy-path="/" source-path="/WebContent" tag="defaultRootSource"/>
++        <wb-resource deploy-path="/WEB-INF/classes" source-path="/OnlineBookStore"/>
++        <property name="context-root" value="onlinebookstore"/>
++        <property name="java-output-path" value="/onlinebookstore/build/classes"/>
++    </wb-module>
++</project-modules>
+diff --git a/.settings/org.eclipse.wst.common.project.facet.core.xml b/.settings/org.eclipse.wst.common.project.facet.core.xml
+new file mode 100644
+index 0000000..c94023a
+--- /dev/null
++++ b/.settings/org.eclipse.wst.common.project.facet.core.xml
+@@ -0,0 +1,7 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<faceted-project>
++  <fixed facet="wst.jsdt.web"/>
++  <installed facet="java" version="1.7"/>
++  <installed facet="jst.web" version="3.1"/>
++  <installed facet="wst.jsdt.web" version="1.0"/>
++</faceted-project>
+diff --git a/.settings/org.eclipse.wst.jsdt.ui.superType.container b/.settings/org.eclipse.wst.jsdt.ui.superType.container
+new file mode 100644
+index 0000000..3bd5d0a
+--- /dev/null
++++ b/.settings/org.eclipse.wst.jsdt.ui.superType.container
+@@ -0,0 +1 @@
++org.eclipse.wst.jsdt.launching.baseBrowserLibrary
+\ No newline at end of file
+diff --git a/.settings/org.eclipse.wst.jsdt.ui.superType.name b/.settings/org.eclipse.wst.jsdt.ui.superType.name
+new file mode 100644
+index 0000000..05bd71b
+--- /dev/null
++++ b/.settings/org.eclipse.wst.jsdt.ui.superType.name
+@@ -0,0 +1 @@
++Window
+\ No newline at end of file
+diff --git a/.settings/org.eclipse.wst.validation.prefs b/.settings/org.eclipse.wst.validation.prefs
+new file mode 100644
+index 0000000..04cad8c
+--- /dev/null
++++ b/.settings/org.eclipse.wst.validation.prefs
+@@ -0,0 +1,2 @@
++disabled=06target
++eclipse.preferences.version=1
+diff --git a/OnlineBookStore/WebContent/WEB-INF/lib/ojdbc5.jar b/OnlineBookStore/WebContent/WEB-INF/lib/ojdbc5.jar
+deleted file mode 100644
+index 1b899e6..0000000
+Binary files a/OnlineBookStore/WebContent/WEB-INF/lib/ojdbc5.jar and /dev/null differ
+diff --git a/OnlineBookStore/WebContent/WEB-INF/web.xml b/OnlineBookStore/WebContent/WEB-INF/web.xml
+deleted file mode 100644
+index 98e7240..0000000
+--- a/OnlineBookStore/WebContent/WEB-INF/web.xml
++++ /dev/null
+@@ -1,78 +0,0 @@
+-<?xml version="1.0" encoding="UTF-8"?>
+-<web-app>
+-<servlet>
+-	<servlet-name>AdminLoginServlet</servlet-name>
+-	<servlet-class>test.AdminLoginServlet</servlet-class>
+-</servlet>
+-<servlet-mapping>
+-<servlet-name>AdminLoginServlet</servlet-name>
+-<url-pattern>/adminlog</url-pattern>
+-</servlet-mapping>
+-
+-<servlet>
+-<servlet-name>UserLoginServlet</servlet-name>
+-<servlet-class>test.UserLoginServlet</servlet-class>
+-</servlet>
+-<servlet-mapping>
+-<servlet-name>UserLoginServlet</servlet-name>
+-<url-pattern>/userlog</url-pattern>
+-</servlet-mapping>
+-
+-<servlet>
+-<servlet-name>UserRegisterServlet</servlet-name>
+-<servlet-class>test.UserRegisterServlet</servlet-class>
+-</servlet>
+-<servlet-mapping>
+-<servlet-name>UserRegisterServlet</servlet-name>
+-<url-pattern>/userreg</url-pattern>
+-</servlet-mapping>
+-
+-<servlet>
+-<servlet-name>RemoveBookServlet</servlet-name>
+-<servlet-class>test.RemoveBookServlet</servlet-class>
+-</servlet>
+-<servlet-mapping>
+-<servlet-name>RemoveBookServlet</servlet-name>
+-<url-pattern>/remove</url-pattern>
+-</servlet-mapping>
+-
+-<servlet>
+-<servlet-name>AddBookServlet</servlet-name>
+-<servlet-class>test.AddBookServlet</servlet-class>
+-</servlet>
+-<servlet-mapping>
+-<servlet-name>AddBookServlet</servlet-name>
+-<url-pattern>/addbook</url-pattern>
+-</servlet-mapping>
+-
+-<servlet>
+-<servlet-name>ViewBookServlet</servlet-name>
+-<servlet-class>test.ViewBookServlet</servlet-class>
+-</servlet>
+-<servlet-mapping>
+-<servlet-name>ViewBookServlet</servlet-name>
+-<url-pattern>/viewbook</url-pattern>
+-</servlet-mapping>
+-
+-<servlet>
+-<servlet-name>BuyBooksServlet</servlet-name>
+-<servlet-class>test.BuyBooksServlet</servlet-class>
+-</servlet>
+-<servlet-mapping>
+-<servlet-name>BuyBooksServlet</servlet-name>
+-<url-pattern>/buybook</url-pattern>
+-</servlet-mapping>
+-
+-<servlet>
+-<servlet-name>ReceiptServlet</servlet-name>
+-<servlet-class>test.ReceiptServlet</servlet-class>
+-</servlet>
+-<servlet-mapping>
+-<servlet-name>ReceiptServlet</servlet-name>
+-<url-pattern>/buys</url-pattern>
+-</servlet-mapping>
+-
+-<welcome-file-list>
+-	<welcome-file>index.html</welcome-file>
+-</welcome-file-list>
+-</web-app>
+\ No newline at end of file
+diff --git a/OnlineBookStore/build/classes/test/AddBookServlet.class b/OnlineBookStore/build/classes/test/AddBookServlet.class
+deleted file mode 100644
+index def5889..0000000
+Binary files a/OnlineBookStore/build/classes/test/AddBookServlet.class and /dev/null differ
+diff --git a/OnlineBookStore/build/classes/test/AdminLoginServlet.class b/OnlineBookStore/build/classes/test/AdminLoginServlet.class
+deleted file mode 100644
+index 490e1b4..0000000
+Binary files a/OnlineBookStore/build/classes/test/AdminLoginServlet.class and /dev/null differ
+diff --git a/OnlineBookStore/build/classes/test/BuyBooksServlet.class b/OnlineBookStore/build/classes/test/BuyBooksServlet.class
+deleted file mode 100644
+index 8170356..0000000
+Binary files a/OnlineBookStore/build/classes/test/BuyBooksServlet.class and /dev/null differ
+diff --git a/OnlineBookStore/build/classes/test/DBConnection.class b/OnlineBookStore/build/classes/test/DBConnection.class
+deleted file mode 100644
+index 01a6006..0000000
+Binary files a/OnlineBookStore/build/classes/test/DBConnection.class and /dev/null differ
+diff --git a/OnlineBookStore/build/classes/test/ReceiptServlet.class b/OnlineBookStore/build/classes/test/ReceiptServlet.class
+deleted file mode 100644
+index 213b721..0000000
+Binary files a/OnlineBookStore/build/classes/test/ReceiptServlet.class and /dev/null differ
+diff --git a/OnlineBookStore/build/classes/test/RemoveBookServlet.class b/OnlineBookStore/build/classes/test/RemoveBookServlet.class
+deleted file mode 100644
+index 8f91ceb..0000000
+Binary files a/OnlineBookStore/build/classes/test/RemoveBookServlet.class and /dev/null differ
+diff --git a/OnlineBookStore/build/classes/test/UserLoginServlet.class b/OnlineBookStore/build/classes/test/UserLoginServlet.class
+deleted file mode 100644
+index f5f1485..0000000
+Binary files a/OnlineBookStore/build/classes/test/UserLoginServlet.class and /dev/null differ
+diff --git a/OnlineBookStore/build/classes/test/UserRegisterServlet.class b/OnlineBookStore/build/classes/test/UserRegisterServlet.class
+deleted file mode 100644
+index 623dc0f..0000000
+Binary files a/OnlineBookStore/build/classes/test/UserRegisterServlet.class and /dev/null differ
+diff --git a/OnlineBookStore/build/classes/test/ViewBookServlet.class b/OnlineBookStore/build/classes/test/ViewBookServlet.class
+deleted file mode 100644
+index a96fde2..0000000
+Binary files a/OnlineBookStore/build/classes/test/ViewBookServlet.class and /dev/null differ
+diff --git a/OnlineBookStore/constants/IOnlineBookStoreConstants.java b/OnlineBookStore/constants/IOnlineBookStoreConstants.java
+new file mode 100644
+index 0000000..ba00835
+--- /dev/null
++++ b/OnlineBookStore/constants/IOnlineBookStoreConstants.java
+@@ -0,0 +1,7 @@
++package constants;
++
++public interface IOnlineBookStoreConstants {
++	public static String CONTENT_TYPE_TEXT_HTML = "text/html";
++	
++	
++}
+diff --git a/OnlineBookStore/servlets/AddBookServlet.java b/OnlineBookStore/servlets/AddBookServlet.java
+new file mode 100644
+index 0000000..2b11e09
+--- /dev/null
++++ b/OnlineBookStore/servlets/AddBookServlet.java
+@@ -0,0 +1,56 @@
++package servlets;
++import java.io.IOException;
++import java.io.PrintWriter;
++import java.sql.Connection;
++import java.sql.PreparedStatement;
++
++import javax.servlet.GenericServlet;
++import javax.servlet.RequestDispatcher;
++import javax.servlet.ServletException;
++import javax.servlet.ServletRequest;
++import javax.servlet.ServletResponse;
++
++import constants.IOnlineBookStoreConstants;
++import sql.IBookConstants;
++
++public class AddBookServlet extends GenericServlet{
++	public void service(ServletRequest req,ServletResponse res) throws IOException,ServletException
++	{
++		PrintWriter pw = res.getWriter();
++		
++		res.setContentType(IOnlineBookStoreConstants.CONTENT_TYPE_TEXT_HTML);
++		
++		String bCode = req.getParameter(IBookConstants.COLUMN_BARCODE);
++		String bName = req.getParameter(IBookConstants.COLUMN_NAME);
++		String bAuthor = req.getParameter(IBookConstants.COLUMN_AUTHOR);
++		int bPrice =Integer.parseInt(req.getParameter(IBookConstants.COLUMN_PRICE));
++		int bQty = Integer.parseInt(req.getParameter(IBookConstants.COLUMN_QUANTITY));
++		
++		try {
++			Connection con = DBConnection.getCon();
++			PreparedStatement ps = con.prepareStatement("insert into " + IBookConstants.TABLE_BOOK + "  values(?,?,?,?,?)");
++			ps.setString(1, bCode);
++			ps.setString(2, bName);
++			ps.setString(3, bAuthor);
++			ps.setInt(4, bPrice);
++			ps.setInt(5, bQty);
++			int k = ps.executeUpdate();
++			if(k==1)
++			{
++				RequestDispatcher rd = req.getRequestDispatcher("AddBook.html");
++				rd.include(req, res);
++				pw.println("<div class=\"tab\">Book Detail Updated Successfully!<br/>Add More Books</div>");
++			}
++			else
++			{
++				RequestDispatcher rd = req.getRequestDispatcher("AddBook.html");
++				pw.println("<div class=\"tab\">Failed to Add Books! Fill up CareFully</div>");
++				rd.include(req, res);
++			}
++		}
++		catch(Exception e)
++		{
++			e.printStackTrace();
++		}
++	}
++}
+diff --git a/OnlineBookStore/src/test/AdminLoginServlet.java b/OnlineBookStore/servlets/AdminLoginServlet.java
+similarity index 54%
+rename from OnlineBookStore/src/test/AdminLoginServlet.java
+rename to OnlineBookStore/servlets/AdminLoginServlet.java
+index 85940bd..7b8ab6d 100644
+--- a/OnlineBookStore/src/test/AdminLoginServlet.java
++++ b/OnlineBookStore/servlets/AdminLoginServlet.java
+@@ -1,41 +1,42 @@
+-package test;
+-import test.DBConnection;
++package servlets;
++
+ import javax.servlet.*;
++
++import constants.IOnlineBookStoreConstants;
++import sql.IUserContants;
++
+ import java.io.*;
+ import java.sql.*;
+-public class AdminLoginServlet extends GenericServlet{
+-	public void service(ServletRequest req, ServletResponse res) throws IOException,ServletException
+-	{
++
++public class AdminLoginServlet extends GenericServlet {
++	public void service(ServletRequest req, ServletResponse res) throws IOException, ServletException {
+ 		PrintWriter pw = res.getWriter();
+-		res.setContentType("text/html");
+-		String uName = req.getParameter("uname");
+-		String pWord = req.getParameter("pword");
++		res.setContentType(IOnlineBookStoreConstants.CONTENT_TYPE_TEXT_HTML);
++		String uName = req.getParameter(IUserContants.COLUMN_USERNAME);
++		String pWord = req.getParameter(IUserContants.COLUMN_PASSWORD);
+ 		try {
+ 			Connection con = DBConnection.getCon();
+-			PreparedStatement ps = con.prepareStatement("SELECT * FROM ADMIN6 WHERE UNAME=? AND PWORD=?");
++			PreparedStatement ps = con.prepareStatement("SELECT * FROM " + IUserContants.TABLE_USERS + " WHERE  "
++					+ IUserContants.COLUMN_USERNAME + "=? AND " + IUserContants.COLUMN_PASSWORD + "=? AND "
++					+ IUserContants.COLUMN_USERTYPE + "=1");
+ 			ps.setString(1, uName);
+ 			ps.setString(2, pWord);
+ 			ResultSet rs = ps.executeQuery();
+-			if(rs.next())
+-			{
++			if (rs.next()) {
+ 				RequestDispatcher rd = req.getRequestDispatcher("Sample.html");
+ 				rd.include(req, res);
+ 				pw.println("<div class=\"tab\">Admin login Successful</div>");
+ 				pw.println("<div class=\"tab\"><br/><a href=\"AddBook.html\">ADD BOOKS</a><br/></div>");
+ 				pw.println("<div class=\"tab\"><br/><a href=\"RemoveBooks.html\">REMOVE BOOKS</a><br/></div>");
+ 				pw.println("<div class=\"tab\"><br/><a href=\"viewbook\">VIEW BOOKS</a></div>");
+-			}
+-			else
+-			{
+-				
++			} else {
++
+ 				RequestDispatcher rd = req.getRequestDispatcher("AdminLogin.html");
+-				rd.include(req,res);
++				rd.include(req, res);
+ 				pw.println("<div class=\"tab\">Incorrect UserName or PassWord</div>");
+ 			}
+-			
+-		}
+-		catch(Exception e)
+-		{
++
++		} catch (Exception e) {
+ 			e.printStackTrace();
+ 		}
+ 	}
+diff --git a/OnlineBookStore/src/test/BuyBooksServlet.java b/OnlineBookStore/servlets/BuyBooksServlet.java
+similarity index 85%
+rename from OnlineBookStore/src/test/BuyBooksServlet.java
+rename to OnlineBookStore/servlets/BuyBooksServlet.java
+index 09156ca..6bed24e 100644
+--- a/OnlineBookStore/src/test/BuyBooksServlet.java
++++ b/OnlineBookStore/servlets/BuyBooksServlet.java
+@@ -1,17 +1,20 @@
+-package test;
+-import test.DBConnection;
++package servlets;
+ import java.io.*;
+ import java.sql.*;
+ import javax.servlet.*;
++
++import constants.IOnlineBookStoreConstants;
++import sql.IBookConstants;
++import sql.IUserContants;
+ public class BuyBooksServlet extends GenericServlet{
+ 	public void service(ServletRequest req,ServletResponse res) throws IOException,ServletException
+ 	{
+ 		PrintWriter pw = res.getWriter();
+-		res.setContentType("text/html");
++		res.setContentType(IOnlineBookStoreConstants.CONTENT_TYPE_TEXT_HTML);
+ 		try {
+ 			Connection con = DBConnection.getCon();
+ 			//ArrayList<Books> al = new ArrayList<Books>();
+-			PreparedStatement ps = con.prepareStatement("Select * from book6");
++			PreparedStatement ps = con.prepareStatement("Select * from " + IBookConstants.TABLE_BOOK);
+ 			ResultSet rs = ps.executeQuery();
+ 			RequestDispatcher rd = req.getRequestDispatcher("ViewBooks.html");
+ 			rd.include(req, res);
+diff --git a/OnlineBookStore/src/test/DBConnection.java b/OnlineBookStore/servlets/DBConnection.java
+similarity index 58%
+rename from OnlineBookStore/src/test/DBConnection.java
+rename to OnlineBookStore/servlets/DBConnection.java
+index d00bc7d..1d30628 100644
+--- a/OnlineBookStore/src/test/DBConnection.java
++++ b/OnlineBookStore/servlets/DBConnection.java
+@@ -1,12 +1,12 @@
+-package test;
++package servlets;
+ import java.sql.*;
+ public class DBConnection {
+ 	private static Connection con;
+ 	private DBConnection(){};
+ 	static {
+ 		try {
+-			Class.forName("oracle.jdbc.driver.OracleDriver");
+-			con = DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:xe","SHASHI","MANAGER");
++			Class.forName("org.postgresql.Driver");
++			con = DriverManager.getConnection("jdbc:postgresql://127.0.0.1:5432/onlinebookstore","postgres","postgres");
+ 		}//End of try
+ 		catch(Exception e)
+ 		{
+diff --git a/OnlineBookStore/servlets/ReceiptServlet.java b/OnlineBookStore/servlets/ReceiptServlet.java
+new file mode 100644
+index 0000000..e717a60
+--- /dev/null
++++ b/OnlineBookStore/servlets/ReceiptServlet.java
+@@ -0,0 +1,71 @@
++package servlets;
++
++import java.sql.*;
++import java.io.*;
++import javax.servlet.*;
++
++import constants.IOnlineBookStoreConstants;
++import sql.IBookConstants;
++
++public class ReceiptServlet extends GenericServlet {
++	public void service(ServletRequest req, ServletResponse res) throws IOException, ServletException {
++		PrintWriter pw = res.getWriter();
++		res.setContentType(IOnlineBookStoreConstants.CONTENT_TYPE_TEXT_HTML);
++		try {
++			Connection con = DBConnection.getCon();
++			PreparedStatement ps = con.prepareStatement("select * from " + IBookConstants.TABLE_BOOK);
++			ResultSet rs = ps.executeQuery();
++			int i = 0;
++			RequestDispatcher rd = req.getRequestDispatcher("ViewBooks.html");
++			rd.include(req, res);
++			pw.println("<div class=\"tab\">You Successfully Paid for Following Books</div>");
++			pw.println(
++					"<div class=\"tab\">\r\n" + "		<table>\r\n" + "			<tr>\r\n" + "				\r\n"
++							+ "				<th>Book Code</th>\r\n" + "				<th>Book Name</th>\r\n"
++							+ "				<th>Book Author</th>\r\n" + "				<th>Book Price</th>\r\n"
++							+ "				<th>Quantity</th><br/>\r\n" + "			</tr>");
++			double total = 0.0;
++			while (rs.next()) {
++				int bPrice = rs.getInt(IBookConstants.COLUMN_PRICE);
++				String bCode = rs.getString(IBookConstants.COLUMN_BARCODE);
++				String bName = rs.getString(IBookConstants.COLUMN_NAME);
++				String bAuthor = rs.getString(IBookConstants.COLUMN_AUTHOR);
++				int bQty = rs.getInt(IBookConstants.COLUMN_QUANTITY);
++				i = i + 1;
++
++				String qt = "qty" + Integer.toString(i);
++				int quantity = Integer.parseInt(req.getParameter(qt));
++				try {
++					String check1 = "checked" + Integer.toString(i);
++					String getChecked = req.getParameter(check1);
++					if (bQty < quantity) {
++						pw.println(
++								"</table><div class=\"tab\">Please Select the Qty less than Available Books Quantity</div>");
++						break;
++					}
++
++					if (getChecked.equals("pay")) {
++						pw.println("<tr><td>" + bCode + "</td>");
++						pw.println("<td>" + bName + "</td>");
++						pw.println("<td>" + bAuthor + "</td>");
++						pw.println("<td>" + bPrice + "</td>");
++						pw.println("<td>" + quantity + "</td></tr>");
++						total = total + bPrice * quantity;
++						bQty = bQty - quantity;
++						PreparedStatement ps1 = con.prepareStatement("update " + IBookConstants.TABLE_BOOK + " set "
++								+ IBookConstants.COLUMN_QUANTITY + "=? where " + IBookConstants.COLUMN_BARCODE + "=?");
++						ps1.setInt(1, bQty);
++						ps1.setString(2, bCode);
++						ps1.executeQuery();
++					}
++				} catch (Exception e) {
++				}
++			}
++			pw.println("</table><br/><div class='tab'>Total Paid Amount: " + total + "</div>");
++			String fPay = req.getParameter("f_pay");
++		} catch (Exception e) {
++			e.printStackTrace();
++		}
++	}
++
++}
+diff --git a/OnlineBookStore/src/test/RemoveBookServlet.java b/OnlineBookStore/servlets/RemoveBookServlet.java
+similarity index 61%
+rename from OnlineBookStore/src/test/RemoveBookServlet.java
+rename to OnlineBookStore/servlets/RemoveBookServlet.java
+index fac32f7..7d8b6d9 100644
+--- a/OnlineBookStore/src/test/RemoveBookServlet.java
++++ b/OnlineBookStore/servlets/RemoveBookServlet.java
+@@ -1,37 +1,36 @@
+-package test;
+-import test.DBConnection;
++package servlets;
++
+ import java.sql.*;
+ import javax.servlet.*;
++
++import sql.IBookConstants;
++
+ import java.io.*;
+-public class RemoveBookServlet extends GenericServlet{
+-	public void service(ServletRequest req,ServletResponse res) throws IOException,ServletException
+-	{
++
++public class RemoveBookServlet extends GenericServlet {
++	public void service(ServletRequest req, ServletResponse res) throws IOException, ServletException {
+ 		PrintWriter pw = res.getWriter();
+ 		res.setContentType("text/html");
+-		String bkid= req.getParameter("book_code");
++		String bkid = req.getParameter("book_code");
+ 		try {
+ 			Connection con = DBConnection.getCon();
+-			PreparedStatement ps = con.prepareStatement("delete from book6 where bcode=?");
++			PreparedStatement ps = con.prepareStatement(
++					"delete from " + IBookConstants.TABLE_BOOK + "  where " + IBookConstants.COLUMN_BARCODE + "=?");
+ 			ps.setString(1, bkid);
+ 			int k = ps.executeUpdate();
+-			if(k==1)
+-			{
++			if (k == 1) {
+ 				RequestDispatcher rd = req.getRequestDispatcher("Sample.html");
+ 				rd.include(req, res);
+ 				pw.println("<div class=\"tab\">Book Removed Successfully</div>");
+ 				pw.println("<div class=\"tab\"><a href=\"RemoveBooks.html\">Remove more Books</a></div>");
+-				
+-			}
+-			else
+-			{
++
++			} else {
+ 				RequestDispatcher rd = req.getRequestDispatcher("Sample.html");
+ 				rd.include(req, res);
+ 				pw.println("<div class=\"tab\">Book Not Available In The Store</div>");
+ 				pw.println("<div class=\"tab\"><a href=\"RemoveBooks.html\">Remove more Books</a></div>");
+ 			}
+-		}
+-		catch(Exception e)
+-		{
++		} catch (Exception e) {
+ 			e.printStackTrace();
+ 		}
+ 	}
+diff --git a/OnlineBookStore/servlets/UserLoginServlet.java b/OnlineBookStore/servlets/UserLoginServlet.java
+new file mode 100644
+index 0000000..5e597d6
+--- /dev/null
++++ b/OnlineBookStore/servlets/UserLoginServlet.java
+@@ -0,0 +1,42 @@
++package servlets;
++
++import javax.servlet.*;
++
++import constants.IOnlineBookStoreConstants;
++import sql.IUserContants;
++
++import java.io.*;
++import java.sql.*;
++
++public class UserLoginServlet extends GenericServlet {
++	public void service(ServletRequest req, ServletResponse res) throws IOException, ServletException {
++		PrintWriter pw = res.getWriter();
++		res.setContentType(IOnlineBookStoreConstants.CONTENT_TYPE_TEXT_HTML);
++		String uName = req.getParameter(IUserContants.COLUMN_USERNAME);
++		String pWord = req.getParameter(IUserContants.COLUMN_PASSWORD);
++		try {
++			Connection con = DBConnection.getCon();
++			PreparedStatement ps = con.prepareStatement("SELECT * FROM " + IUserContants.TABLE_USERS + " WHERE "
++					+ IUserContants.COLUMN_USERNAME + "=? AND " + IUserContants.COLUMN_PASSWORD + "=? AND " + IUserContants.COLUMN_USERTYPE + "=2");
++			ps.setString(1, uName);
++			ps.setString(2, pWord);
++			ResultSet rs = ps.executeQuery();
++			if (rs.next()) {
++				RequestDispatcher rd = req.getRequestDispatcher("Sample.html");
++				rd.include(req, res);
++				pw.println("<div class=\"home hd brown\">Welcome ! " + uName + "</div><br/>");
++				pw.println("<div class=\"tab hd brown\">User Login Successful !</div><br/>");
++				pw.println("<div class=\"tab\"><a href=\"viewbook\">VIEW BOOKS</a></div>");
++				pw.println("<div class='tab'><a href=\"buybook\">BUY BOOKS</a></div>");
++			} else {
++
++				RequestDispatcher rd = req.getRequestDispatcher("UserLogin.html");
++				rd.include(req, res);
++				pw.println("<div class=\"tab\">Incorrect UserName or PassWord</div>");
++			}
++
++		} catch (Exception e) {
++			e.printStackTrace();
++		}
++	}
++}
+\ No newline at end of file
+diff --git a/OnlineBookStore/servlets/UserRegisterServlet.java b/OnlineBookStore/servlets/UserRegisterServlet.java
+new file mode 100644
+index 0000000..1e0e86f
+--- /dev/null
++++ b/OnlineBookStore/servlets/UserRegisterServlet.java
+@@ -0,0 +1,49 @@
++package servlets;
++
++import java.sql.*;
++import javax.servlet.*;
++
++import constants.IOnlineBookStoreConstants;
++import sql.IUserContants;
++
++import java.io.*;
++
++public class UserRegisterServlet extends GenericServlet {
++	public void service(ServletRequest req, ServletResponse res) throws IOException, ServletException {
++		PrintWriter pw = res.getWriter();
++		res.setContentType(IOnlineBookStoreConstants.CONTENT_TYPE_TEXT_HTML);
++
++		String uName = req.getParameter(IUserContants.COLUMN_USERNAME);
++		String pWord = req.getParameter(IUserContants.COLUMN_PASSWORD);
++		String fName = req.getParameter(IUserContants.COLUMN_FIRSTNAME);
++		String lName = req.getParameter(IUserContants.COLUMN_LASTNAME);
++		String addr = req.getParameter(IUserContants.COLUMN_ADDRESS);
++		String phNo = req.getParameter(IUserContants.COLUMN_PHONE);
++		String mailId = req.getParameter(IUserContants.COLUMN_MAILID);
++		try {
++			Connection con = DBConnection.getCon();
++			PreparedStatement ps = con
++					.prepareStatement("insert into " + IUserContants.TABLE_USERS + "  values(?,?,?,?,?,?,?)");
++			ps.setString(1, uName);
++			ps.setString(2, pWord);
++			ps.setString(3, fName);
++			ps.setString(4, lName);
++			ps.setString(5, addr);
++			ps.setString(6, phNo);
++			ps.setString(7, mailId);
++			//ps.setInt(8, 2);
++			int k = ps.executeUpdate();
++			if (k == 1) {
++				RequestDispatcher rd = req.getRequestDispatcher("Sample.html");
++				rd.include(req, res);
++				pw.println("<h3 class='tab'>User Registered Successfully</h3>");
++			} else {
++				RequestDispatcher rd = req.getRequestDispatcher("userreg");
++				rd.include(req, res);
++				pw.println("Sorry for interruption! Register again");
++			}
++		} catch (Exception e) {
++			e.printStackTrace();
++		}
++	}
++}
+\ No newline at end of file
+diff --git a/OnlineBookStore/src/test/ViewBookServlet.java b/OnlineBookStore/servlets/ViewBookServlet.java
+similarity index 74%
+rename from OnlineBookStore/src/test/ViewBookServlet.java
+rename to OnlineBookStore/servlets/ViewBookServlet.java
+index 248c1c7..7952eb3 100644
+--- a/OnlineBookStore/src/test/ViewBookServlet.java
++++ b/OnlineBookStore/servlets/ViewBookServlet.java
+@@ -1,21 +1,11 @@
+-package test;
+-import test.DBConnection;
++package servlets;
+ import java.io.*;
+ import java.sql.*;
+ import javax.servlet.*;
+-/*class Books
+-{
+-	public String bName,bCode,bAuthor;
+-	public int bPrice,bQty;
+-	public Books(String bCode,String bName,String bAuthor,int bPrice,int bQty)
+-	{
+-		this.bAuthor=bAuthor;
+-		this.bCode = bCode;
+-		this.bName = bName;
+-		this.bPrice = bPrice;
+-		this.bQty = bQty;
+-	}
+-}*/
++
++import constants.IOnlineBookStoreConstants;
++import sql.IBookConstants;
++
+ public class ViewBookServlet extends GenericServlet{
+ 	public void service(ServletRequest req,ServletResponse res) throws IOException,ServletException
+ 	{
+@@ -23,8 +13,7 @@ public class ViewBookServlet extends GenericServlet{
+ 		res.setContentType("text/html");
+ 		try {
+ 			Connection con = DBConnection.getCon();
+-			//ArrayList<Books> al = new ArrayList<Books>();
+-			PreparedStatement ps = con.prepareStatement("Select * from book6");
++			PreparedStatement ps = con.prepareStatement("Select * from " + IBookConstants.TABLE_BOOK);
+ 			ResultSet rs = ps.executeQuery();
+ 			RequestDispatcher rd = req.getRequestDispatcher("ViewBooks.html");
+ 			rd.include(req, res);
+diff --git a/OnlineBookStore/sql/IBookConstants.java b/OnlineBookStore/sql/IBookConstants.java
+new file mode 100644
+index 0000000..137383b
+--- /dev/null
++++ b/OnlineBookStore/sql/IBookConstants.java
+@@ -0,0 +1,12 @@
++package sql;
++
++public interface IBookConstants {
++	
++    public static String TABLE_BOOK = "books";
++	
++	public static String COLUMN_NAME = "name";
++	public static String COLUMN_BARCODE = "barcode";
++	public static String COLUMN_AUTHOR = "author";
++	public static String COLUMN_PRICE = "price";
++	public static String COLUMN_QUANTITY = "quantity";
++}
+diff --git a/OnlineBookStore/sql/IUserContants.java b/OnlineBookStore/sql/IUserContants.java
+new file mode 100644
+index 0000000..fc4a911
+--- /dev/null
++++ b/OnlineBookStore/sql/IUserContants.java
+@@ -0,0 +1,15 @@
++package sql;
++
++public interface IUserContants {
++
++	public static String TABLE_USERS = "users";
++	
++	public static String COLUMN_USERNAME = "username";
++	public static String COLUMN_PASSWORD = "password";
++	public static String COLUMN_FIRSTNAME = "firstname";
++	public static String COLUMN_LASTNAME = "lastname";
++	public static String COLUMN_ADDRESS = "address";
++	public static String COLUMN_PHONE = "phone";
++	public static String COLUMN_MAILID = "mailid";
++	public static String COLUMN_USERTYPE = "usertype";
++}
+diff --git a/OnlineBookStore/src/test/AddBookServlet.java b/OnlineBookStore/src/test/AddBookServlet.java
+deleted file mode 100644
+index a5ad4da..0000000
+--- a/OnlineBookStore/src/test/AddBookServlet.java
++++ /dev/null
+@@ -1,46 +0,0 @@
+-package test;
+-import test.DBConnection;
+-import java.sql.*;
+-import javax.servlet.*;
+-import java.io.*;
+-public class AddBookServlet extends GenericServlet{
+-	public void service(ServletRequest req,ServletResponse res) throws IOException,ServletException
+-	{
+-		PrintWriter pw = res.getWriter();
+-		res.setContentType("text/html");
+-		String bCode = req.getParameter("bcode");
+-		String bName = req.getParameter("bname");
+-		String bAuthor = req.getParameter("bauthor");
+-		int bPrice =Integer.parseInt(req.getParameter("bprice"));
+-		int bQty = Integer.parseInt(req.getParameter("bqty"));
+-		try {
+-			Connection con = DBConnection.getCon();
+-			PreparedStatement ps = con.prepareStatement("insert into book6 values(?,?,?,?,?)");
+-			ps.setString(1, bCode);
+-			ps.setString(2, bName);
+-			ps.setString(3, bAuthor);
+-			ps.setInt(4, bPrice);
+-			ps.setInt(5, bQty);
+-			int k = ps.executeUpdate();
+-			if(k==1)
+-			{
+-				RequestDispatcher rd = req.getRequestDispatcher("AddBook.html");
+-				rd.include(req, res);
+-				pw.println("<div class=\"tab\">Book Detail Updated Successfully!<br/>Add More Books</div>");
+-				
+-			
+-				
+-			}
+-			else
+-			{
+-				RequestDispatcher rd = req.getRequestDispatcher("AddBook.html");
+-				pw.println("<div class=\"tab\">Failed to Add Books! Fill up CareFully</div>");
+-				rd.include(req, res);
+-			}
+-		}
+-		catch(Exception e)
+-		{
+-			e.printStackTrace();
+-		}
+-	}
+-}
+diff --git a/OnlineBookStore/src/test/ReceiptServlet.java b/OnlineBookStore/src/test/ReceiptServlet.java
+deleted file mode 100644
+index e606371..0000000
+--- a/OnlineBookStore/src/test/ReceiptServlet.java
++++ /dev/null
+@@ -1,75 +0,0 @@
+-package test;
+-import test.DBConnection;
+-import java.sql.*;
+-import java.io.*;
+-import javax.servlet.*;
+-public class ReceiptServlet extends GenericServlet{
+-	public void service(ServletRequest req,ServletResponse res) throws IOException,ServletException
+-	{
+-		PrintWriter pw = res.getWriter();
+-		res.setContentType("text/html");
+-		try {
+-		Connection con = DBConnection.getCon();
+-		PreparedStatement ps = con.prepareStatement("select * from book6");
+-		ResultSet rs = ps.executeQuery();
+-		int i=0;
+-		RequestDispatcher rd = req.getRequestDispatcher("ViewBooks.html");
+-		rd.include(req, res);
+-		pw.println("<div class=\"tab\">You Successfully Paid for Following Books</div>");
+-		pw.println("<div class=\"tab\">\r\n" + 
+-				"		<table>\r\n" + 
+-				"			<tr>\r\n" + 
+-				"				\r\n" + 
+-				"				<th>Book Code</th>\r\n" + 
+-				"				<th>Book Name</th>\r\n" + 
+-				"				<th>Book Author</th>\r\n" + 
+-				"				<th>Book Price</th>\r\n" + 
+-				"				<th>Quantity</th><br/>\r\n" + 
+-				"			</tr>");
+-		double total=0.0;
+-		while(rs.next())
+-		{
+-			int bPrice =rs.getInt("bprice");
+-			String bCode=rs.getString("bcode");
+-			String bName = rs.getString("bname");
+-			String bAuthor = rs.getString("bauthor");
+-			int bQty = rs.getInt("bqty");
+-			i=i+1;
+-			
+-			String qt = "qty"+Integer.toString(i);
+-			int quantity = Integer.parseInt(req.getParameter(qt));
+-			try {
+-			String check1 = "checked"+Integer.toString(i);
+-			String getChecked = req.getParameter(check1);
+-			if(bQty<quantity)
+-			{
+-				pw.println("</table><div class=\"tab\">Please Select the Qty less than Available Books Quantity</div>");
+-				break;
+-			}
+-
+-			if(getChecked.equals("pay"))
+-			{
+-				pw.println("<tr><td>"+bCode+"</td>");
+-				pw.println("<td>"+bName+"</td>");
+-				pw.println("<td>"+bAuthor+"</td>");
+-				pw.println("<td>"+bPrice+"</td>");
+-				pw.println("<td>"+quantity+"</td></tr>");
+-				total = total + bPrice * quantity;
+-				bQty = bQty - quantity;
+-				PreparedStatement ps1 = con.prepareStatement("update book6 set bqty=? where bcode=?");
+-				ps1.setInt(1, bQty);
+-				ps1.setString(2,bCode);
+-				ps1.executeQuery();
+-			}
+-			}catch(Exception e) {}
+-		}
+-		pw.println("</table><br/><div class='tab'>Total Paid Amount: "+total+"</div>");
+-		String fPay = req.getParameter("f_pay");
+-		}
+-		catch(Exception e)
+-		{
+-			e.printStackTrace();
+-		}
+-	}
+-
+-}
+diff --git a/OnlineBookStore/src/test/UserLoginServlet.java b/OnlineBookStore/src/test/UserLoginServlet.java
+deleted file mode 100644
+index 1882a69..0000000
+--- a/OnlineBookStore/src/test/UserLoginServlet.java
++++ /dev/null
+@@ -1,42 +0,0 @@
+-package test;
+-import test.DBConnection;
+-import javax.servlet.*;
+-import java.io.*;
+-import java.sql.*;
+-public class UserLoginServlet extends GenericServlet{
+-	public void service(ServletRequest req, ServletResponse res) throws IOException,ServletException
+-	{
+-		PrintWriter pw = res.getWriter();
+-		res.setContentType("text/html");
+-		String uName = req.getParameter("uname");
+-		String pWord = req.getParameter("pword");
+-		try {
+-			Connection con = DBConnection.getCon();
+-			PreparedStatement ps = con.prepareStatement("SELECT * FROM REGISTER WHERE UNAME=? AND PWORD=?");
+-			ps.setString(1, uName);
+-			ps.setString(2, pWord);
+-			ResultSet rs = ps.executeQuery();
+-			if(rs.next())
+-			{
+-				RequestDispatcher rd = req.getRequestDispatcher("Sample.html");
+-				rd.include(req, res);
+-				pw.println("<div class=\"home hd brown\">Welcome ! "+uName+"</div><br/>");
+-				pw.println("<div class=\"tab hd brown\">User Login Successful !</div><br/>");
+-				pw.println("<div class=\"tab\"><a href=\"viewbook\">VIEW BOOKS</a></div>");
+-				pw.println("<div class='tab'><a href=\"buybook\">BUY BOOKS</a></div>");
+-			}
+-			else
+-			{
+-				
+-				RequestDispatcher rd = req.getRequestDispatcher("UserLogin.html");
+-				rd.include(req,res);
+-				pw.println("<div class=\"tab\">Incorrect UserName or PassWord</div>");
+-			}
+-			
+-		}
+-		catch(Exception e)
+-		{
+-			e.printStackTrace();
+-		}
+-	}
+-}
+\ No newline at end of file
+diff --git a/OnlineBookStore/src/test/UserRegisterServlet.java b/OnlineBookStore/src/test/UserRegisterServlet.java
+deleted file mode 100644
+index 26ae421..0000000
+--- a/OnlineBookStore/src/test/UserRegisterServlet.java
++++ /dev/null
+@@ -1,47 +0,0 @@
+-package test;
+-import test.DBConnection;
+-import java.sql.*;
+-import javax.servlet.*;
+-import java.io.*;
+-public class UserRegisterServlet extends GenericServlet{
+-	public void service(ServletRequest req, ServletResponse res) throws IOException,ServletException
+-	{
+-		PrintWriter pw = res.getWriter();
+-		res.setContentType("text/html");
+-		String uName = req.getParameter("uname");
+-		String pWord = req.getParameter("pword");
+-		String fName = req.getParameter("firstname");
+-		String lName = req.getParameter("lastname");
+-		String addr = req.getParameter("address");
+-		int phNo = Integer.parseInt(req.getParameter("phoneno"));
+-		String mailId = req.getParameter("mailid");
+-		try {
+-		Connection con = DBConnection.getCon();
+-		PreparedStatement ps = con.prepareStatement("insert into register values(?,?,?,?,?,?,?)");
+-		ps.setString(1, uName);
+-		ps.setString(2, pWord);
+-		ps.setString(3, fName);
+-		ps.setString(4, lName);
+-		ps.setString(5, addr);
+-		ps.setInt(6, phNo);
+-		ps.setString(7, mailId);
+-		int k = ps.executeUpdate();
+-		if(k==1)
+-		{
+-			RequestDispatcher rd = req.getRequestDispatcher("Sample.html");
+-			rd.include(req, res);
+-			pw.println("<h3 class='tab'>User Registered Successfully</h3>");
+-		}
+-		else
+-		{
+-			RequestDispatcher rd = req.getRequestDispatcher("userreg");
+-			rd.include(req, res);
+-			pw.println("Sorry for interruption! Register again");
+-		}
+-		}
+-		catch(Exception e)
+-		{
+-			e.printStackTrace();
+-		}
+-	}
+-}
+\ No newline at end of file
+diff --git a/OnlineBookStore/WebContent/AddBook.html b/WebContent/AddBook.html
+similarity index 80%
+rename from OnlineBookStore/WebContent/AddBook.html
+rename to WebContent/AddBook.html
+index 9d66429..bceb903 100644
+--- a/OnlineBookStore/WebContent/AddBook.html
++++ b/WebContent/AddBook.html
+@@ -103,11 +103,11 @@
+ 		<tr>
+ 			<td>
+ 				<form action="addbook" method="post">
+-					Book Code : <input type="text" name="bcode"><br/><br/>
+-					Book Name : <input type="text" name="bname"><br/><br/>
+-					BookAuthor: <input type="text" name="bauthor"><br/><br/>
+-					Book Price: <input type="text" name="bprice"><br/><br/>
+-					Book Qnty : <input type="text" name="bqty"><br/><br/>
++					Book Code : <input type="text" name="barcode"><br/><br/>
++					Book Name : <input type="text" name="name"><br/><br/>
++					BookAuthor: <input type="text" name="author"><br/><br/>
++					Book Price: <input type="text" name="price"><br/><br/>
++					Book Qnty : <input type="text" name="quantity"><br/><br/>
+ 					<input type="submit" value=" Add These Books ">
+ 				</form>
+ 			</td>
+diff --git a/OnlineBookStore/WebContent/AdminLogin.html b/WebContent/AdminLogin.html
+similarity index 87%
+rename from OnlineBookStore/WebContent/AdminLogin.html
+rename to WebContent/AdminLogin.html
+index 800c0ca..951a740 100644
+--- a/OnlineBookStore/WebContent/AdminLogin.html
++++ b/WebContent/AdminLogin.html
+@@ -105,8 +105,8 @@
+ 		<tr>
+ 			<td>
+ 				<form action="adminlog" method="post">
+-					Username: <input type="text" name="uname"><br/><br/>
+-					Password: <input type="password" name="pword"><br/><br/>
++					Username: <input type="text" name="username"><br/><br/>
++					Password: <input type="password" name="password"><br/><br/>
+ 					<input type="submit" value=" LOGIN AS ADMIN " text-align="center">
+ 				</form>
+ 			</td>
+diff --git a/OnlineBookStore/WebContent/META-INF/MANIFEST.MF b/WebContent/META-INF/MANIFEST.MF
+similarity index 100%
+rename from OnlineBookStore/WebContent/META-INF/MANIFEST.MF
+rename to WebContent/META-INF/MANIFEST.MF
+diff --git a/OnlineBookStore/WebContent/Photo.jpg b/WebContent/Photo.jpg
+similarity index 100%
+rename from OnlineBookStore/WebContent/Photo.jpg
+rename to WebContent/Photo.jpg
+diff --git a/OnlineBookStore/WebContent/RemoveBooks.html b/WebContent/RemoveBooks.html
+similarity index 90%
+rename from OnlineBookStore/WebContent/RemoveBooks.html
+rename to WebContent/RemoveBooks.html
+index b403c5d..51d0b89 100644
+--- a/OnlineBookStore/WebContent/RemoveBooks.html
++++ b/WebContent/RemoveBooks.html
+@@ -94,7 +94,7 @@
+ 	
+ 	<div class="tab">
+ 	<form action="remove" method="post">
+-		Book Code: <input type="text" name="book_code">
++		Book Code: <input type="text" name="barcode">
+ 			<input type="submit" value="Remove Book">
+ 	</form>
+ 	</div>
+diff --git a/OnlineBookStore/WebContent/Sample.html b/WebContent/Sample.html
+similarity index 100%
+rename from OnlineBookStore/WebContent/Sample.html
+rename to WebContent/Sample.html
+diff --git a/OnlineBookStore/WebContent/UserLogin.html b/WebContent/UserLogin.html
+similarity index 87%
+rename from OnlineBookStore/WebContent/UserLogin.html
+rename to WebContent/UserLogin.html
+index bcbff51..aa67c4a 100644
+--- a/OnlineBookStore/WebContent/UserLogin.html
++++ b/WebContent/UserLogin.html
+@@ -103,8 +103,8 @@
+ 		<tr>
+ 			<td>
+ 				<form action="userlog" method="post">
+-					Username: <input type="text" name="uname"><br/><br/>
+-					Password: <input type="password" name="pword"><br/><br/>
++					Username: <input type="text" name="username"><br/><br/>
++					Password: <input type="password" name="password><br/><br/>
+ 					<input type="submit" value=" LOGIN AS USER ">
+ 				</form>
+ 			</td>
+diff --git a/OnlineBookStore/WebContent/UserRegister.html b/WebContent/UserRegister.html
+similarity index 83%
+rename from OnlineBookStore/WebContent/UserRegister.html
+rename to WebContent/UserRegister.html
+index fdf9e48..3e98a55 100644
+--- a/OnlineBookStore/WebContent/UserRegister.html
++++ b/WebContent/UserRegister.html
+@@ -107,12 +107,12 @@
+ 		<tr>
+ 			<td>
+ 				<form action="userreg" method="post">
+-					Username : <input type="text" name="uname"><br/><br/>
+-					Password : <input type="password" name="pword"><br/><br/>
++					Username : <input type="text" name="username"><br/><br/>
++					Password : <input type="password" name="password"><br/><br/>
+ 					FirstName: <input type="text" name="firstname"><br/><br/>
+ 					Last Name: <input type="text" name="lastname"><br/><br/>
+-					Addrress : <input type="text" name="address"><br/><br/>
+-					Phone No : <input type="text" name="phoneno"><br/><br/>
++					Address : <input type="text" name="address"><br/><br/>
++					Phone No : <input type="text" name="phone"><br/><br/>
+ 					Email Id : <input type="text" name="mailid"><br/><br/>
+ 					<input type="submit" value=" I AGREE FOR ALL TERMS & CONDITIONS ! REGISTER ME ">
+ 				</form>
+diff --git a/OnlineBookStore/WebContent/ViewBooks.html b/WebContent/ViewBooks.html
+similarity index 100%
+rename from OnlineBookStore/WebContent/ViewBooks.html
+rename to WebContent/ViewBooks.html
+diff --git a/WebContent/WEB-INF/web.xml b/WebContent/WEB-INF/web.xml
+new file mode 100644
+index 0000000..5d12165
+--- /dev/null
++++ b/WebContent/WEB-INF/web.xml
+@@ -0,0 +1,78 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<web-app>
++	<servlet>
++		<servlet-name>AdminLoginServlet</servlet-name>
++		<servlet-class>servlets.AdminLoginServlet</servlet-class>
++	</servlet>
++	<servlet-mapping>
++		<servlet-name>AdminLoginServlet</servlet-name>
++		<url-pattern>/adminlog</url-pattern>
++	</servlet-mapping>
++
++	<servlet>
++		<servlet-name>UserLoginServlet</servlet-name>
++		<servlet-class>servlets.UserLoginServlet</servlet-class>
++	</servlet>
++	<servlet-mapping>
++		<servlet-name>UserLoginServlet</servlet-name>
++		<url-pattern>/userlog</url-pattern>
++	</servlet-mapping>
++
++	<servlet>
++		<servlet-name>UserRegisterServlet</servlet-name>
++		<servlet-class>servlets.UserRegisterServlet</servlet-class>
++	</servlet>
++	<servlet-mapping>
++		<servlet-name>UserRegisterServlet</servlet-name>
++		<url-pattern>/userreg</url-pattern>
++	</servlet-mapping>
++
++	<servlet>
++		<servlet-name>RemoveBookServlet</servlet-name>
++		<servlet-class>servlets.RemoveBookServlet</servlet-class>
++	</servlet>
++	<servlet-mapping>
++		<servlet-name>RemoveBookServlet</servlet-name>
++		<url-pattern>/remove</url-pattern>
++	</servlet-mapping>
++
++	<servlet>
++		<servlet-name>AddBookServlet</servlet-name>
++		<servlet-class>servlets.AddBookServlet</servlet-class>
++	</servlet>
++	<servlet-mapping>
++		<servlet-name>AddBookServlet</servlet-name>
++		<url-pattern>/addbook</url-pattern>
++	</servlet-mapping>
++
++	<servlet>
++		<servlet-name>ViewBookServlet</servlet-name>
++		<servlet-class>servlets.ViewBookServlet</servlet-class>
++	</servlet>
++	<servlet-mapping>
++		<servlet-name>ViewBookServlet</servlet-name>
++		<url-pattern>/viewbook</url-pattern>
++	</servlet-mapping>
++
++	<servlet>
++		<servlet-name>BuyBooksServlet</servlet-name>
++		<servlet-class>servlets.BuyBooksServlet</servlet-class>
++	</servlet>
++	<servlet-mapping>
++		<servlet-name>BuyBooksServlet</servlet-name>
++		<url-pattern>/buybook</url-pattern>
++	</servlet-mapping>
++
++	<servlet>
++		<servlet-name>ReceiptServlet</servlet-name>
++		<servlet-class>servlets.ReceiptServlet</servlet-class>
++	</servlet>
++	<servlet-mapping>
++		<servlet-name>ReceiptServlet</servlet-name>
++		<url-pattern>/buys</url-pattern>
++	</servlet-mapping>
++
++	<welcome-file-list>
++		<welcome-file>index.html</welcome-file>
++	</welcome-file-list>
++</web-app>
+\ No newline at end of file
+diff --git a/OnlineBookStore/WebContent/index.html b/WebContent/index.html
+similarity index 100%
+rename from OnlineBookStore/WebContent/index.html
+rename to WebContent/index.html
+diff --git a/pom.xml b/pom.xml
+new file mode 100644
+index 0000000..e8409c4
+--- /dev/null
++++ b/pom.xml
+@@ -0,0 +1,39 @@
++<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
++  <modelVersion>4.0.0</modelVersion>
++  <groupId>onlinebookstore</groupId>
++  <artifactId>onlinebookstore</artifactId>
++  <version>0.0.1-SNAPSHOT</version>
++  <packaging>war</packaging>
++  <build>
++    <sourceDirectory>src</sourceDirectory>
++    <plugins>
++      <plugin>
++        <artifactId>maven-compiler-plugin</artifactId>
++        <version>3.8.0</version>
++        <configuration>
++          <source>1.7</source>
++          <target>1.7</target>
++        </configuration>
++      </plugin>
++      <plugin>
++        <artifactId>maven-war-plugin</artifactId>
++        <version>3.2.1</version>
++        <configuration>
++          <warSourceDirectory>WebContent</warSourceDirectory>
++        </configuration>
++      </plugin>
++    </plugins>
++  </build>
++  <dependencies>
++  	<dependency>
++  		<groupId>org.postgresql</groupId>
++  		<artifactId>postgresql</artifactId>
++  		<version>42.2.8</version>
++  	</dependency>
++  	<dependency>
++  		<groupId>javax.servlet</groupId>
++  		<artifactId>javax.servlet-api</artifactId>
++  		<version>3.1.0</version>
++  	</dependency>
++  </dependencies>
++</project>
+\ No newline at end of file
+diff --git a/setup/CreateDatastore.sql b/setup/CreateDatastore.sql
+new file mode 100644
+index 0000000..0aa04e2
+--- /dev/null
++++ b/setup/CreateDatastore.sql
+@@ -0,0 +1,24 @@
++CREATE DATABASE onlinebookstore;
++
++\c onlinebookstore
++
++CREATE TABLE books 
++  ( 
++     barcode   VARCHAR(100) NOT NULL, 
++     name      TEXT NOT NULL, 
++     author    VARCHAR(100) NOT NULL, 
++     price     INT, 
++     quantity  REAL
++  ); 
++  
++  CREATE TABLE users
++  ( 
++     username  VARCHAR(100) NOT NULL, 
++     password  VARCHAR(100) NOT NULL, 
++     firstname VARCHAR(100) NOT NULL, 
++     lastname  VARCHAR(100) NOT NULL, 
++     address   TEXT NOT NULL, 
++     phone     VARCHAR(100) NOT NULL, 
++     mailid    VARCHAR(100) NOT NULL,
++     usertype  INT
++  ); 
+\ No newline at end of file
+
+commit 379714315d504754bc5ad0bc17ab6d224adf4ae6
+Author: Shashi Raj <34605595+shashirajraja@users.noreply.github.com>
+Date:   Wed Sep 11 17:34:51 2019 +0530
+
+    updated
+
+diff --git a/README.md b/README.md
+index e9b35b6..8a0c7b2 100644
+--- a/README.md
++++ b/README.md
+@@ -11,5 +11,5 @@ This much is only the start of this  project and i am working hard for this  pro
+ Suggestions are invited!<br/>
+ 
+ <bold>Thanks a lot</bold><br/>
+-                                                                                                        Project Manager<br/>
++                                                                                                        Team Leader<br/>
+                                                                                                          <b>Shashi Raj</b>
+
+commit 38443e531a68d35f9c3be2fcdbe749b3da232963
+Author: Shashi Raj <34605595+shashirajraja@users.noreply.github.com>
+Date:   Fri Jan 25 09:59:45 2019 +0530
+
+    Update README.md
+
+diff --git a/README.md b/README.md
+index 1c241a4..e9b35b6 100644
+--- a/README.md
++++ b/README.md
+@@ -1,5 +1,5 @@
+ # Online Book Store
+-<br/><b style="color:red font-size:30px">Welcome to Online Book Store</b><br/><br/>
++<b style="color:red font-size:30px">Welcome to Online Book Store</b><br/><br/>
+ This is a sample made under small mini-project for the online book store.<br/>
+ Under this project we have provided the facilities to search for books available in the book store ,anyone can get the details of the book and its price. <br/>
+ The users are also provided a profile any anyone can register login and access the onlinebookstore from anywhere. The user will not be allowed to access the website if he logs out from the store<br/>
+
+commit 9f0a5c0e2efd594dfc93a7440f8965860b0fcfe0
+Author: shashirajraja <34605595+shashirajraja@users.noreply.github.com>
+Date:   Tue Oct 9 00:57:28 2018 +0530
+
+    Update README.md
+
+diff --git a/README.md b/README.md
+index ccec436..1c241a4 100644
+--- a/README.md
++++ b/README.md
+@@ -1,6 +1,6 @@
+ # Online Book Store
+ <br/><b style="color:red font-size:30px">Welcome to Online Book Store</b><br/><br/>
+-This is a sample made under small sub-project for the online book store.<br/>
++This is a sample made under small mini-project for the online book store.<br/>
+ Under this project we have provided the facilities to search for books available in the book store ,anyone can get the details of the book and its price. <br/>
+ The users are also provided a profile any anyone can register login and access the onlinebookstore from anywhere. The user will not be allowed to access the website if he logs out from the store<br/>
+ We have also provided the facilities to select the books anyone wants to buy and also select the quantity of books to be buy. <br/> After clicking  the final button the books is purchased and the books quantity decreases from the store<br/>
+
+commit 7ee02cf2e1405fb376a7f0d9f10c53628ba18373
+Author: shashirajraja <34605595+shashirajraja@users.noreply.github.com>
+Date:   Tue Oct 9 00:52:06 2018 +0530
+
+    Readme updated
+
+diff --git a/README.md b/README.md
+index ab7012a..ccec436 100644
+--- a/README.md
++++ b/README.md
+@@ -1,5 +1,15 @@
+-# onlinebookstore
+-<br/><b>Welcome to Online Book Store</b>
+-<br/>This website is currently in progress under a live Project<br/>
+-You can send us any commit or help improvement ideas if you want<br/>
+-<bold>Thanks</bold>
++# Online Book Store
++<br/><b style="color:red font-size:30px">Welcome to Online Book Store</b><br/><br/>
++This is a sample made under small sub-project for the online book store.<br/>
++Under this project we have provided the facilities to search for books available in the book store ,anyone can get the details of the book and its price. <br/>
++The users are also provided a profile any anyone can register login and access the onlinebookstore from anywhere. The user will not be allowed to access the website if he logs out from the store<br/>
++We have also provided the facilities to select the books anyone wants to buy and also select the quantity of books to be buy. <br/> After clicking  the final button the books is purchased and the books quantity decreases from the store<br/>
++We provide a final receipt to the user as the books buyed detail and price paid for further uses.<br/>
++To update the book details and quantity and to add more books, we have made our website admin friendly by which the bookstore owner can easily login into the account and updates the details of the books</br>
++Both the user and admin are provide the profile facility where the details of the user or admin are stored and may be updated or changed by logging in<br/>
++This much is only the start of this  project and i am working hard for this  project<br/>
++Suggestions are invited!<br/>
++
++<bold>Thanks a lot</bold><br/>
++                                                                                                        Project Manager<br/>
++                                                                                                         <b>Shashi Raj</b>
+
+commit a1e77a023e1449d6f1d6bb4fc321e537c1c91432
+Author: shashirajraja <34605595+shashirajraja@users.noreply.github.com>
+Date:   Wed Jul 25 10:27:53 2018 +0530
+
+    Files upload
+
+diff --git a/OnlineBookStore/WebContent/AddBook.html b/OnlineBookStore/WebContent/AddBook.html
+new file mode 100644
+index 0000000..9d66429
+--- /dev/null
++++ b/OnlineBookStore/WebContent/AddBook.html
+@@ -0,0 +1,125 @@
++<html>
++<head>
++	<meta charset="ISO-8859-1">
++	<title>Book Store</title>
++	<style>
++	*{
++		box-sizing: border-box;
++	}	
++	body
++	{
++		background-image: url("Photo.jpg");
++	}
++	#topmid{
++		border:0px solid black;
++		color:#FFFFFF;
++		text-align: center;
++		font-weight: bold;
++		margin-top: 0px;
++		padding-left: 30%;
++		font-style: oblique;
++		font-size:38px;
++	}
++	a:hover{
++		color:red;
++	}
++	a:link{
++		color: green;
++		text-decoration: none;
++	}
++	.tab{
++		border:1px black solid;
++		background-color: #FFE5CC;
++		margin-left: 48%;
++		width:450px;
++		color:green;
++		font-weight: bold;
++		font-style:normal;
++		text-align:center;
++		font-size: 22px;
++		margin-bottom:10px;
++		padding:10px;
++	}
++	.home{
++		border:1px black solid;
++		background-color: #ccffcc;
++		margin-left: 1%;
++		width:200px;
++		color:blue;
++		font-weight: bold;
++		font-style:italic;
++		text-align:center;
++		font-size: 25px;
++		margin-bottom:10px;
++		padding:10px;
++		float:left;
++		clear:both;
++	}
++	.yel{
++	color:yellow;
++	}
++	.red{
++		color:red;
++	}
++	.green{
++		color:green;
++	}
++	.hd{
++		font-size:25px;
++	}
++	.brown{
++		color:brown;
++	}
++</style>
++</head>
++<body>
++	<div id="topmid">
++		<h1>Welcome to Online Book Store</h1>
++	</div>
++	
++	<div class="home">
++		<a href="adminlog">Home</a>
++	</div>
++
++	<div class="home">
++		<a href="index.html">Login</a>
++	</div>
++	
++	<div class="home">
++		<a href="viewbook">Books Available</a>
++	</div>
++
++	<div class="home">
++		<a href="index.html">Logout</a>
++	</div>
++	
++	<table class="tab hd brown">
++		<tr>
++			<td>Add Books</td>
++		</tr>
++	</table>
++
++	<table class="tab" border="0px" cellpadding="10" cellspacing="10" text-color="red">
++		<tr>
++			<td>
++				<form action="addbook" method="post">
++					Book Code : <input type="text" name="bcode"><br/><br/>
++					Book Name : <input type="text" name="bname"><br/><br/>
++					BookAuthor: <input type="text" name="bauthor"><br/><br/>
++					Book Price: <input type="text" name="bprice"><br/><br/>
++					Book Qnty : <input type="text" name="bqty"><br/><br/>
++					<input type="submit" value=" Add These Books ">
++				</form>
++			</td>
++		</tr>  
++	</table>
++
++	<table class="tab">
++		<tr>
++			<td><a href="index.html">Back To Home Page</a></td>
++		</tr>
++	</table>
++	</div>
++
++</body>
++</html>
+\ No newline at end of file
+diff --git a/OnlineBookStore/WebContent/AdminLogin.html b/OnlineBookStore/WebContent/AdminLogin.html
+new file mode 100644
+index 0000000..800c0ca
+--- /dev/null
++++ b/OnlineBookStore/WebContent/AdminLogin.html
+@@ -0,0 +1,119 @@
++<html>
++<head>
++	<meta charset="ISO-8859-1">
++	<title>Book Store</title>
++	<style>
++	*{
++		box-sizing: border-box;
++	}	
++	body
++	{
++		background-image: url("Photo.jpg");
++	}
++	#topmid{
++		border:0px solid black;
++		color:#FFFFFF;
++		text-align: center;
++		font-weight: bold;
++		margin-top: 0px;
++		padding-left: 30%;
++		font-style: oblique;
++		font-size:38px;
++	}
++	a:hover{
++		color:red;
++	}
++	a:link{
++		color: green;
++		text-decoration: none;
++	}
++	.tab{
++		border:1px black solid;
++		background-color: #FFE5CC;
++		margin-left: 48%;
++		width:450px;
++		color:green;
++		font-weight: bold;
++		font-style:normal;
++		text-align:center;
++		font-size: 22px;
++		margin-bottom:10px;
++		padding:10px;
++	}
++	.home{
++		border:1px black solid;
++		background-color: #ccffcc;
++		margin-left: 1%;
++		width:200px;
++		color:blue;
++		font-weight: bold;
++		font-style:italic;
++		text-align:center;
++		font-size: 25px;
++		margin-bottom:10px;
++		padding:10px;
++		float:left;
++		clear:both;
++	}
++	.yel{
++	color:yellow;
++	}
++	.red{
++		color:red;
++	}
++	.green{
++		color:green;
++	}
++	.hd{
++		font-size:25px;
++	}
++	.brown{
++		color:brown;
++	}
++	</style>
++</head>
++
++<body>
++	<div id="topmid">
++		<h1>Welcome to Online Book Store</h1>
++	</div>
++	
++	<div class="home">
++		<a href="index.html">Home</a>
++	</div>
++
++	<div class="home">
++		<a href="index.html">Login</a>
++	</div>
++	
++	<div class="home">
++		<a href="viewbook">Books Available</a>
++	</div>
++
++	<div class="home">
++		<a href="index.html">Logout</a>
++	</div>
++	
++	<table class="tab brown hd">
++		<tr>
++			<td>ADMIN LOGIN</td>
++		</tr>
++	</table>
++
++	<table class="tab" border="0px" >
++		
++		<tr>
++			<td>
++				<form action="adminlog" method="post">
++					Username: <input type="text" name="uname"><br/><br/>
++					Password: <input type="password" name="pword"><br/><br/>
++					<input type="submit" value=" LOGIN AS ADMIN " text-align="center">
++				</form>
++			</td>
++			
++		</tr>  
++	</table>
++	</div>
++
++</body>
++</html>
+\ No newline at end of file
+diff --git a/OnlineBookStore/WebContent/META-INF/MANIFEST.MF b/OnlineBookStore/WebContent/META-INF/MANIFEST.MF
+new file mode 100644
+index 0000000..5e94951
+--- /dev/null
++++ b/OnlineBookStore/WebContent/META-INF/MANIFEST.MF
+@@ -0,0 +1,3 @@
++Manifest-Version: 1.0
++Class-Path: 
++
+diff --git a/OnlineBookStore/WebContent/Photo.jpg b/OnlineBookStore/WebContent/Photo.jpg
+new file mode 100644
+index 0000000..9c07b8c
+Binary files /dev/null and b/OnlineBookStore/WebContent/Photo.jpg differ
+diff --git a/OnlineBookStore/WebContent/RemoveBooks.html b/OnlineBookStore/WebContent/RemoveBooks.html
+new file mode 100644
+index 0000000..b403c5d
+--- /dev/null
++++ b/OnlineBookStore/WebContent/RemoveBooks.html
+@@ -0,0 +1,103 @@
++<html>
++<head>
++	<meta charset="ISO-8859-1">
++	<title>Book Store</title>
++	<style>
++	*{
++		box-sizing: border-box;
++	}	
++	body
++	{
++		background-image: url("Photo.jpg");
++	}
++	#topmid{
++		border:0px solid black;
++		color:#FFFFFF;
++		text-align: center;
++		font-weight: bold;
++		margin-top: 0px;
++		padding-left: 30%;
++		font-style: oblique;
++		font-size:38px;
++	}
++	a:hover{
++		color:red;
++	}
++	a:link{
++		color: green;
++		text-decoration: none;
++	}
++	.tab{
++		border:1px black solid;
++		background-color: #FFE5CC;
++		margin-left: 48%;
++		width:450px;
++		color:green;
++		font-weight: bold;
++		font-style:normal;
++		text-align:center;
++		font-size: 22px;
++		margin-bottom:10px;
++		padding:10px;
++	}
++	.home{
++		border:1px black solid;
++		background-color: #ccffcc;
++		margin-left: 1%;
++		width:200px;
++		color:blue;
++		font-weight: bold;
++		font-style:italic;
++		text-align:center;
++		font-size: 25px;
++		margin-bottom:10px;
++		padding:10px;
++		float:left;
++		clear:both;
++	}
++	.yel{
++	color:yellow;
++	}
++	.red{
++		color:red;
++	}
++	.green{
++		color:green;
++	}
++	.hd{
++		font-size:25px;
++	}
++	.brown{
++		color:brown;
++	}
++	</style>
++</head>
++<body>
++	<div id="topmid">
++		<h1>Welcome to Online Book Store</h1>
++	</div>
++	<div class="home">
++		<a href="adminlog">Home</a>
++	</div>
++
++	<div class="home">
++		<a href="index.html">Login</a>
++	</div>
++	
++	<div class="home">
++		<a href="viewbook">Books Available</a>
++	</div>
++
++	<div class="home">
++		<a href="index.html">Logout</a>
++	</div>
++	
++	<div class="tab">
++	<form action="remove" method="post">
++		Book Code: <input type="text" name="book_code">
++			<input type="submit" value="Remove Book">
++	</form>
++	</div>
++	
++</body>
++</html>
+\ No newline at end of file
+diff --git a/OnlineBookStore/WebContent/Sample.html b/OnlineBookStore/WebContent/Sample.html
+new file mode 100644
+index 0000000..3a9dd3a
+--- /dev/null
++++ b/OnlineBookStore/WebContent/Sample.html
+@@ -0,0 +1,96 @@
++<html>
++<head>
++	<meta charset="ISO-8859-1">
++	<title>Book Store</title>
++	<style>
++	*{
++		box-sizing: border-box;
++	}	
++	body
++	{
++		background-image: url("Photo.jpg");
++	}
++	#topmid{
++		border:0px solid black;
++		color:#FFFFFF;
++		text-align: center;
++		font-weight: bold;
++		margin-top: 0px;
++		padding-left: 30%;
++		font-style: oblique;
++		font-size:38px;
++	}
++	a:hover{
++		color:red;
++	}
++	a:link{
++		color: green;
++		text-decoration: none;
++	}
++	.tab{
++		border:1px black solid;
++		background-color: #FFE5CC;
++		margin-left: 48%;
++		width:450px;
++		color:green;
++		font-weight: bold;
++		font-style:normal;
++		text-align:center;
++		font-size: 22px;
++		margin-bottom:10px;
++		padding:10px;
++	}
++	.home{
++		border:1px black solid;
++		background-color: #ccffcc;
++		margin-left: 1%;
++		width:200px;
++		color:blue;
++		font-weight: bold;
++		font-style:italic;
++		text-align:center;
++		font-size: 25px;
++		margin-bottom:10px;
++		padding:10px;
++		float:left;
++		clear:both;
++	}
++	.yel{
++	color:yellow;
++	}
++	.red{
++		color:red;
++	}
++	.green{
++		color:green;
++	}
++	.hd{
++		font-size:25px;
++	}
++	.brown{
++		color:brown;
++	}
++	</style>
++</head>
++<body>
++	<div id="topmid">
++		<h1>Welcome to Online Book Store</h1>
++	</div>
++	<div class="home">
++		<a href="">Home</a>
++	</div>
++
++	<div class="home">
++		<a href="index.html">Login</a>
++	</div>
++	
++	<div class="home">
++		<a href="viewbook">Books Available</a>
++	</div>
++
++	<div class="home">
++		<a href="index.html">Logout</a>
++	</div>
++	
++</body>
++</html>
+\ No newline at end of file
+diff --git a/OnlineBookStore/WebContent/UserLogin.html b/OnlineBookStore/WebContent/UserLogin.html
+new file mode 100644
+index 0000000..bcbff51
+--- /dev/null
++++ b/OnlineBookStore/WebContent/UserLogin.html
+@@ -0,0 +1,117 @@
++<html>
++<head>
++	<meta charset="ISO-8859-1">
++	<title>Book Store</title>
++	<style>
++	*{
++		box-sizing: border-box;
++	}	
++	body
++	{
++		background-image: url("Photo.jpg");
++	}
++	#topmid{
++		border:0px solid black;
++		color:#FFFFFF;
++		text-align: center;
++		font-weight: bold;
++		margin-top: 0px;
++		padding-left: 30%;
++		font-style: oblique;
++		font-size:38px;
++	}
++	a:hover{
++		color:red;
++	}
++	a:link{
++		color: green;
++		text-decoration: none;
++	}
++	.tab{
++		border:1px black solid;
++		background-color: #FFE5CC;
++		margin-left: 48%;
++		width:450px;
++		color:green;
++		font-weight: bold;
++		font-style:normal;
++		text-align:center;
++		font-size: 22px;
++		margin-bottom:10px;
++		padding:10px;
++	}
++	.home{
++		border:1px black solid;
++		background-color: #ccffcc;
++		margin-left: 1%;
++		width:200px;
++		color:blue;
++		font-weight: bold;
++		font-style:italic;
++		text-align:center;
++		font-size: 25px;
++		margin-bottom:10px;
++		padding:10px;
++		float:left;
++		clear:both;
++	}
++	.yel{
++	color:yellow;
++	}
++	.red{
++		color:red;
++	}
++	.green{
++		color:green;
++	}
++	.hd{
++		font-size:25px;
++	}
++	.brown{
++		color:brown;
++	}
++	</style>
++</head>
++<body>
++	<div id="topmid">
++		<h1>Welcome to Online Book Store</h1>
++	</div>
++	<div class="home">
++		<a href="">Home</a>
++	</div>
++
++	<div class="home">
++		<a href="index.html">Login</a>
++	</div>
++	
++	<div class="home">
++		<a href="viewbook">Books Available</a>
++	</div>
++
++	<div class="home">
++		<a href="index.html">Logout</a>
++	</div>
++	
++	<table class="tab hd brown">
++		<tr>
++			<td>USER LOGIN</td>
++		</tr>
++	</table>
++
++	<table class="tab" border="0px" cellpadding="10" cellspacing="10">
++		
++		<tr>
++			<td>
++				<form action="userlog" method="post">
++					Username: <input type="text" name="uname"><br/><br/>
++					Password: <input type="password" name="pword"><br/><br/>
++					<input type="submit" value=" LOGIN AS USER ">
++				</form>
++			</td>
++			
++		</tr>  
++	</table>
++	
++
++</body>
++</html>
+\ No newline at end of file
+diff --git a/OnlineBookStore/WebContent/UserRegister.html b/OnlineBookStore/WebContent/UserRegister.html
+new file mode 100644
+index 0000000..fdf9e48
+--- /dev/null
++++ b/OnlineBookStore/WebContent/UserRegister.html
+@@ -0,0 +1,127 @@
++<html>
++<head>
++	<meta charset="ISO-8859-1">
++	<title>Book Store</title>
++	<style>
++	*{
++		box-sizing: border-box;
++	}	
++	body
++	{
++		background-image: url("Photo.jpg");
++	}
++	#topmid{
++		border:0px solid black;
++		color:#FFFFFF;
++		text-align: center;
++		font-weight: bold;
++		margin-top: 0px;
++		padding-left: 30%;
++		font-style: oblique;
++		font-size:38px;
++	}
++	a:hover{
++		color:red;
++	}
++	a:link{
++		color: green;
++		text-decoration: none;
++	}
++	.tab{
++		border:1px black solid;
++		background-color: #FFE5CC;
++		margin-left: 48%;
++		width:450px;
++		color:green;
++		font-weight: bold;
++		font-style:normal;
++		text-align:center;
++		font-size: 22px;
++		margin-bottom:10px;
++		padding:10px;
++	}
++	.home{
++		border:1px black solid;
++		background-color: #ccffcc;
++		margin-left: 1%;
++		width:200px;
++		color:blue;
++		font-weight: bold;
++		font-style:italic;
++		text-align:center;
++		font-size: 25px;
++		margin-bottom:10px;
++		padding:10px;
++		float:left;
++		clear:both;
++	}
++	.yel{
++	color:yellow;
++	}
++	.red{
++		color:red;
++	}
++	.green{
++		color:green;
++	}
++	.hd{
++		font-size:25px;
++	}
++	.brown{
++		color:brown;
++	}
++	.blue{
++		color:blue;
++	}
++	</style>
++</head>
++
++<body>
++	<div id="topmid">
++		<h1>Welcome to Online Book Store</h1>
++	</div>
++	<div class="home">
++		<a href="userlog">Home</a>
++	</div>
++
++	<div class="home">
++		<a href="index.html">Login</a>
++	</div>
++	
++	<div class="home">
++		<a href="ViewBooks.html">Books Available</a>
++	</div>
++
++	<div class="home">
++		<a href="index.html">Logout</a>
++	</div>
++	
++	<table class="tab brown hd">
++		<tr>
++			<td>Register Here</td>
++		</tr>
++	</table>
++
++	<table class="tab" border="0px">
++		
++		<tr>
++			<td>
++				<form action="userreg" method="post">
++					Username : <input type="text" name="uname"><br/><br/>
++					Password : <input type="password" name="pword"><br/><br/>
++					FirstName: <input type="text" name="firstname"><br/><br/>
++					Last Name: <input type="text" name="lastname"><br/><br/>
++					Addrress : <input type="text" name="address"><br/><br/>
++					Phone No : <input type="text" name="phoneno"><br/><br/>
++					Email Id : <input type="text" name="mailid"><br/><br/>
++					<input type="submit" value=" I AGREE FOR ALL TERMS & CONDITIONS ! REGISTER ME ">
++				</form>
++			</td>
++			
++		</tr>  
++	</table>
++	
++
++
++</body>
++</html>
+\ No newline at end of file
+diff --git a/OnlineBookStore/WebContent/ViewBooks.html b/OnlineBookStore/WebContent/ViewBooks.html
+new file mode 100644
+index 0000000..a8b3612
+--- /dev/null
++++ b/OnlineBookStore/WebContent/ViewBooks.html
+@@ -0,0 +1,116 @@
++<html>
++<head>
++	<meta charset="ISO-8859-1">
++	<title>Book Store</title>
++	<style>
++	*{
++		box-sizing: border-box;
++	}	
++	body
++	{
++		background-image: url("Photo.jpg");
++	}
++	#topmid{
++		border:0px solid black;
++		color:#FFFFFF;
++		text-align: center;
++		font-weight: bold;
++		margin-top: 0px;
++		padding-left: 30%;
++		font-style: oblique;
++		font-size:38px;
++	}
++	a:hover{
++		color:red;
++	}
++	a:link{
++		color: green;
++		text-decoration: none;
++	}
++	.tab{
++		border:1px black solid;
++		background-color: #FFE5CC;
++		margin-left: 45%;
++		max-width:700px;
++		color:green;
++		font-weight: bold;
++		font-style:normal;
++		text-align:center;
++		font-size: 22px;
++		margin-bottom:10px;
++		padding:10px;
++		padding-top:2px;
++	}
++	.home{
++		border:1px black solid;
++		background-color: #ccffcc;
++		margin-left: 1%;
++		width:200px;
++		color:blue;
++		font-weight: bold;
++		font-style:italic;
++		text-align:center;
++		font-size: 25px;
++		margin-bottom:10px;
++		padding:10px;
++		float:left;
++		clear:both;
++	}
++	table{
++		border:2px solid black;
++		text-align: center;
++		padding:5px;
++		cellspacing:2px;
++		width:680px;
++	}
++	tr:hover {
++		background-color: #f5f5f5;
++		color:blue;
++	}
++	td{
++		padding:10px;
++		border:1px solid black;
++	}
++	th{
++		color:green;
++		font-size:20px;
++	}
++	.yel{
++	color:yellow;
++	}
++	.red{
++		color:red;
++	}
++	.green{
++		color:green;
++	}
++	.hd{
++		font-size:25px;
++	}
++	.brown{
++		color:brown;
++	}
++	</style>
++</head>
++<body>
++	<div id="topmid">
++		<h1>Welcome to Online Book Store</h1>
++	</div>
++	<div class="home">
++		<a href="index.html">Home</a>
++	</div>
++
++	<div class="home">
++		<a href="index.html">Login</a>
++	</div>
++	
++	<div class="home">
++		<a href="viewbook">Books Available</a>
++	</div>
++
++	<div class="home">
++		<a href="index.html">Logout</a>
++	</div>
++	
++</body>
++</html>
+\ No newline at end of file
+diff --git a/OnlineBookStore/WebContent/WEB-INF/lib/ojdbc5.jar b/OnlineBookStore/WebContent/WEB-INF/lib/ojdbc5.jar
+new file mode 100644
+index 0000000..1b899e6
+Binary files /dev/null and b/OnlineBookStore/WebContent/WEB-INF/lib/ojdbc5.jar differ
+diff --git a/OnlineBookStore/WebContent/WEB-INF/web.xml b/OnlineBookStore/WebContent/WEB-INF/web.xml
+new file mode 100644
+index 0000000..98e7240
+--- /dev/null
++++ b/OnlineBookStore/WebContent/WEB-INF/web.xml
+@@ -0,0 +1,78 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<web-app>
++<servlet>
++	<servlet-name>AdminLoginServlet</servlet-name>
++	<servlet-class>test.AdminLoginServlet</servlet-class>
++</servlet>
++<servlet-mapping>
++<servlet-name>AdminLoginServlet</servlet-name>
++<url-pattern>/adminlog</url-pattern>
++</servlet-mapping>
++
++<servlet>
++<servlet-name>UserLoginServlet</servlet-name>
++<servlet-class>test.UserLoginServlet</servlet-class>
++</servlet>
++<servlet-mapping>
++<servlet-name>UserLoginServlet</servlet-name>
++<url-pattern>/userlog</url-pattern>
++</servlet-mapping>
++
++<servlet>
++<servlet-name>UserRegisterServlet</servlet-name>
++<servlet-class>test.UserRegisterServlet</servlet-class>
++</servlet>
++<servlet-mapping>
++<servlet-name>UserRegisterServlet</servlet-name>
++<url-pattern>/userreg</url-pattern>
++</servlet-mapping>
++
++<servlet>
++<servlet-name>RemoveBookServlet</servlet-name>
++<servlet-class>test.RemoveBookServlet</servlet-class>
++</servlet>
++<servlet-mapping>
++<servlet-name>RemoveBookServlet</servlet-name>
++<url-pattern>/remove</url-pattern>
++</servlet-mapping>
++
++<servlet>
++<servlet-name>AddBookServlet</servlet-name>
++<servlet-class>test.AddBookServlet</servlet-class>
++</servlet>
++<servlet-mapping>
++<servlet-name>AddBookServlet</servlet-name>
++<url-pattern>/addbook</url-pattern>
++</servlet-mapping>
++
++<servlet>
++<servlet-name>ViewBookServlet</servlet-name>
++<servlet-class>test.ViewBookServlet</servlet-class>
++</servlet>
++<servlet-mapping>
++<servlet-name>ViewBookServlet</servlet-name>
++<url-pattern>/viewbook</url-pattern>
++</servlet-mapping>
++
++<servlet>
++<servlet-name>BuyBooksServlet</servlet-name>
++<servlet-class>test.BuyBooksServlet</servlet-class>
++</servlet>
++<servlet-mapping>
++<servlet-name>BuyBooksServlet</servlet-name>
++<url-pattern>/buybook</url-pattern>
++</servlet-mapping>
++
++<servlet>
++<servlet-name>ReceiptServlet</servlet-name>
++<servlet-class>test.ReceiptServlet</servlet-class>
++</servlet>
++<servlet-mapping>
++<servlet-name>ReceiptServlet</servlet-name>
++<url-pattern>/buys</url-pattern>
++</servlet-mapping>
++
++<welcome-file-list>
++	<welcome-file>index.html</welcome-file>
++</welcome-file-list>
++</web-app>
+\ No newline at end of file
+diff --git a/OnlineBookStore/WebContent/index.html b/OnlineBookStore/WebContent/index.html
+new file mode 100644
+index 0000000..a3d7340
+--- /dev/null
++++ b/OnlineBookStore/WebContent/index.html
+@@ -0,0 +1,122 @@
++<html>
++<head>
++	<meta charset="ISO-8859-1">
++	<title>Book Store</title>
++	<style>
++	*{
++		box-sizing: border-box;
++	}	
++	body
++	{
++		background-image: url("Photo.jpg");
++	}
++	#topmid{
++		border:0px solid black;
++		color:#FFFFFF;
++		text-align: center;
++		font-weight: bold;
++		margin-top: 0px;
++		padding-left: 30%;
++		font-style: oblique;
++		font-size:38px;
++	}
++	a:hover{
++		color:red;
++	}
++	a:link{
++		color: green;
++		text-decoration: none;
++	}
++	.tab{
++		border:1px black solid;
++		background-color: #FFE5CC;
++		margin-left: 48%;
++		width:450px;
++		color:green;
++		font-weight: bold;
++		font-style:normal;
++		text-align:center;
++		font-size: 22px;
++		margin-bottom:10px;
++		padding:10px;
++	}
++	.home{
++		border:1px black solid;
++		background-color: #ccffcc;
++		margin-left: 1%;
++		width:200px;
++		color:blue;
++		font-weight: bold;
++		font-style:italic;
++		text-align:center;
++		font-size: 25px;
++		margin-bottom:10px;
++		padding:10px;
++		float:left;
++		clear:both;
++	}
++	.yel{
++	color:yellow;
++	}
++	.red{
++		color:red;
++	}
++	.green{
++		color:green;
++	}
++	.hd{
++		font-size:25px;
++	}
++	.brown{
++		color:brown;
++	}
++	</style>
++</head>
++
++<body>
++	<div id="topmid">
++		<h1>Welcome to Online Book Store</h1>
++	</div>
++	
++	<div class="home">
++		<a href="index.html">Home</a>
++	</div>
++
++	<div class="home">
++		<a href="index.html">Login</a>
++	</div>
++	
++	<div class="home">
++		<a href="viewbook">Books Available</a>
++	</div>
++
++	<div class="home">
++		<a href="index.html">Logout</a>
++	</div>
++	
++	<table class="tab brown hd">
++		<tr>
++			<td>Login or Signup Below</td>
++		</tr>
++	</table>
++
++	<table class="tab" border="0px solid black">
++		
++		<tr>
++			<td><a href="AdminLogin.html">Login As Admin</a></td>
++		</tr>
++	</table>
++	<table class="tab" border="0px solid black">
++		
++		<tr>
++			<td><a href="UserLogin.html"> Login As<span> User</span> </a></td>
++		</tr>
++	</table>
++	<table class="tab green">
++		<tr>
++			<td><a href="UserRegister.html">New user ! Register Here</a></td>
++		</tr>
++	</table>
++
++</body>
++</html>
+\ No newline at end of file
+diff --git a/OnlineBookStore/build/classes/test/AddBookServlet.class b/OnlineBookStore/build/classes/test/AddBookServlet.class
+new file mode 100644
+index 0000000..def5889
+Binary files /dev/null and b/OnlineBookStore/build/classes/test/AddBookServlet.class differ
+diff --git a/OnlineBookStore/build/classes/test/AdminLoginServlet.class b/OnlineBookStore/build/classes/test/AdminLoginServlet.class
+new file mode 100644
+index 0000000..490e1b4
+Binary files /dev/null and b/OnlineBookStore/build/classes/test/AdminLoginServlet.class differ
+diff --git a/OnlineBookStore/build/classes/test/BuyBooksServlet.class b/OnlineBookStore/build/classes/test/BuyBooksServlet.class
+new file mode 100644
+index 0000000..8170356
+Binary files /dev/null and b/OnlineBookStore/build/classes/test/BuyBooksServlet.class differ
+diff --git a/OnlineBookStore/build/classes/test/DBConnection.class b/OnlineBookStore/build/classes/test/DBConnection.class
+new file mode 100644
+index 0000000..01a6006
+Binary files /dev/null and b/OnlineBookStore/build/classes/test/DBConnection.class differ
+diff --git a/OnlineBookStore/build/classes/test/ReceiptServlet.class b/OnlineBookStore/build/classes/test/ReceiptServlet.class
+new file mode 100644
+index 0000000..213b721
+Binary files /dev/null and b/OnlineBookStore/build/classes/test/ReceiptServlet.class differ
+diff --git a/OnlineBookStore/build/classes/test/RemoveBookServlet.class b/OnlineBookStore/build/classes/test/RemoveBookServlet.class
+new file mode 100644
+index 0000000..8f91ceb
+Binary files /dev/null and b/OnlineBookStore/build/classes/test/RemoveBookServlet.class differ
+diff --git a/OnlineBookStore/build/classes/test/UserLoginServlet.class b/OnlineBookStore/build/classes/test/UserLoginServlet.class
+new file mode 100644
+index 0000000..f5f1485
+Binary files /dev/null and b/OnlineBookStore/build/classes/test/UserLoginServlet.class differ
+diff --git a/OnlineBookStore/build/classes/test/UserRegisterServlet.class b/OnlineBookStore/build/classes/test/UserRegisterServlet.class
+new file mode 100644
+index 0000000..623dc0f
+Binary files /dev/null and b/OnlineBookStore/build/classes/test/UserRegisterServlet.class differ
+diff --git a/OnlineBookStore/build/classes/test/ViewBookServlet.class b/OnlineBookStore/build/classes/test/ViewBookServlet.class
+new file mode 100644
+index 0000000..a96fde2
+Binary files /dev/null and b/OnlineBookStore/build/classes/test/ViewBookServlet.class differ
+diff --git a/OnlineBookStore/src/test/AddBookServlet.java b/OnlineBookStore/src/test/AddBookServlet.java
+new file mode 100644
+index 0000000..a5ad4da
+--- /dev/null
++++ b/OnlineBookStore/src/test/AddBookServlet.java
+@@ -0,0 +1,46 @@
++package test;
++import test.DBConnection;
++import java.sql.*;
++import javax.servlet.*;
++import java.io.*;
++public class AddBookServlet extends GenericServlet{
++	public void service(ServletRequest req,ServletResponse res) throws IOException,ServletException
++	{
++		PrintWriter pw = res.getWriter();
++		res.setContentType("text/html");
++		String bCode = req.getParameter("bcode");
++		String bName = req.getParameter("bname");
++		String bAuthor = req.getParameter("bauthor");
++		int bPrice =Integer.parseInt(req.getParameter("bprice"));
++		int bQty = Integer.parseInt(req.getParameter("bqty"));
++		try {
++			Connection con = DBConnection.getCon();
++			PreparedStatement ps = con.prepareStatement("insert into book6 values(?,?,?,?,?)");
++			ps.setString(1, bCode);
++			ps.setString(2, bName);
++			ps.setString(3, bAuthor);
++			ps.setInt(4, bPrice);
++			ps.setInt(5, bQty);
++			int k = ps.executeUpdate();
++			if(k==1)
++			{
++				RequestDispatcher rd = req.getRequestDispatcher("AddBook.html");
++				rd.include(req, res);
++				pw.println("<div class=\"tab\">Book Detail Updated Successfully!<br/>Add More Books</div>");
++				
++			
++				
++			}
++			else
++			{
++				RequestDispatcher rd = req.getRequestDispatcher("AddBook.html");
++				pw.println("<div class=\"tab\">Failed to Add Books! Fill up CareFully</div>");
++				rd.include(req, res);
++			}
++		}
++		catch(Exception e)
++		{
++			e.printStackTrace();
++		}
++	}
++}
+diff --git a/OnlineBookStore/src/test/AdminLoginServlet.java b/OnlineBookStore/src/test/AdminLoginServlet.java
+new file mode 100644
+index 0000000..85940bd
+--- /dev/null
++++ b/OnlineBookStore/src/test/AdminLoginServlet.java
+@@ -0,0 +1,42 @@
++package test;
++import test.DBConnection;
++import javax.servlet.*;
++import java.io.*;
++import java.sql.*;
++public class AdminLoginServlet extends GenericServlet{
++	public void service(ServletRequest req, ServletResponse res) throws IOException,ServletException
++	{
++		PrintWriter pw = res.getWriter();
++		res.setContentType("text/html");
++		String uName = req.getParameter("uname");
++		String pWord = req.getParameter("pword");
++		try {
++			Connection con = DBConnection.getCon();
++			PreparedStatement ps = con.prepareStatement("SELECT * FROM ADMIN6 WHERE UNAME=? AND PWORD=?");
++			ps.setString(1, uName);
++			ps.setString(2, pWord);
++			ResultSet rs = ps.executeQuery();
++			if(rs.next())
++			{
++				RequestDispatcher rd = req.getRequestDispatcher("Sample.html");
++				rd.include(req, res);
++				pw.println("<div class=\"tab\">Admin login Successful</div>");
++				pw.println("<div class=\"tab\"><br/><a href=\"AddBook.html\">ADD BOOKS</a><br/></div>");
++				pw.println("<div class=\"tab\"><br/><a href=\"RemoveBooks.html\">REMOVE BOOKS</a><br/></div>");
++				pw.println("<div class=\"tab\"><br/><a href=\"viewbook\">VIEW BOOKS</a></div>");
++			}
++			else
++			{
++				
++				RequestDispatcher rd = req.getRequestDispatcher("AdminLogin.html");
++				rd.include(req,res);
++				pw.println("<div class=\"tab\">Incorrect UserName or PassWord</div>");
++			}
++			
++		}
++		catch(Exception e)
++		{
++			e.printStackTrace();
++		}
++	}
++}
+\ No newline at end of file
+diff --git a/OnlineBookStore/src/test/BuyBooksServlet.java b/OnlineBookStore/src/test/BuyBooksServlet.java
+new file mode 100644
+index 0000000..09156ca
+--- /dev/null
++++ b/OnlineBookStore/src/test/BuyBooksServlet.java
+@@ -0,0 +1,64 @@
++package test;
++import test.DBConnection;
++import java.io.*;
++import java.sql.*;
++import javax.servlet.*;
++public class BuyBooksServlet extends GenericServlet{
++	public void service(ServletRequest req,ServletResponse res) throws IOException,ServletException
++	{
++		PrintWriter pw = res.getWriter();
++		res.setContentType("text/html");
++		try {
++			Connection con = DBConnection.getCon();
++			//ArrayList<Books> al = new ArrayList<Books>();
++			PreparedStatement ps = con.prepareStatement("Select * from book6");
++			ResultSet rs = ps.executeQuery();
++			RequestDispatcher rd = req.getRequestDispatcher("ViewBooks.html");
++			rd.include(req, res);
++			pw.println("<div class=\"tab hd brown \">Books Available In Our Store</div>");
++			pw.println("<div class=\"tab\"><form action=\"buys\" method=\"post\">");
++			pw.println("<table>\r\n" + 
++					"			<tr>\r\n" + 
++					"				<th>Books</th>\r\n" + 
++					"				<th>Code</th>\r\n" + 
++					"				<th>Name</th>\r\n" + 
++					"				<th>Author</th>\r\n" + 
++					"				<th>Price</th>\r\n" + 
++					"				<th>Avail</th>\r\n" + 
++					"				<th>Qty</th>\r\n" + 
++					"			</tr>");
++			int i=0;
++			while(rs.next())
++			{
++				String bCode = rs.getString(1);
++				String bName = rs.getString(2);
++				String bAuthor = rs.getString(3);
++				int bPrice = rs.getInt(4);
++				int bAvl = rs.getInt(5);
++				i=i+1;
++				String n = "checked"+ Integer.toString(i);
++				String q = "qty"+Integer.toString(i);
++				pw.println("<tr>\r\n" + 
++						"				<td>\r\n" + 
++						"					<input type=\"checkbox\" name="+n+" value=\"pay\">\r\n" + //Value is made equal to bcode
++						"				</td>");
++				pw.println("<td>"+bCode+"</td>");
++				pw.println("<td>"+bName+"</td>");
++				pw.println("<td>"+bAuthor+"</td>");
++				pw.println("<td>"+bPrice+"</td>");
++				pw.println("<td>"+bAvl+"</td>");
++				pw.println("<td><input type=\"text\" name="+q+" value=\"0\" text-align=\"center\"></td></tr>");
++				
++			}
++			pw.println("</table>\r\n" + "<input type=\"submit\" value=\" PAY NOW \">"+"<br/>"+
++					"	</form>\r\n" + 
++					"	</div>");
++			//pw.println("<div class=\"tab\"><a href=\"AddBook.html\">Add More Books</a></div>");
++		}
++		catch(Exception e)
++		{
++			e.printStackTrace();
++		}
++	}
++
++}
+diff --git a/OnlineBookStore/src/test/DBConnection.java b/OnlineBookStore/src/test/DBConnection.java
+new file mode 100644
+index 0000000..d00bc7d
+--- /dev/null
++++ b/OnlineBookStore/src/test/DBConnection.java
+@@ -0,0 +1,21 @@
++package test;
++import java.sql.*;
++public class DBConnection {
++	private static Connection con;
++	private DBConnection(){};
++	static {
++		try {
++			Class.forName("oracle.jdbc.driver.OracleDriver");
++			con = DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:xe","SHASHI","MANAGER");
++		}//End of try
++		catch(Exception e)
++		{
++			e.printStackTrace();
++		}
++	}//End of static block
++	
++	public static Connection getCon()
++	{
++		return con;
++	}
++}
+diff --git a/OnlineBookStore/src/test/ReceiptServlet.java b/OnlineBookStore/src/test/ReceiptServlet.java
+new file mode 100644
+index 0000000..e606371
+--- /dev/null
++++ b/OnlineBookStore/src/test/ReceiptServlet.java
+@@ -0,0 +1,75 @@
++package test;
++import test.DBConnection;
++import java.sql.*;
++import java.io.*;
++import javax.servlet.*;
++public class ReceiptServlet extends GenericServlet{
++	public void service(ServletRequest req,ServletResponse res) throws IOException,ServletException
++	{
++		PrintWriter pw = res.getWriter();
++		res.setContentType("text/html");
++		try {
++		Connection con = DBConnection.getCon();
++		PreparedStatement ps = con.prepareStatement("select * from book6");
++		ResultSet rs = ps.executeQuery();
++		int i=0;
++		RequestDispatcher rd = req.getRequestDispatcher("ViewBooks.html");
++		rd.include(req, res);
++		pw.println("<div class=\"tab\">You Successfully Paid for Following Books</div>");
++		pw.println("<div class=\"tab\">\r\n" + 
++				"		<table>\r\n" + 
++				"			<tr>\r\n" + 
++				"				\r\n" + 
++				"				<th>Book Code</th>\r\n" + 
++				"				<th>Book Name</th>\r\n" + 
++				"				<th>Book Author</th>\r\n" + 
++				"				<th>Book Price</th>\r\n" + 
++				"				<th>Quantity</th><br/>\r\n" + 
++				"			</tr>");
++		double total=0.0;
++		while(rs.next())
++		{
++			int bPrice =rs.getInt("bprice");
++			String bCode=rs.getString("bcode");
++			String bName = rs.getString("bname");
++			String bAuthor = rs.getString("bauthor");
++			int bQty = rs.getInt("bqty");
++			i=i+1;
++			
++			String qt = "qty"+Integer.toString(i);
++			int quantity = Integer.parseInt(req.getParameter(qt));
++			try {
++			String check1 = "checked"+Integer.toString(i);
++			String getChecked = req.getParameter(check1);
++			if(bQty<quantity)
++			{
++				pw.println("</table><div class=\"tab\">Please Select the Qty less than Available Books Quantity</div>");
++				break;
++			}
++
++			if(getChecked.equals("pay"))
++			{
++				pw.println("<tr><td>"+bCode+"</td>");
++				pw.println("<td>"+bName+"</td>");
++				pw.println("<td>"+bAuthor+"</td>");
++				pw.println("<td>"+bPrice+"</td>");
++				pw.println("<td>"+quantity+"</td></tr>");
++				total = total + bPrice * quantity;
++				bQty = bQty - quantity;
++				PreparedStatement ps1 = con.prepareStatement("update book6 set bqty=? where bcode=?");
++				ps1.setInt(1, bQty);
++				ps1.setString(2,bCode);
++				ps1.executeQuery();
++			}
++			}catch(Exception e) {}
++		}
++		pw.println("</table><br/><div class='tab'>Total Paid Amount: "+total+"</div>");
++		String fPay = req.getParameter("f_pay");
++		}
++		catch(Exception e)
++		{
++			e.printStackTrace();
++		}
++	}
++
++}
+diff --git a/OnlineBookStore/src/test/RemoveBookServlet.java b/OnlineBookStore/src/test/RemoveBookServlet.java
+new file mode 100644
+index 0000000..fac32f7
+--- /dev/null
++++ b/OnlineBookStore/src/test/RemoveBookServlet.java
+@@ -0,0 +1,39 @@
++package test;
++import test.DBConnection;
++import java.sql.*;
++import javax.servlet.*;
++import java.io.*;
++public class RemoveBookServlet extends GenericServlet{
++	public void service(ServletRequest req,ServletResponse res) throws IOException,ServletException
++	{
++		PrintWriter pw = res.getWriter();
++		res.setContentType("text/html");
++		String bkid= req.getParameter("book_code");
++		try {
++			Connection con = DBConnection.getCon();
++			PreparedStatement ps = con.prepareStatement("delete from book6 where bcode=?");
++			ps.setString(1, bkid);
++			int k = ps.executeUpdate();
++			if(k==1)
++			{
++				RequestDispatcher rd = req.getRequestDispatcher("Sample.html");
++				rd.include(req, res);
++				pw.println("<div class=\"tab\">Book Removed Successfully</div>");
++				pw.println("<div class=\"tab\"><a href=\"RemoveBooks.html\">Remove more Books</a></div>");
++				
++			}
++			else
++			{
++				RequestDispatcher rd = req.getRequestDispatcher("Sample.html");
++				rd.include(req, res);
++				pw.println("<div class=\"tab\">Book Not Available In The Store</div>");
++				pw.println("<div class=\"tab\"><a href=\"RemoveBooks.html\">Remove more Books</a></div>");
++			}
++		}
++		catch(Exception e)
++		{
++			e.printStackTrace();
++		}
++	}
++
++}
+diff --git a/OnlineBookStore/src/test/UserLoginServlet.java b/OnlineBookStore/src/test/UserLoginServlet.java
+new file mode 100644
+index 0000000..1882a69
+--- /dev/null
++++ b/OnlineBookStore/src/test/UserLoginServlet.java
+@@ -0,0 +1,42 @@
++package test;
++import test.DBConnection;
++import javax.servlet.*;
++import java.io.*;
++import java.sql.*;
++public class UserLoginServlet extends GenericServlet{
++	public void service(ServletRequest req, ServletResponse res) throws IOException,ServletException
++	{
++		PrintWriter pw = res.getWriter();
++		res.setContentType("text/html");
++		String uName = req.getParameter("uname");
++		String pWord = req.getParameter("pword");
++		try {
++			Connection con = DBConnection.getCon();
++			PreparedStatement ps = con.prepareStatement("SELECT * FROM REGISTER WHERE UNAME=? AND PWORD=?");
++			ps.setString(1, uName);
++			ps.setString(2, pWord);
++			ResultSet rs = ps.executeQuery();
++			if(rs.next())
++			{
++				RequestDispatcher rd = req.getRequestDispatcher("Sample.html");
++				rd.include(req, res);
++				pw.println("<div class=\"home hd brown\">Welcome ! "+uName+"</div><br/>");
++				pw.println("<div class=\"tab hd brown\">User Login Successful !</div><br/>");
++				pw.println("<div class=\"tab\"><a href=\"viewbook\">VIEW BOOKS</a></div>");
++				pw.println("<div class='tab'><a href=\"buybook\">BUY BOOKS</a></div>");
++			}
++			else
++			{
++				
++				RequestDispatcher rd = req.getRequestDispatcher("UserLogin.html");
++				rd.include(req,res);
++				pw.println("<div class=\"tab\">Incorrect UserName or PassWord</div>");
++			}
++			
++		}
++		catch(Exception e)
++		{
++			e.printStackTrace();
++		}
++	}
++}
+\ No newline at end of file
+diff --git a/OnlineBookStore/src/test/UserRegisterServlet.java b/OnlineBookStore/src/test/UserRegisterServlet.java
+new file mode 100644
+index 0000000..26ae421
+--- /dev/null
++++ b/OnlineBookStore/src/test/UserRegisterServlet.java
+@@ -0,0 +1,47 @@
++package test;
++import test.DBConnection;
++import java.sql.*;
++import javax.servlet.*;
++import java.io.*;
++public class UserRegisterServlet extends GenericServlet{
++	public void service(ServletRequest req, ServletResponse res) throws IOException,ServletException
++	{
++		PrintWriter pw = res.getWriter();
++		res.setContentType("text/html");
++		String uName = req.getParameter("uname");
++		String pWord = req.getParameter("pword");
++		String fName = req.getParameter("firstname");
++		String lName = req.getParameter("lastname");
++		String addr = req.getParameter("address");
++		int phNo = Integer.parseInt(req.getParameter("phoneno"));
++		String mailId = req.getParameter("mailid");
++		try {
++		Connection con = DBConnection.getCon();
++		PreparedStatement ps = con.prepareStatement("insert into register values(?,?,?,?,?,?,?)");
++		ps.setString(1, uName);
++		ps.setString(2, pWord);
++		ps.setString(3, fName);
++		ps.setString(4, lName);
++		ps.setString(5, addr);
++		ps.setInt(6, phNo);
++		ps.setString(7, mailId);
++		int k = ps.executeUpdate();
++		if(k==1)
++		{
++			RequestDispatcher rd = req.getRequestDispatcher("Sample.html");
++			rd.include(req, res);
++			pw.println("<h3 class='tab'>User Registered Successfully</h3>");
++		}
++		else
++		{
++			RequestDispatcher rd = req.getRequestDispatcher("userreg");
++			rd.include(req, res);
++			pw.println("Sorry for interruption! Register again");
++		}
++		}
++		catch(Exception e)
++		{
++			e.printStackTrace();
++		}
++	}
++}
+\ No newline at end of file
+diff --git a/OnlineBookStore/src/test/ViewBookServlet.java b/OnlineBookStore/src/test/ViewBookServlet.java
+new file mode 100644
+index 0000000..248c1c7
+--- /dev/null
++++ b/OnlineBookStore/src/test/ViewBookServlet.java
+@@ -0,0 +1,64 @@
++package test;
++import test.DBConnection;
++import java.io.*;
++import java.sql.*;
++import javax.servlet.*;
++/*class Books
++{
++	public String bName,bCode,bAuthor;
++	public int bPrice,bQty;
++	public Books(String bCode,String bName,String bAuthor,int bPrice,int bQty)
++	{
++		this.bAuthor=bAuthor;
++		this.bCode = bCode;
++		this.bName = bName;
++		this.bPrice = bPrice;
++		this.bQty = bQty;
++	}
++}*/
++public class ViewBookServlet extends GenericServlet{
++	public void service(ServletRequest req,ServletResponse res) throws IOException,ServletException
++	{
++		PrintWriter pw = res.getWriter();
++		res.setContentType("text/html");
++		try {
++			Connection con = DBConnection.getCon();
++			//ArrayList<Books> al = new ArrayList<Books>();
++			PreparedStatement ps = con.prepareStatement("Select * from book6");
++			ResultSet rs = ps.executeQuery();
++			RequestDispatcher rd = req.getRequestDispatcher("ViewBooks.html");
++			rd.include(req, res);
++			pw.println("<div class=\"tab\">Books Available In Our Store</div>");
++			pw.println("<div class=\"tab\">\r\n" + 
++					"		<table>\r\n" + 
++					"			<tr>\r\n" + 
++					"				\r\n" + 
++					"				<th>Book Code</th>\r\n" + 
++					"				<th>Book Name</th>\r\n" + 
++					"				<th>Book Author</th>\r\n" + 
++					"				<th>Book Price</th>\r\n" + 
++					"				<th>Quantity</th><br/>\r\n" + 
++					"			</tr>");
++			while(rs.next())
++			{
++				String bCode = rs.getString(1);
++				String bName = rs.getString(2);
++				String bAuthor = rs.getString(3);
++				int bPrice = rs.getInt(4);
++				int bQty = rs.getInt(5);
++				pw.println("<tr><td>"+bCode+"</td>");
++				pw.println("<td>"+bName+"</td>");
++				pw.println("<td>"+bAuthor+"</td>");
++				pw.println("<td>"+bPrice+"</td>");
++				pw.println("<td>"+bQty+"</td></tr>");
++			}
++			pw.println("</table>\r\n" + 
++					"	</div>");
++			//pw.println("<div class=\"tab\"><a href=\"AddBook.html\">Add More Books</a></div>");
++		}
++		catch(Exception e)
++		{
++			e.printStackTrace();
++		}
++	}
++}
+
+commit 8a3399aec8341c0766a49826a023bb6b24562ec1
+Author: shashirajraja <34605595+shashirajraja@users.noreply.github.com>
+Date:   Wed Jul 25 10:19:06 2018 +0530
+
+    README
+
+diff --git a/README.md b/README.md
+new file mode 100644
+index 0000000..ab7012a
+--- /dev/null
++++ b/README.md
+@@ -0,0 +1,5 @@
++# onlinebookstore
++<br/><b>Welcome to Online Book Store</b>
++<br/>This website is currently in progress under a live Project<br/>
++You can send us any commit or help improvement ideas if you want<br/>
++<bold>Thanks</bold>

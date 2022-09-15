@@ -1,0 +1,80 @@
+Filename,Buggy/Deleted,Fixed/Added
+MapperProcessor.java,String type = element.asType().toString();,if (element != null ) String type = element.asType().toString();
+ToStringMapperIT.java,EnumToStringMapper.EnumContainer enumContainer = new EnumToStringMapper.EnumContainer();,if (EnumToStringMapper != null ) EnumToStringMapper.EnumContainer enumContainer = new EnumToStringMapper.EnumContainer();
+ToStringMapperIT.java,EnumToStringMapper.EnumContainer enumContainer = new EnumToStringMapper.EnumContainer();,if (EnumToStringMapper != null ) EnumToStringMapper.EnumContainer enumContainer = new EnumToStringMapper.EnumContainer();
+MappingBuilder.java,res = inOutType.inIsPrimitive();,if (inOutType != null ) res = inOutType.inIsPrimitive();
+MappingBuilder.java,final PackageElement typePackage = context.elements.getPackageOf(declaredType.asElement());,if (context != null ) final PackageElement typePackage = context.elements.getPackageOf(declaredType.asElement());
+MapsWrapper.java,ignoreMissingProperties = mapperWrapper.isIgnoreMissingProperties();,if (mapperWrapper != null ) ignoreMissingProperties = mapperWrapper.isIgnoreMissingProperties();
+CustomMapperWrapper.java,InOutType inOutType = method.inOutArgs();,if (method != null ) InOutType inOutType = method.inOutArgs();
+MapperMethodGenerator.java,out = inOutType.out().toString();,if (inOutType != null ) out = inOutType.out().toString();
+MapperMethodGenerator.java,isPrimitiveOrImmutable = !inOutType.differs() && mappingBuilder.isNullSafe();,if (mappingBuilder != null ) isPrimitiveOrImmutable = !inOutType.differs() && mappingBuilder.isNullSafe();
+MapperMethodGenerator.java,"final BeanWrapper outBeanWrapper = getBeanWrapperOrNew(context, inOutType.out());","if (inOutType != null ) final BeanWrapper outBeanWrapper = getBeanWrapperOrNew(context, inOutType.out());"
+MapperMethodGenerator.java,isPrimitiveOrImmutable = isPrimitiveOrImmutable || inOutType.inIsPrimitive();,if (inOutType != null ) isPrimitiveOrImmutable = isPrimitiveOrImmutable || inOutType.inIsPrimitive();
+MapperMethodGenerator.java,Set<String> outFields = outBean.getSetterFields();,if (outBean != null ) Set<String> outFields = outBean.getSetterFields();
+MapperClassGenerator.java,declaredType = (DeclaredType) element.asType();,if (element != null ) declaredType = (DeclaredType) element.asType();
+MapperClassGenerator.java,InOutType inOutType = methodWrapper.inOutType();,if (methodWrapper != null ) InOutType inOutType = methodWrapper.inOutType();
+MapperClassGenerator.java,writer = new JavaWriter(sourceFile.openWriter());,if (JavaWriter(sourceFile != null ) writer = new JavaWriter(sourceFile.openWriter());
+MapperClassGenerator.java,type = type.getEnclosingElement();,if (type != null ) type = type.getEnclosingElement();
+MapperClassGenerator.java,declaredType = (DeclaredType) element.asType();,if (element != null ) declaredType = (DeclaredType) element.asType();
+MapperClassGenerator.java,InOutType inOutType = methodWrapper.inOutType();,if (methodWrapper != null ) InOutType inOutType = methodWrapper.inOutType();
+MapperClassGenerator.java,writer = new JavaWriter(sourceFile.openWriter());,if (JavaWriter(sourceFile != null ) writer = new JavaWriter(sourceFile.openWriter());
+MapperClassGenerator.java,type = type.getEnclosingElement();,if (type != null ) type = type.getEnclosingElement();
+BeanWrapper.java,result = item.getter.returnType();,if (item != null ) result = item.getter.returnType();
+BeanWrapper.java,result = item.setter.firstParameterType();,if (item != null ) result = item.setter.firstParameterType();
+MapperMethodGenerator.java,fieldRegistry = customField.mappingRegistry();,if (customField != null ) fieldRegistry = customField.mappingRegistry();
+MapperMethodGenerator.java,"final BeanWrapper outBeanWrapper = getBeanWrapperOrNew(context, inOutType.outAsTypeElement());","if (inOutType != null ) final BeanWrapper outBeanWrapper = getBeanWrapperOrNew(context, inOutType.outAsTypeElement());"
+ImmutableTypesWrapper.java,mappingBuilder = MappingBuilder.newImmutable();,if (MappingBuilder != null ) mappingBuilder = MappingBuilder.newImmutable();
+MapperMethodGenerator.java,out = inOutType.out().toString();,if (inOutType != null ) out = inOutType.out().toString();
+IntegrationTestBase.java,String srcLine = diagnostic.toString();,if (diagnostic != null ) String srcLine = diagnostic.toString();
+MappingBuilder.java,TypeElement typeElement = inOutType.inAsTypeElement();,if (inOutType != null ) TypeElement typeElement = inOutType.inAsTypeElement();
+Selma.java,ClassLoader classLoader = Thread.currentThread().getContextClassLoader();,if (Thread != null ) ClassLoader classLoader = Thread.currentThread().getContextClassLoader();
+Selma.java,classLoader = Selma.class.getClassLoader();,if (Selma != null ) classLoader = Selma.class.getClassLoader();
+Selma.java,mapperInstance = retainedConstructor.newInstance(source.toArray());,if (retainedConstructor != null ) mapperInstance = retainedConstructor.newInstance(source.toArray());
+Selma.java,mapperInstance = mapperImpl.newInstance();,if (mapperImpl != null ) mapperInstance = mapperImpl.newInstance();
+Selma.java,classe = classe.getSuperclass();,if (classe != null ) classe = classe.getSuperclass();
+Selma.java,classe = classe.getSuperclass();,if (classe != null ) classe = classe.getSuperclass();
+MethodWrapper.java,res = setterMatcher.matches();,if (setterMatcher != null ) res = setterMatcher.matches();
+MapperMethodGenerator.java,"final BeanWrapper outBeanWrapper = getBeanWrapperOrNew(context, inOutType.outAsTypeElement());","if (inOutType != null ) final BeanWrapper outBeanWrapper = getBeanWrapperOrNew(context, inOutType.outAsTypeElement());"
+MapperMethodGenerator.java,res = outBean.hasCallableConstructor();,if (outBean != null ) res = outBean.hasCallableConstructor();
+BeanWrapper.java,result = item.getter.returnType();,if (item != null ) result = item.getter.returnType();
+BeanWrapper.java,result = item.setter.firstParameterType();,if (item != null ) result = item.setter.firstParameterType();
+Selma.java,"String setter = ""setCustomMapper"" + customMapperClass.getSimpleName();","if (customMapperClass != null ) String setter = ""setCustomMapper"" + customMapperClass.getSimpleName();"
+Selma.java,classe = classe.getSuperclass();,if (classe != null ) classe = classe.getSuperclass();
+Selma.java,"setter = ""setCustomMapper"" + classe.getSimpleName();","if (classe != null ) setter = ""setCustomMapper"" + classe.getSimpleName();"
+BeanWrapper.java,List<ExecutableElement> constructors = ElementFilter.constructorsIn(typeElement.getEnclosedElements());,if (ElementFilter != null ) List<ExecutableElement> constructors = ElementFilter.constructorsIn(typeElement.getEnclosedElements());
+BeanWrapper.java,int paramsCount = constructor.getParameters().size();,if (constructor != null ) int paramsCount = constructor.getParameters().size();
+CustomMapperWrapper.java,List<ExecutableElement> constructors = ElementFilter.constructorsIn(element.getEnclosedElements());,if (ElementFilter != null ) List<ExecutableElement> constructors = ElementFilter.constructorsIn(element.getEnclosedElements());
+MapperMethodGenerator.java,String[] fromFields = customField.fromFields();,if (customField != null ) String[] fromFields = customField.fromFields();
+FieldsWrapper.java,final String fqcn = type.toString().toLowerCase();,if (type != null ) final String fqcn = type.toString().toLowerCase();
+MapperMethodGenerator.java,"String outField = maps.getFieldFor(field, inOutType.inAsDeclaredType());","if (inOutType != null ) String outField = maps.getFieldFor(field, inOutType.inAsDeclaredType());"
+InOutType.java,int result = in.toString().hashCode();,if (in != null ) int result = in.toString().hashCode();
+MapperProcessor.java,types = processingEnv.getTypeUtils();,if (processingEnv != null ) types = processingEnv.getTypeUtils();
+MapperProcessor.java,String inType = variableElementInType.asType().toString();,if (variableElementInType != null ) String inType = variableElementInType.asType().toString();
+MapperProcessor.java,String outType = executableElement.getReturnType().toString();,if (executableElement != null ) String outType = executableElement.getReturnType().toString();
+MapperClassGenerator.java,TypeMirror enumOut = methodWrapper.returnType();,if (methodWrapper != null ) TypeMirror enumOut = methodWrapper.returnType();
+MapperClassGenerator.java,TypeMirror enumIn = methodWrapper.firstParameterType();,if (methodWrapper != null ) TypeMirror enumIn = methodWrapper.firstParameterType();
+MapperClassGenerator.java,List<ExecutableElement> constructors = ElementFilter.constructorsIn(element.getEnclosedElements());,if (ElementFilter != null ) List<ExecutableElement> constructors = ElementFilter.constructorsIn(element.getEnclosedElements());
+MappingRegistry.java,InOutType inOutType = method.inOutType();,if (method != null ) InOutType inOutType = method.inOutType();
+MappingRegistry.java,InOutType inOutType = method.inOutArgs();,if (method != null ) InOutType inOutType = method.inOutArgs();
+MapperMethodGenerator.java,String fqcn = type.toString();,if (type != null ) String fqcn = type.toString();
+MapperMethodGenerator.java,DeclaredType inType = inOutType.inAsDeclaredType();,if (inOutType != null ) DeclaredType inType = inOutType.inAsDeclaredType();
+MapperMethodGenerator.java,String fqcn = inType.toString();,if (inType != null ) String fqcn = inType.toString();
+Selma.java,ClassLoader classLoader = Thread.currentThread().getContextClassLoader();,if (Thread != null ) ClassLoader classLoader = Thread.currentThread().getContextClassLoader();
+Selma.java,classLoader = Selma.class.getClassLoader();,if (Selma != null ) classLoader = Selma.class.getClassLoader();
+Selma.java,mapperInstance = mapperImpl.newInstance();,if (mapperImpl != null ) mapperInstance = mapperImpl.newInstance();
+Selma.java,classe = classe.getSuperclass();,if (classe != null ) classe = classe.getSuperclass();
+MapperMethodGenerator.java,TypeMirror typeElement = inOutType.in();,if (inOutType != null ) TypeMirror typeElement = inOutType.in();
+InOutType.java,int result = in.hashCode();,if (in != null ) int result = in.hashCode();
+Selma.java,ClassLoader classLoader = Thread.currentThread().getContextClassLoader();,if (Thread != null ) ClassLoader classLoader = Thread.currentThread().getContextClassLoader();
+Selma.java,classLoader = Selma.class.getClassLoader();,if (Selma != null ) classLoader = Selma.class.getClassLoader();
+Selma.java,mapperInstance = mapperImpl.newInstance();,if (mapperImpl != null ) mapperInstance = mapperImpl.newInstance();
+BeanWrapper.java,String field = methodWrapper.getFieldName();,if (methodWrapper != null ) String field = methodWrapper.getFieldName();
+BeanWrapper.java,String field = methodWrapper.getFieldName();,if (methodWrapper != null ) String field = methodWrapper.getFieldName();
+BeanWrapper.java,ExecutableElement method = it.next();,if (it != null ) ExecutableElement method = it.next();
+BeanWrapper.java,String methodName = method.getSimpleName().toString();,if (method != null ) String methodName = method.getSimpleName().toString();
+BeanWrapper.java,String methodName = method.getSimpleName().toString();,if (method != null ) String methodName = method.getSimpleName().toString();
+BeanWrapper.java,result = item.field.asType();,if (item != null ) result = item.field.asType();
+MethodWrapper.java,this.processingEnv = context.processingEnv();,if (context != null ) this.processingEnv = context.processingEnv();
+MapperClassGenerator.java,InOutType inOutType = methodWrapper.inOutType();,if (methodWrapper != null ) InOutType inOutType = methodWrapper.inOutType();
+TestCompiler.java,boolean res  =  task.call();,if (task != null ) boolean res  =  task.call();
+Selma.java,classLoader = XMapper.class.getClassLoader();,if (XMapper != null ) classLoader = XMapper.class.getClassLoader();

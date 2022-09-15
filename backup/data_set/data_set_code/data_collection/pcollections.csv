@@ -1,0 +1,48 @@
+Filename,Buggy/Deleted,Fixed/Added
+TreePMap.java,final K key = entry.getKey();,if (entry != null ) final K key = entry.getKey();
+TreePMap.java,final V value = entry.getValue();,if (entry != null ) final V value = entry.getValue();
+Benchmarks.java,ConsPStack list = ConsPStack.empty();,if (ConsPStack != null ) ConsPStack list = ConsPStack.empty();
+Benchmarks.java,TreePVector vector = TreePVector.empty();,if (TreePVector != null ) TreePVector vector = TreePVector.empty();
+Benchmarks.java,PMap map = HashTreePMap.empty();,if (HashTreePMap != null ) PMap map = HashTreePMap.empty();
+Benchmarks.java,PMap map = IntTreePMap.empty();,if (IntTreePMap != null ) PMap map = IntTreePMap.empty();
+AmortizedPQueue.java,E e = queue.peek();,if (queue != null ) E e = queue.peek();
+AmortizedPQueue.java,queue = queue.minus();,if (queue != null ) queue = queue.minus();
+AmortizedPQueue.java,int fsize = front.size();,if (front != null ) int fsize = front.size();
+AmortizedPQueue.java,int i = queue.peek();,if (queue != null ) int i = queue.peek();
+AmortizedPQueue.java,queue = queue.minus();,if (queue != null ) queue = queue.minus();
+HashPMap.java,if(entries==null) return ConsPStack.empty();,if (ConsPStack != null ) if(entries==null) return ConsPStack.empty();
+MapPBag.java,e = entry.getKey();,if (entry != null ) e = entry.getKey();
+MapPBag.java,n = entry.getValue();,if (entry != null ) n = entry.getValue();
+ConsPStackTest.java,PStack<Integer> pstack = ConsPStack.empty();,if (ConsPStack != null ) PStack<Integer> pstack = ConsPStack.empty();
+ConsPStackTest.java,int k = r.nextInt(pstack.size());,if (r != null ) int k = r.nextInt(pstack.size());
+ConsPStackTest.java,PStack<Integer> s = ConsPStack.empty();,if (ConsPStack != null ) PStack<Integer> s = ConsPStack.empty();
+HashPMapTest.java,int j = r.nextInt(pmap.size());,if (r != null ) int j = r.nextInt(pmap.size());
+IntTreePMapTest.java,int j = r.nextInt(pmap.size());,if (r != null ) int j = r.nextInt(pmap.size());
+OrderedPSetTest.java,POrderedSet<Integer> s = Empty.orderedSet();,if (Empty != null ) POrderedSet<Integer> s = Empty.orderedSet();
+OrderedPSetTest.java,POrderedSet<Integer> s = Empty.orderedSet();,if (Empty != null ) POrderedSet<Integer> s = Empty.orderedSet();
+OrderedPSetTest.java,PSet<Integer> s = Empty.set();,if (Empty != null ) PSet<Integer> s = Empty.set();
+OrderedPSetTest.java,POrderedSet<Integer> os = Empty.orderedSet();,if (Empty != null ) POrderedSet<Integer> os = Empty.orderedSet();
+SerializationTest.java,Object[] deserializedElements = deserializedPQueue.toArray();,if (deserializedPQueue != null ) Object[] deserializedElements = deserializedPQueue.toArray();
+SerializationTest.java,Object deserializedObject = objectInputStream.readObject();,if (objectInputStream != null ) Object deserializedObject = objectInputStream.readObject();
+TreePVectorTest.java,PVector<Integer> pvec = TreePVector.empty();,if (TreePVector != null ) PVector<Integer> pvec = TreePVector.empty();
+TreePVectorTest.java,int k = r.nextInt(pvec.size());,if (r != null ) int k = r.nextInt(pvec.size());
+TreePVectorTest.java,PVector<Integer> v = TreePVector.empty();,if (TreePVector != null ) PVector<Integer> v = TreePVector.empty();
+UtilityTest.java,PStack<String> stack = ConsPStack.empty();,if (ConsPStack != null ) PStack<String> stack = ConsPStack.empty();
+UtilityTest.java,"pseq = pseq.plus(j, r.nextInt());","if (r != null ) pseq = pseq.plus(j, r.nextInt());"
+UtilityTest.java,"pseq = pseq.with(j, r.nextInt());","if (r != null ) pseq = pseq.with(j, r.nextInt());"
+UtilityTest.java,pseq = pseq.plus(r.nextInt());,if (pseq != null ) pseq = pseq.plus(r.nextInt());
+UtilityTest.java,PStack<E> rev = ConsPStack.empty();,if (ConsPStack != null ) PStack<E> rev = ConsPStack.empty();
+SimpleImmutableEntry.java,this.key   = entry.getKey();,if (entry != null ) this.key   = entry.getKey();
+SimpleImmutableEntry.java,this.value = entry.getValue();,if (entry != null ) this.value = entry.getValue();
+Benchmarks.java,PStack consPStack = ConsPStack.empty();,if (ConsPStack != null ) PStack consPStack = ConsPStack.empty();
+Benchmarks.java,PVector treePVector = TreePVector.empty();,if (TreePVector != null ) PVector treePVector = TreePVector.empty();
+Benchmarks.java,PSet hashTreePSet = HashTreePSet.empty();,if (HashTreePSet != null ) PSet hashTreePSet = HashTreePSet.empty();
+Benchmarks.java,PBag hashTreePBag = HashTreePBag.empty();,if (HashTreePBag != null ) PBag hashTreePBag = HashTreePBag.empty();
+Benchmarks.java,PMap hashTreePMap = HashTreePMap.empty();,if (HashTreePMap != null ) PMap hashTreePMap = HashTreePMap.empty();
+Benchmarks.java,PMap intTreePMap = IntTreePMap.empty();,if (IntTreePMap != null ) PMap intTreePMap = IntTreePMap.empty();
+UtilityTest.java,PStack<String> stack = ConsPStack.empty();,if (ConsPStack != null ) PStack<String> stack = ConsPStack.empty();
+UtilityTest.java,PStack<E> rev = ConsPStack.empty();,if (ConsPStack != null ) PStack<E> rev = ConsPStack.empty();
+ConsPStack.java,"hashCode = super.hashCode(); // AbstractList.hashCode(), uses iterator()","if (iterator() != null ) hashCode = super.hashCode(); // AbstractList.hashCode(), uses iterator()"
+HashPMap.java,hash += entry.hashCode();,if (entry != null ) hash += entry.hashCode();
+IntTreePMap.java,"hashCode = super.hashCode(); // AbstractMap.hashCode(), uses entrySet()","if (entrySet() != null ) hashCode = super.hashCode(); // AbstractMap.hashCode(), uses entrySet()"
+TreePVector.java,"hashCode = super.hashCode(); // AbstractList.hashCode(), uses iterator()","if (iterator() != null ) hashCode = super.hashCode(); // AbstractList.hashCode(), uses iterator()"

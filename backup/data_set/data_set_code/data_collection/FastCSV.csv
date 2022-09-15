@@ -1,0 +1,21 @@
+Filename,Buggy/Deleted,Fixed/Added
+CsvReaderExample.java,FileInputStream fin = new FileInputStream(raf.getFD());,if (FileInputStream(raf != null ) FileInputStream fin = new FileInputStream(raf.getFD());
+CsvReaderTest.java,final CsvRow row = it.next();,if (it != null ) final CsvRow row = it.next();
+CsvReaderTest.java,CsvRow row = it.next();,if (it != null ) CsvRow row = it.next();
+CsvReaderTest.java,row = it.next();,if (it != null ) row = it.next();
+InfiniteDataReader.java,this.data = data.toCharArray();,if (data != null ) this.data = data.toCharArray();
+CsvParser.java,lineNo += line.getLines();,if (line != null ) lineNo += line.getLines();
+CsvRow.java,final String key = header.getKey();,if (header != null ) final String key = header.getKey();
+RowReader.java,final Line localLine = line.reset();,if (line != null ) final Line localLine = line.reset();
+CsvWriter.java,this.lineDelimiter = lineDelimiter.clone();,if (lineDelimiter != null ) this.lineDelimiter = lineDelimiter.clone();
+CsvReaderTest.java,final CsvRow csvRow = csv.nextRow();,if (csv != null ) final CsvRow csvRow = csv.nextRow();
+CsvReaderTest.java,CsvRow row = csv.nextRow();,if (csv != null ) CsvRow row = csv.nextRow();
+CsvReaderTest.java,row = csv.nextRow();,if (csv != null ) row = csv.nextRow();
+CsvReaderTest.java,final CsvRow csvRow = csvParser.nextRow();,if (csvParser != null ) final CsvRow csvRow = csvParser.nextRow();
+ReusableStringBuilderTest.java,final String s = sb.toStringAndReset();,if (sb != null ) final String s = sb.toStringAndReset();
+ReusableStringBuilderTest.java,String s = sb.toStringAndReset();,if (sb != null ) String s = sb.toStringAndReset();
+ReusableStringBuilderTest.java,s = sb.toStringAndReset();,if (sb != null ) s = sb.toStringAndReset();
+ReusableStringBuilderTest.java,String s = sb.toStringAndReset();,if (sb != null ) String s = sb.toStringAndReset();
+ReusableStringBuilderTest.java,s = sb.toStringAndReset();,if (sb != null ) s = sb.toStringAndReset();
+CsvParser.java,final int fieldCount = currentFields.size();,if (currentFields != null ) final int fieldCount = currentFields.size();
+ReusableStringBuilderTest.java,String s = sb.toStringAndReset();,if (sb != null ) String s = sb.toStringAndReset();

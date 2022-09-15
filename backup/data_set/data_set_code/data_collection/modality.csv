@@ -1,0 +1,88 @@
+Filename,Buggy/Deleted,Fixed/Added
+BaseModel.java,Iterator<URL> availableIt = versionningScripts.iterator();,if (versionningScripts != null ) Iterator<URL> availableIt = versionningScripts.iterator();
+Transaction.java,changed += statement.executeUpdate();,if (statement != null ) changed += statement.executeUpdate();
+BaseModel.java,Object obj = clazz.newInstance();,if (clazz != null ) Object obj = clazz.newInstance();
+ConfigHelper.java,ret = file.exists();,if (file != null ) ret = file.exists();
+Transaction.java,int paramCount = statement.getParameterMetaData().getParameterCount();,if (statement != null ) int paramCount = statement.getParameterMetaData().getParameterCount();
+Transaction.java,changed += statement.executeUpdate();,if (statement != null ) changed += statement.executeUpdate();
+Transaction.java,savepoint = connection.setSavepoint();,if (connection != null ) savepoint = connection.setSavepoint();
+Transaction.java,connection = getModel().getTransactionConnection();,if (getModel() != null ) connection = getModel().getTransactionConnection();
+BasicModelToolTests.java,Calendar cal = GregorianCalendar.getInstance();,if (GregorianCalendar != null ) Calendar cal = GregorianCalendar.getInstance();
+BasicModelToolTests.java,long books = countBooks.getLong();,if (countBooks != null ) long books = countBooks.getLong();
+BasicModelToolTests.java,long count = authors.getCount();,if (authors != null ) long count = authors.getCount();
+BasicModelToolTests.java,Calendar cal = GregorianCalendar.getInstance();,if (GregorianCalendar != null ) Calendar cal = GregorianCalendar.getInstance();
+BasicModelToolTests.java,Calendar cal = GregorianCalendar.getInstance();,if (GregorianCalendar != null ) Calendar cal = GregorianCalendar.getInstance();
+BasicModelToolTests.java,Instance oneAuthor = author.newInstance();,if (author != null ) Instance oneAuthor = author.newInstance();
+BasicModelToolTests.java,Instance blob = blobEntity.newInstance();,if (blobEntity != null ) Instance blob = blobEntity.newInstance();
+BasicModelToolTests.java,Instance book = related.next();,if (related != null ) Instance book = related.next();
+BasicModelToolTests.java,book = related.next();,if (related != null ) book = related.next();
+BasicModelToolTests.java,Instance similarBook = it.next();,if (it != null ) Instance similarBook = it.next();
+ApiClient.java,String paramsUrl = url + paramsString.toString();,if (paramsString != null ) String paramsUrl = url + paramsString.toString();
+ApiClient.java,StatusLine statusLine = resp.getStatusLine();,if (resp != null ) StatusLine statusLine = resp.getStatusLine();
+ApiClient.java,int status = statusLine.getStatusCode();,if (statusLine != null ) int status = statusLine.getStatusCode();
+ApiClient.java,HttpEntity entity = resp.getEntity();,if (resp != null ) HttpEntity entity = resp.getEntity();
+ApiClient.java,HttpEntity entity = resp.getEntity();,if (resp != null ) HttpEntity entity = resp.getEntity();
+Transaction.java,connection = getModel().getTransactionConnection();,if (getModel() != null ) connection = getModel().getTransactionConnection();
+SqlUtils.java,String nextQuery = currentQuery.toString().trim();,if (currentQuery != null ) String nextQuery = currentQuery.toString().trim();
+StatementPool.java,ConnectionWrapper connection = currentTransactionConnection.get();,if (currentTransactionConnection != null ) ConnectionWrapper connection = currentTransactionConnection.get();
+ApiClientTests.java,String content = contents.get(key).toJson();,if (contents != null ) String content = contents.get(key).toJson();
+BaseModel.java,List<String> sqlTables = reverseEngineer.getTables();,if (reverseEngineer != null ) List<String> sqlTables = reverseEngineer.getTables();
+BaseModel.java,String fkTable = join.getLeft();,if (join != null ) String fkTable = join.getLeft();
+BaseModel.java,List<String> fkColumns = join.getRight();,if (join != null ) List<String> fkColumns = join.getRight();
+BaseModel.java,Entity fkEntity = entry.getKey();,if (entry != null ) Entity fkEntity = entry.getKey();
+Instance.java,Filter<Serializable> filter = readFilters.getTypeEntry(value.getClass());,if (readFilters != null ) Filter<Serializable> filter = readFilters.getTypeEntry(value.getClass());
+ColumnMapper.java,ret = entry.getLeaf();,if (entry != null ) ret = entry.getLeaf();
+ColumnMapper.java,ret = entry.getLeaf();,if (entry != null ) ret = entry.getLeaf();
+Mapper.java,Object obj = leafClass.newInstance();,if (leafClass != null ) Object obj = leafClass.newInstance();
+Mapper.java,String key = (String)entry.getKey();,if ((String)entry != null ) String key = (String)entry.getKey();
+Mapper.java,Filter<T> leaf = valueToLeaf(entry.getValue());,if (valueToLeaf(entry != null ) Filter<T> leaf = valueToLeaf(entry.getValue());
+TableMapper.java,ret = mappingEntry.getLeaf();,if (mappingEntry != null ) ret = mappingEntry.getLeaf();
+TypeMapper.java,clazz = clazz.getSuperclass();,if (clazz != null ) clazz = clazz.getSuperclass();
+ReverseEngineer.java,Identifiers identifiers = entity.getModel().getIdentifiers();,if (entity != null ) Identifiers identifiers = entity.getModel().getIdentifiers();
+Mapper.java,T leaf = valueToLeaf(entry.getValue());,if (valueToLeaf(entry != null ) T leaf = valueToLeaf(entry.getValue());
+StatementPool.java,for(Iterator it = available.iterator(); it.hasNext(); ),if () != null ) for(Iterator it = available.iterator(); it.hasNext(); )
+StatementPool.java,statement = (PooledStatement)it.next();,if ((PooledStatement)it != null ) statement = (PooledStatement)it.next();
+StatementPool.java,connection = connectionPool.getConnection();,if (connectionPool != null ) connection = connectionPool.getConnection();
+DriverInfos.java,ResultSet rs = statement.getGeneratedKeys();,if (statement != null ) ResultSet rs = statement.getGeneratedKeys();
+DriverInfos.java,ResultSetMetaData rsmd = rs.getMetaData();,if (rs != null ) ResultSetMetaData rsmd = rs.getMetaData();
+DriverInfos.java,int numberOfColumns = rsmd.getColumnCount();,if (rsmd != null ) int numberOfColumns = rsmd.getColumnCount();
+WebappModelProvider.java,modelId = model.getModelId();,if (model != null ) modelId = model.getModelId();
+ModalityFilter.java,model = config.initModel();,if (config != null ) model = config.initModel();
+ModalityServlet.java,model = config.initModel();,if (config != null ) model = config.initModel();
+WebappModelProvider.java,"InputStream is = ServletUtils.getInputStream(modalityConfigPath, webConfig.getServletContext());","if (webConfig != null ) InputStream is = ServletUtils.getInputStream(modalityConfigPath, webConfig.getServletContext());"
+ModalityFilter.java,"InputStream is = ServletUtils.getInputStream(modalityConfigPath, config.getServletContext());","if (config != null ) InputStream is = ServletUtils.getInputStream(modalityConfigPath, config.getServletContext());"
+ModalityFilter.java,modelId = modelKey = modelKeys.iterator().next();,if (modelKeys != null ) modelId = modelKey = modelKeys.iterator().next();
+ModalityFilter.java,modelId = model.getModelId();,if (model != null ) modelId = model.getModelId();
+ModalityServlet.java,"InputStream is = ServletUtils.getInputStream(modalityConfigPath, config.getServletContext());","if (config != null ) InputStream is = ServletUtils.getInputStream(modalityConfigPath, config.getServletContext());"
+ModalityServlet.java,modelId = modelKey = modelKeys.iterator().next();,if (modelKeys != null ) modelId = modelKey = modelKeys.iterator().next();
+ModalityServlet.java,modelId = model.getModelId();,if (model != null ) modelId = model.getModelId();
+SavedRequest.java,body = toByteArray(request.getInputStream());,if (toByteArray(request != null ) body = toByteArray(request.getInputStream());
+AbstractFormAuthFilter.java,HttpSession session = request.getSession();,if (request != null ) HttpSession session = request.getSession();
+AbstractFormAuthFilter.java,HttpSession session = request.getSession();,if (request != null ) HttpSession session = request.getSession();
+SavedRequest.java,Enumeration<String> attributeNames = request.getAttributeNames();,if (request != null ) Enumeration<String> attributeNames = request.getAttributeNames();
+SavedRequest.java,String attributeName = attributeNames.nextElement();,if (attributeNames != null ) String attributeName = attributeNames.nextElement();
+SavedRequest.java,Enumeration<String> headerNames = request.getHeaderNames();,if (request != null ) Enumeration<String> headerNames = request.getHeaderNames();
+SavedRequest.java,String headerName = headerNames.nextElement();,if (headerNames != null ) String headerName = headerNames.nextElement();
+SavedRequest.java,requestURL = request.getRequestURL();,if (request != null ) requestURL = request.getRequestURL();
+SavedRequest.java,String charset = request.getCharacterEncoding();,if (request != null ) String charset = request.getCharacterEncoding();
+BaseModel.java,upstreamAttributeName = pkEntity.getName();,if (pkEntity != null ) upstreamAttributeName = pkEntity.getName();
+VelosurfEntityReference.java,String msg = tuple.getMessage();,if (tuple != null ) String msg = tuple.getMessage();
+VelosurfEntityReference.java,Throwable err = tuple.getThrowable();,if (tuple != null ) Throwable err = tuple.getThrowable();
+VelosurfInstanceReference.java,String msg = tuple.getMessage();,if (tuple != null ) String msg = tuple.getMessage();
+VelosurfInstanceReference.java,Throwable err = tuple.getThrowable();,if (tuple != null ) Throwable err = tuple.getThrowable();
+VelosurfTool.java,String msg = tuple.getMessage();,if (tuple != null ) String msg = tuple.getMessage();
+VelosurfTool.java,Throwable err = tuple.getThrowable();,if (tuple != null ) Throwable err = tuple.getThrowable();
+VelosurfActiveInstanceReference.java,String msg = tuple.getMessage();,if (tuple != null ) String msg = tuple.getMessage();
+VelosurfActiveInstanceReference.java,Throwable err = tuple.getThrowable();,if (tuple != null ) Throwable err = tuple.getThrowable();
+Transaction.java,element = element.trim();,if (element != null ) element = element.trim();
+BaseModel.java,Connection connection = dataSource.getConnection();,if (dataSource != null ) Connection connection = dataSource.getConnection();
+Instance.java,Filter<Serializable> filter = readFilters.getTypeEntry(value.getClass());,if (readFilters != null ) Filter<Serializable> filter = readFilters.getTypeEntry(value.getClass());
+ConfigDigester.java,String childName = childElement.getLocalName();,if (childElement != null ) String childName = childElement.getLocalName();
+FormAuthFilter.java,modelId = modelKey = modelKeys.iterator().next();,if (modelKeys != null ) modelId = modelKey = modelKeys.iterator().next();
+FormAuthFilter.java,modelId = model.getModelId();,if (model != null ) modelId = model.getModelId();
+ModalityFilter.java,"InputStream is = ServletUtils.getInputStream(modalityConfigPath, config.getServletContext());","if (config != null ) InputStream is = ServletUtils.getInputStream(modalityConfigPath, config.getServletContext());"
+ModalityFilter.java,"InputStream is = ServletUtils.getInputStream(motionConfigPath, config.getServletContext());","if (config != null ) InputStream is = ServletUtils.getInputStream(motionConfigPath, config.getServletContext());"
+AbstractAuthFilter.java,"InputStream is = ServletUtils.getInputStream(motionConfigPath, config.getServletContext());","if (config != null ) InputStream is = ServletUtils.getInputStream(motionConfigPath, config.getServletContext());"
+VelosurfTool.java,DocumentBuilderFactory builderFactory = XmlUtils.createDocumentBuilderFactory();,if (XmlUtils != null ) DocumentBuilderFactory builderFactory = XmlUtils.createDocumentBuilderFactory();
+BasicModelToolTests.java,ToolboxFactory factory = config.createFactory();,if (config != null ) ToolboxFactory factory = config.createFactory();
+BasicModelToolTests.java,Context context = manager.createContext();,if (manager != null ) Context context = manager.createContext();

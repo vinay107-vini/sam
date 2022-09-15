@@ -1,0 +1,8 @@
+how to login
+
+1) open the terminal from the pem key directory
+2) enter ---> ssh -i recosense-monitor_key.pem ubuntu@ip_address
+3) if permission denied follow this step else no --->sudo chmod 400 recosense-monitor_key.pem
+4) ssh -i recosense-monitor_key.pem ubuntu@20.199.27.48
+
+and follow the steps for frontend or backend 

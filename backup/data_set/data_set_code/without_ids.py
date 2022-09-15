@@ -1,0 +1,67 @@
+import os
+import pandas as pd
+#Clone a Repo#
+repo_url = input("Enter any public Repo URL: ")
+os.system("git clone {}".format(repo_url))
+
+repo_name= repo_url.split('.git')[0].split('/')[-1]
+cwd = os.getcwd()  
+
+os.chdir("{}/{}".format(cwd,repo_name))
+os.system("git log -p >{}/commit.diff".format(cwd))
+
+res = pd.DataFrame()
+def func(collection):
+    global res
+    list1=[]
+    list2=[]
+    no_bug=0
+    no_fixed=0
+
+    for commit in collection:
+        if commit[1].startswith("+"):
+            list2.append(commit)
+            no_fixed+=1
+        if commit[1].startswith("-"):
+            list1.append(commit)
+            no_bug+=1
+
+    skip=no_bug-no_fixed
+
+    if list1 and list2:
+        if skip>0:
+            for _ in range(abs(skip)):
+                list2.append((name,""))
+        elif skip<0:
+            for _ in range(abs(skip)):
+                list1.append((name,""))
+
+
+    list2.append((name,"END OF THE COMMIT"))
+    first_df = pd.DataFrame(list1, columns = ['Filename','Buggy/Deleted'])
+    second_df = pd.DataFrame(list2, columns = ['Filename','Fixed/Added'])
+    final = pd.concat([first_df,second_df[['Fixed/Added']]],axis=1)
+    res = pd.concat([res, final])
+
+with open('{}/commit.diff'.format(cwd),'r') as f:
+    lines = f.readlines()
+    data=[]
+    name=""
+    for each in lines:
+        if each.startswith("diff --git"):
+            name = each.split("/")[-1]
+
+        if "---" not in each and '+++' not in each:
+            if each.startswith("-") or each.startswith("+") or each.startswith("\ No newline"):
+                data.append((name,each.strip()))
+            else:
+                if data:
+                    func(data)
+                    data=[]
+    if data:
+        func(data)
+
+if not res.empty:    
+    res.to_csv('{}/calci.csv'.format(cwd),index=False)
+else:
+    raise Exception("No changes in repo")

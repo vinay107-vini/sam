@@ -1,0 +1,26 @@
+Filename,Buggy/Deleted,Fixed/Added
+JansiLoader.java,String uuid = UUID.randomUUID().toString();,if (UUID != null ) String uuid = UUID.randomUUID().toString();
+AnsiString.java,ByteArrayOutputStream buff = new ByteArrayOutputStream(str.length());,if (ByteArrayOutputStream(str != null ) ByteArrayOutputStream buff = new ByteArrayOutputStream(str.length());
+WindowsSupport.java,char[] chars = msg.toCharArray();,if (msg != null ) char[] chars = msg.toCharArray();
+AnsiRenderWriterTest.java,String result = new String(baos.toByteArray());,if (String(baos != null ) String result = new String(baos.toByteArray());
+AnsiOutputStream.java,Object arg = optionsIterator.next();,if (optionsIterator != null ) Object arg = optionsIterator.next();
+AnsiOutputStream.java,Iterator<Object> optionsIterator = options.iterator();,if (options != null ) Iterator<Object> optionsIterator = options.iterator();
+AnsiOutputStream.java,Object next = optionsIterator.next();,if (optionsIterator != null ) Object next = optionsIterator.next();
+AnsiPrintStream.java,Object arg = optionsIterator.next();,if (optionsIterator != null ) Object arg = optionsIterator.next();
+AnsiPrintStream.java,Iterator<Object> optionsIterator = options.iterator();,if (options != null ) Iterator<Object> optionsIterator = options.iterator();
+AnsiPrintStream.java,Object next = optionsIterator.next();,if (optionsIterator != null ) Object next = optionsIterator.next();
+WindowsAnsiOutputStream.java,COORD leftColCurrRow = info.cursorPosition.copy();,if (info != null ) COORD leftColCurrRow = info.cursorPosition.copy();
+WindowsAnsiPrintStream.java,COORD leftColCurrRow = info.cursorPosition.copy();,if (info != null ) COORD leftColCurrRow = info.cursorPosition.copy();
+AnsiConsole.java,String charset = Charset.defaultCharset().name();,if (Charset != null ) String charset = Charset.defaultCharset().name();
+AnsiRenderer.java,Ansi ansi = Ansi.ansi();,if (Ansi != null ) Ansi ansi = Ansi.ansi();
+AnsiRenderer.java,ansi = ansi.bg(code.getColor());,if (ansi != null ) ansi = ansi.bg(code.getColor());
+AnsiRenderer.java,ansi = ansi.fg(code.getColor());,if (ansi != null ) ansi = ansi.fg(code.getColor());
+AnsiRenderer.java,ansi = ansi.a(code.getAttribute());,if (ansi != null ) ansi = ansi.a(code.getAttribute());
+WindowsAnsiOutputStream.java,COORD leftColCurrRow = info.cursorPosition.copy();,if (info != null ) COORD leftColCurrRow = info.cursorPosition.copy();
+AnsiRenderer.java,Code code = Code.valueOf(name.toUpperCase());,if (Code != null ) Code code = Code.valueOf(name.toUpperCase());
+WindowsAnsiOutputStream.java,COORD.ByValue topLeft = new COORD.ByValue();,if (COORD != null ) COORD.ByValue topLeft = new COORD.ByValue();
+WindowsAnsiOutputStream.java,COORD.ByValue leftColCurrRow = info.cursorPosition.copy();,if (info != null ) COORD.ByValue leftColCurrRow = info.cursorPosition.copy();
+WindowsSupport.java,int errorCode = Native.getLastError();,if (Native != null ) int errorCode = Native.getLastError();
+WindowsAnsiOutputStream.java,COORD.ByValue coord = new COORD.ByValue();,if (COORD != null ) COORD.ByValue coord = new COORD.ByValue();
+WindowsAnsiOutputStream.java,COORD.ByValue coord = new COORD.ByValue();,if (COORD != null ) COORD.ByValue coord = new COORD.ByValue();
+WindowsSupport.java,int errorCode = Native.getLastError();,if (Native != null ) int errorCode = Native.getLastError();

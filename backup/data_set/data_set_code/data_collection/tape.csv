@@ -1,0 +1,20 @@
+Filename,Buggy/Deleted,Fixed/Added
+QueueFileLoadingTest.java,File tmp = new UndeletableFile(testFile.getAbsolutePath());,if (UndeletableFile(testFile != null ) File tmp = new UndeletableFile(testFile.getAbsolutePath());
+ObjectQueueTest.java,Iterator iterator = queue.iterator();,if (queue != null ) Iterator iterator = queue.iterator();
+ObjectQueueTest.java,Iterator iterator = queue.iterator();,if (queue != null ) Iterator iterator = queue.iterator();
+ObjectQueueTest.java,Iterator iterator = queue.iterator();,if (queue != null ) Iterator iterator = queue.iterator();
+ObjectQueueTest.java,Iterator iterator = queue.iterator();,if (queue != null ) Iterator iterator = queue.iterator();
+ObjectQueueTest.java,Iterator iterator = queue.iterator();,if (queue != null ) Iterator iterator = queue.iterator();
+ObjectQueueTest.java,Iterator iterator = queue.iterator();,if (queue != null ) Iterator iterator = queue.iterator();
+ObjectQueueTest.java,Iterator iterator = queue.iterator();,if (queue != null ) Iterator iterator = queue.iterator();
+ObjectQueueTest.java,List<Pojo> peek = queue.asList();,if (queue != null ) List<Pojo> peek = queue.asList();
+InMemoryObjectQueue.java,"int end = Math.min(max, entries.size());","if (entries != null ) int end = Math.min(max, entries.size());"
+QueueFile.java,int b = raf.read();,if (raf != null ) int b = raf.read();
+FileObjectQueueTest.java,List<String> peek = queue.asList();,if (queue != null ) List<String> peek = queue.asList();
+FileObjectQueue.java,byte[] bytes = queueFile.peek();,if (queueFile != null ) byte[] bytes = queueFile.peek();
+ImageUploadTaskService.java,ImageUploadTask task = queue.peek();,if (queue != null ) ImageUploadTask task = queue.peek();
+TaskQueue.java,T task = delegate.peek();,if (delegate != null ) T task = delegate.peek();
+QueueFileTest.java,final ExecutorService executor = Executors.newSingleThreadExecutor();,if (Executors != null ) final ExecutorService executor = Executors.newSingleThreadExecutor();
+QueueFile.java,FileChannel channel = raf.getChannel();,if (raf != null ) FileChannel channel = raf.getChannel();
+QueueFile.java,FileChannel channel = raf.getChannel();,if (raf != null ) FileChannel channel = raf.getChannel();
+QueueFile.java,FileChannel channel = raf.getChannel();,if (raf != null ) FileChannel channel = raf.getChannel();

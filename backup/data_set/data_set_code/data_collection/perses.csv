@@ -1,0 +1,13 @@
+Filename,Buggy/Deleted,Fixed/Added
+AgentLoader.java,"String canonicalPath = new File(""."").getCanonicalPath();","if (File("" != null ) String canonicalPath = new File(""."").getCanonicalPath();"
+AgentLoader.java,String connectorAddress = jvm.startLocalManagementAgent();,if (jvm != null ) String connectorAddress = jvm.startLocalManagementAgent();
+AgentLoader.java,MBeanServerConnection server = connector.getMBeanServerConnection();,if (connector != null ) MBeanServerConnection server = connector.getMBeanServerConnection();
+AgentLoader.java,jvmPid = jvmProcessOpt.get();,if (jvmProcessOpt != null ) jvmPid = jvmProcessOpt.get();
+AgentLoader.java,ByteArrayOutputStream baos = new ByteArrayOutputStream(is.available());,if (ByteArrayOutputStream(is != null ) ByteArrayOutputStream baos = new ByteArrayOutputStream(is.available());
+AgentLoader.java,String connectorAddress = jvm.startLocalManagementAgent();,if (jvm != null ) String connectorAddress = jvm.startLocalManagementAgent();
+AgentLoader.java,MBeanServerConnection server = connector.getMBeanServerConnection();,if (connector != null ) MBeanServerConnection server = connector.getMBeanServerConnection();
+AgentLoader.java,String jvmPid = jvmProcessOpt.get();,if (jvmProcessOpt != null ) String jvmPid = jvmProcessOpt.get();
+AgentLoader.java,MBeanServerConnection server = connector.getMBeanServerConnection();,if (connector != null ) MBeanServerConnection server = connector.getMBeanServerConnection();
+TransformerService.java,targetClassLoader = targetClazz.getClassLoader();,if (targetClazz != null ) targetClassLoader = targetClazz.getClassLoader();
+TransformerService.java,targetClassLoader = targetClazz.getClassLoader();,if (targetClazz != null ) targetClassLoader = targetClazz.getClassLoader();
+AgentLoader.java,if(fos!=null) try { fos.close(); } catch (Exception e) {},if ({} != null ) if(fos!=null) try { fos.close(); } catch (Exception e) {}

@@ -1,0 +1,71 @@
+Filename,Buggy/Deleted,Fixed/Added
+UsageHelper.java,Set<String> options = option.getOptions();,if (option != null ) Set<String> options = option.getOptions();
+CommandGroupUsage.java,List<CommandMetadata> commands = newArrayList(group.getCommands());,if (newArrayList(group != null ) List<CommandMetadata> commands = newArrayList(group.getCommands());
+GlobalUsage.java,List<OptionMetadata> options = newArrayList(global.getOptions());,if (newArrayList(global != null ) List<OptionMetadata> options = newArrayList(global.getOptions());
+TestGalaxyCommandLineParser.java,Cli<GalaxyCommand> galaxy = builder.build();,if (builder != null ) Cli<GalaxyCommand> galaxy = builder.build();
+Parser.java,"OptionMetadata option = findOption(allowedOptions, tokens.peek());","if (tokens != null ) OptionMetadata option = findOption(allowedOptions, tokens.peek());"
+CommandUsage.java,List<OptionMetadata> globalOptions = new ArrayList<OptionMetadata>(command.getGlobalOptions());,if (ArrayList<OptionMetadata>(command != null ) List<OptionMetadata> globalOptions = new ArrayList<OptionMetadata>(command.getGlobalOptions());
+CommandUsage.java,List<OptionMetadata> groupOptions = new ArrayList<OptionMetadata>(command.getGroupOptions());,if (ArrayList<OptionMetadata>(command != null ) List<OptionMetadata> groupOptions = new ArrayList<OptionMetadata>(command.getGroupOptions());
+CommandUsage.java,List<OptionMetadata> commandOptions = new ArrayList<OptionMetadata>(command.getCommandOptions());,if (ArrayList<OptionMetadata>(command != null ) List<OptionMetadata> commandOptions = new ArrayList<OptionMetadata>(command.getCommandOptions());
+GalaxyCommandLineParser.java,GitLikeCli<GalaxyCommand> galaxy = builder.build();,if (builder != null ) GitLikeCli<GalaxyCommand> galaxy = builder.build();
+Git.java,GitLikeCli<Runnable> gitParser = builder.build();,if (builder != null ) GitLikeCli<Runnable> gitParser = builder.build();
+GalaxyCommandLineParser.java,GitLikeCommandParser<GalaxyCommand> galaxy = builder.build();,if (builder != null ) GitLikeCommandParser<GalaxyCommand> galaxy = builder.build();
+Git.java,GitLikeCommandParser<Runnable> gitParser = builder.build();,if (builder != null ) GitLikeCommandParser<Runnable> gitParser = builder.build();
+MetadataLoader.java,title = argumentsAnnotation.title();,if (argumentsAnnotation != null ) title = argumentsAnnotation.title();
+MetadataLoader.java,title = field.getName();,if (field != null ) title = field.getName();
+MetadataLoader.java,String description = argumentsAnnotation.description();,if (argumentsAnnotation != null ) String description = argumentsAnnotation.description();
+MetadataLoader.java,String usage = argumentsAnnotation.usage();,if (argumentsAnnotation != null ) String usage = argumentsAnnotation.usage();
+MetadataLoader.java,boolean required = argumentsAnnotation.required();,if (argumentsAnnotation != null ) boolean required = argumentsAnnotation.required();
+CommandGroupParser.java,"this.groupOptions = OptionParser.from(typeConverter, metadata.getOptions());","if (metadata != null ) this.groupOptions = OptionParser.from(typeConverter, metadata.getOptions());"
+CommandGroupParser.java,"this.commands = CommandParser.createIndex(typeConverter, metadata.getCommands());","if (metadata != null ) this.commands = CommandParser.createIndex(typeConverter, metadata.getCommands());"
+CommandParser.java,"options = OptionParser.from(typeConverter, metadata.getAllOptions());","if (metadata != null ) options = OptionParser.from(typeConverter, metadata.getAllOptions());"
+CommandParser.java,ArgumentsMetadata arguments = metadata.getArguments();,if (metadata != null ) ArgumentsMetadata arguments = metadata.getArguments();
+GitLikeCommandParser.java,"this.globalOptions = OptionParser.from(typeConverter, metadata.getOptions());","if (metadata != null ) this.globalOptions = OptionParser.from(typeConverter, metadata.getOptions());"
+GitLikeCommandParser.java,"this.defaultGroupCommands = CommandParser.createIndex(typeConverter, metadata.getDefaultGroupCommands());","if (metadata != null ) this.defaultGroupCommands = CommandParser.createIndex(typeConverter, metadata.getDefaultGroupCommands());"
+GitLikeCommandParser.java,"this.commandGroups = CommandGroupParser.createIndex(typeConverter, metadata.getCommandGroups());","if (metadata != null ) this.commandGroups = CommandGroupParser.createIndex(typeConverter, metadata.getCommandGroups());"
+OptionParser.java,int arity = metadata.getArity();,if (metadata != null ) int arity = metadata.getArity();
+ParserUtil.java,Iterator<String> iterator = parameters.iterator();,if (parameters != null ) Iterator<String> iterator = parameters.iterator();
+ParserUtil.java,String arg = iterator.next();,if (iterator != null ) String arg = iterator.next();
+Git.java,GitLikeCommandParser<GitCommand> gitParser = builder.build();,if (builder != null ) GitLikeCommandParser<GitCommand> gitParser = builder.build();
+GalaxyCommandLineParser.java,GlobalMetadata metadata = parser.getMetadata();,if (parser != null ) GlobalMetadata metadata = parser.getMetadata();
+CommandUsage.java,List<OptionMetadata> options = newArrayList(command.getAllOptions());,if (newArrayList(command != null ) List<OptionMetadata> options = newArrayList(command.getAllOptions());
+MetadataLoader.java,List<String> options = ImmutableList.copyOf(optionAnnotation.options());,if (ImmutableList != null ) List<String> options = ImmutableList.copyOf(optionAnnotation.options());
+Accessor.java,type = field.getType();,if (field != null ) type = field.getType();
+ArgumentParser.java,this.name = argumentsAnnotation.name();,if (argumentsAnnotation != null ) this.name = argumentsAnnotation.name();
+ArgumentParser.java,this.name = field.getName();,if (field != null ) this.name = field.getName();
+ArgumentParser.java,this.description = argumentsAnnotation.description();,if (argumentsAnnotation != null ) this.description = argumentsAnnotation.description();
+ArgumentParser.java,this.usage = argumentsAnnotation.usage();,if (argumentsAnnotation != null ) this.usage = argumentsAnnotation.usage();
+ArgumentParser.java,this.required = argumentsAnnotation.required();,if (argumentsAnnotation != null ) this.required = argumentsAnnotation.required();
+CommandParser.java,this.name = command.name();,if (command != null ) this.name = command.name();
+CommandParser.java,this.group = command.group();,if (command != null ) this.group = command.group();
+CommandParser.java,this.defaultCommand = command.defaultCommand();,if (command != null ) this.defaultCommand = command.defaultCommand();
+CommandParser.java,this.arguments = optionsMetadata.getArgumentParser();,if (optionsMetadata != null ) this.arguments = optionsMetadata.getArgumentParser();
+CommandParser.java,this.options = ImmutableList.copyOf(optionsMetadata.getOptions());,if (ImmutableList != null ) this.options = ImmutableList.copyOf(optionsMetadata.getOptions());
+CommandParser.java,this.globalOptionsAccessor = optionsMetadata.getGlobalOptionsAccessors();,if (optionsMetadata != null ) this.globalOptionsAccessor = optionsMetadata.getGlobalOptionsAccessors();
+CommandParser.java,this.groupOptionsAccessor = optionsMetadata.getGroupOptionsAccessor();,if (optionsMetadata != null ) this.groupOptionsAccessor = optionsMetadata.getGroupOptionsAccessor();
+CommandParser.java,this.optionIndex = optionsIndex.build();,if (optionsIndex != null ) this.optionIndex = optionsIndex.build();
+CommandUsage.java,arguments = commandParser.getArguments();,if (commandParser != null ) arguments = commandParser.getArguments();
+CommandUsage.java,List<OptionParser> options = new ArrayList<OptionParser>(commandParser.getOptions());,if (ArrayList<OptionParser>(commandParser != null ) List<OptionParser> options = new ArrayList<OptionParser>(commandParser.getOptions());
+CommandUsage.java,Object defaultValue = option.getDefaultValue();,if (option != null ) Object defaultValue = option.getDefaultValue();
+GitLikeCommandParser.java,this.groupCommandParsers = groupCommandParsers.build();,if (groupCommandParsers != null ) this.groupCommandParsers = groupCommandParsers.build();
+GitLikeCommandParser.java,this.globalOptionsType = globalOptionsTypes.iterator().next();,if (globalOptionsTypes != null ) this.globalOptionsType = globalOptionsTypes.iterator().next();
+GitLikeCommandParser.java,this.globalOptionsIndex = globalOptionsIndex.build();,if (globalOptionsIndex != null ) this.globalOptionsIndex = globalOptionsIndex.build();
+GroupCommandParser.java,this.commandParserIndex = commandParserIndex.build();,if (commandParserIndex != null ) this.commandParserIndex = commandParserIndex.build();
+GroupCommandParser.java,this.groupOptionsType = groupOptionsTypes.iterator().next();,if (groupOptionsTypes != null ) this.groupOptionsType = groupOptionsTypes.iterator().next();
+GroupCommandParser.java,this.groupOptionsIndex = groupOptionsIndex.build();,if (groupOptionsIndex != null ) this.groupOptionsIndex = groupOptionsIndex.build();
+GroupCommandParser.java,this.groupOptionsIndex = ImmutableMap.of();,if (ImmutableMap != null ) this.groupOptionsIndex = ImmutableMap.of();
+OptionParser.java,this.name = optionAnnotation.name();,if (optionAnnotation != null ) this.name = optionAnnotation.name();
+OptionParser.java,this.name = field.getName();,if (field != null ) this.name = field.getName();
+OptionParser.java,this.options = ImmutableList.copyOf(optionAnnotation.options());,if (ImmutableList != null ) this.options = ImmutableList.copyOf(optionAnnotation.options());
+OptionParser.java,this.description = optionAnnotation.description();,if (optionAnnotation != null ) this.description = optionAnnotation.description();
+OptionParser.java,this.arity = optionAnnotation.arity();,if (optionAnnotation != null ) this.arity = optionAnnotation.arity();
+OptionParser.java,this.required = optionAnnotation.required();,if (optionAnnotation != null ) this.required = optionAnnotation.required();
+OptionParser.java,this.hidden = optionAnnotation.hidden();,if (optionAnnotation != null ) this.hidden = optionAnnotation.hidden();
+UsageHelper.java,List<String> options = option.getOptions();,if (option != null ) List<String> options = option.getOptions();
+UsageHelper.java,List<String> options = option.getOptions();,if (option != null ) List<String> options = option.getOptions();
+CommandUsage.java,List<String> options = option.getOptions();,if (option != null ) List<String> options = option.getOptions();
+CommandUsage.java,List<String> options = option.getOptions();,if (option != null ) List<String> options = option.getOptions();
+CommandUsage.java,boolean required = option.isRequired();,if (option != null ) boolean required = option.isRequired();
+CommandUsage.java,boolean required = arguments.isRequired();,if (arguments != null ) boolean required = arguments.isRequired();
+CommandUsage.java,ArgumentParser arguments = commandParser.getArguments();,if (commandParser != null ) ArgumentParser arguments = commandParser.getArguments();
+CommandUsage.java,currentPosition += word.length();,if (word != null ) currentPosition += word.length();

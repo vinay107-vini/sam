@@ -1,0 +1,9 @@
+Filename,Buggy/Deleted,Fixed/Added
+HyperMinHashSerDe.java,registers[i] = inputBuffer.getLong();,if (inputBuffer != null ) registers[i] = inputBuffer.getLong();
+BetaMinHashWritable.java,registers[i] = dataInput.readShort();,if (dataInput != null ) registers[i] = dataInput.readShort();
+TestBetaMinHash.java,long exact = unique.size();,if (unique != null ) long exact = unique.size();
+TestBetaMinHash.java,long res = sk.cardinality();,if (sk != null ) long res = sk.cardinality();
+TestBetaMinHash.java,long exact = unique.size();,if (unique != null ) long exact = unique.size();
+TestBetaMinHash.java,long res = msk.cardinality();,if (msk != null ) long res = msk.cardinality();
+TestBetaMinHash.java,long res = sk.cardinality();,if (sk != null ) long res = sk.cardinality();
+DemoBetaMinHash.java,int c = ai.incrementAndGet();,if (ai != null ) int c = ai.incrementAndGet();

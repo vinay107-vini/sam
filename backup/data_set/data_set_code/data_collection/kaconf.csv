@@ -1,0 +1,2 @@
+Filename,Buggy/Deleted,Fixed/Added
+Configurator.java,areModifiersAccessible = modifiersField.isAccessible();,if (modifiersField != null ) areModifiersAccessible = modifiersField.isAccessible();

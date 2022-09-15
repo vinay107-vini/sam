@@ -1,0 +1,14 @@
+1) start mongodb
+	systemctl start mongodb
+	systemctl status mongodb
+	systemctl stop mongodb
+	
+2) start rabbitmq
+	sudo service rabbitmq-server restart
+	service rabbitmq-server status
+	
+3) start celery befor that 
+	activate venv
+	from terminal navigate to particular directory and activate venv
+	
+	celery -A main.celery worker --loglevel=info --concurrency=20 -n 15

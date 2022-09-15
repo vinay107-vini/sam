@@ -1,0 +1,367 @@
+Filename,Buggy/Deleted,Fixed/Added
+FinalValueClassModel.java,AbstractJClass usedCaseClassType = caseClass.narrow(caseClass.typeParams());,if (caseClass != null ) AbstractJClass usedCaseClassType = caseClass.narrow(caseClass.typeParams());
+Stage1ValueClassModel.java,AbstractJClass usedValueClassType = valueClass.narrow(valueClass.typeParams());,if (valueClass != null ) AbstractJClass usedValueClassType = valueClass.narrow(valueClass.typeParams());
+ValueClassConfiguration.java,AbstractJClass usedValueClassType = valueClass.narrow(valueClass.typeParams());,if (valueClass != null ) AbstractJClass usedValueClassType = valueClass.narrow(valueClass.typeParams());
+ValueClassConfiguration.java,AbstractJClass usedValueClassType = valueClass.narrow(valueClass.typeParams());,if (valueClass != null ) AbstractJClass usedValueClassType = valueClass.narrow(valueClass.typeParams());
+Source.java,AbstractJClass result = narrowedType.erasure();,if (narrowedType != null ) AbstractJClass result = narrowedType.erasure();
+Source.java,covariantTypeArgument = typeArgument.wildcard();,if (typeArgument != null ) covariantTypeArgument = typeArgument.wildcard();
+FinalValueClassModel.java,"JInvocation staticInvoke = environment.invokeValueClassStaticMethod(constructorMethod, factoryClass.typeParams());","if (factoryClass != null ) JInvocation staticInvoke = environment.invokeValueClassStaticMethod(constructorMethod, factoryClass.typeParams());"
+FinalValueClassModel.java,JVar param = interfaceMethod.varParam();,if (interfaceMethod != null ) JVar param = interfaceMethod.varParam();
+FinalValueClassModel.java,JVar param = interfaceMethod.varParam();,if (interfaceMethod != null ) JVar param = interfaceMethod.varParam();
+FinalValueClassModel.java,JTypeVar visitorResultType = environment.getVisitorResultTypeParameter();,if (environment != null ) JTypeVar visitorResultType = environment.getVisitorResultTypeParameter();
+FinalValueClassModel.java,JTypeVar resultTypeVar = acceptMethod.generify(visitorResultType.name());,if (acceptMethod != null ) JTypeVar resultTypeVar = acceptMethod.generify(visitorResultType.name());
+FinalValueClassModel.java,JTypeVar visitorExceptionType = environment.getVisitorExceptionTypeParameter();,if (environment != null ) JTypeVar visitorExceptionType = environment.getVisitorExceptionTypeParameter();
+FinalValueClassModel.java,JTypeVar exceptionTypeParameter = acceptMethod.generify(visitorExceptionType.name());,if (acceptMethod != null ) JTypeVar exceptionTypeParameter = acceptMethod.generify(visitorExceptionType.name());
+FinalValueClassModel.java,JTypeVar visitorResultType = environment.getVisitorResultTypeParameter();,if (environment != null ) JTypeVar visitorResultType = environment.getVisitorResultTypeParameter();
+FinalValueClassModel.java,JTypeVar resultTypeVar = acceptMethod.generify(visitorResultType.name());,if (acceptMethod != null ) JTypeVar resultTypeVar = acceptMethod.generify(visitorResultType.name());
+FinalValueClassModel.java,JTypeVar visitorExceptionType = environment.getVisitorExceptionTypeParameter();,if (environment != null ) JTypeVar visitorExceptionType = environment.getVisitorExceptionTypeParameter();
+FinalValueClassModel.java,JTypeVar exceptionTypeVar = acceptMethod.generify(visitorExceptionType.name());,if (acceptMethod != null ) JTypeVar exceptionTypeVar = acceptMethod.generify(visitorExceptionType.name());
+FinalValueClassModel.java,JVar param = interfaceMethod.varParam();,if (interfaceMethod != null ) JVar param = interfaceMethod.varParam();
+Stage1ValueClassModel.java,JTypeVar visitorResultType = configuration.visitor().getResultTypeParameter();,if (configuration != null ) JTypeVar visitorResultType = configuration.visitor().getResultTypeParameter();
+Stage1ValueClassModel.java,JTypeVar visitorExceptionType = configuration.visitor().getExceptionTypeParameter();,if (configuration != null ) JTypeVar visitorExceptionType = configuration.visitor().getExceptionTypeParameter();
+ValueClassConfiguration.java,className = autoClassName(visitorModel.visitorName());,if (autoClassName(visitorModel != null ) className = autoClassName(visitorModel.visitorName());
+ValueClassConfiguration.java,className = autoClassName(visitorModel.visitorName());,if (autoClassName(visitorModel != null ) className = autoClassName(visitorModel.visitorName());
+ValueClassConfiguration.java,List<JTypeVar> generatedTypeParameters = visitorModel.nonspecialTypeParameters();,if (visitorModel != null ) List<JTypeVar> generatedTypeParameters = visitorModel.nonspecialTypeParameters();
+ValueClassConfiguration.java,JVar param = interfaceMethod.varParam();,if (interfaceMethod != null ) JVar param = interfaceMethod.varParam();
+ValueClassConfiguration.java,JVar param = interfaceMethod.varParam();,if (interfaceMethod != null ) JVar param = interfaceMethod.varParam();
+VisitorDefinition.java,AbstractJClass result = narrowedType.erasure();,if (narrowedType != null ) AbstractJClass result = narrowedType.erasure();
+GenerateValueClassForVisitorProcessor.java,"JCodeModelJavaxLangModelAdapter adapter = new JCodeModelJavaxLangModelAdapter(bootJCodeModel, processingEnv.getElementUtils());","if (processingEnv != null ) JCodeModelJavaxLangModelAdapter adapter = new JCodeModelJavaxLangModelAdapter(bootJCodeModel, processingEnv.getElementUtils());"
+Source.java,AbstractJClass jannotationClass = jannotation.getAnnotationClass();,if (jannotation != null ) AbstractJClass jannotationClass = jannotation.getAnnotationClass();
+FinalValueClassModel.java,Caching hashCode = visitorInterface.hashCodeCaching();,if (visitorInterface != null ) Caching hashCode = visitorInterface.hashCodeCaching();
+FinalValueClassModel.java,AbstractJType usedAcceptingInterfaceType = acceptingInterface.narrow(valueClass.typeParams());,if (acceptingInterface != null ) AbstractJType usedAcceptingInterfaceType = acceptingInterface.narrow(valueClass.typeParams());
+FinalValueClassModel.java,AbstractJClass usedAcceptingInterfaceType = acceptingInterface.narrow(caseClass.typeParams());,if (acceptingInterface != null ) AbstractJClass usedAcceptingInterfaceType = acceptingInterface.narrow(caseClass.typeParams());
+FinalValueClassModel.java,JTypeVar visitorResultType = visitorInterface.getResultTypeParameter();,if (visitorInterface != null ) JTypeVar visitorResultType = visitorInterface.getResultTypeParameter();
+FinalValueClassModel.java,JTypeVar visitorExceptionType = visitorInterface.getExceptionTypeParameter();,if (visitorInterface != null ) JTypeVar visitorExceptionType = visitorInterface.getExceptionTypeParameter();
+FinalValueClassModel.java,JTypeVar typeParameter = result.generify(visitorTypeParameter.name());,if (result != null ) JTypeVar typeParameter = result.generify(visitorTypeParameter.name());
+FinalValueClassModel.java,AbstractJClass unwrappedUsedValueClassType = valueClass.narrow(valueClass.typeParams());,if (valueClass != null ) AbstractJClass unwrappedUsedValueClassType = valueClass.narrow(valueClass.typeParams());
+FinalValueClassModel.java,JTypeVar visitorResultType = visitorInterface.getResultTypeParameter();,if (visitorInterface != null ) JTypeVar visitorResultType = visitorInterface.getResultTypeParameter();
+FinalValueClassModel.java,JTypeVar visitorExceptionType = visitorInterface.getExceptionTypeParameter();,if (visitorInterface != null ) JTypeVar visitorExceptionType = visitorInterface.getExceptionTypeParameter();
+FinalValueClassModel.java,JInvocation invocation = acceptorField.invoke(visitorInterface.acceptMethodName());,if (acceptorField != null ) JInvocation invocation = acceptorField.invoke(visitorInterface.acceptMethodName());
+FinalValueClassModel.java,AbstractJClass unwrappedUsedValueClassType = valueClass.narrow(constructorMethod.typeParams());,if (valueClass != null ) AbstractJClass unwrappedUsedValueClassType = valueClass.narrow(constructorMethod.typeParams());
+FinalValueClassModel.java,String getterName = configuration.name();,if (configuration != null ) String getterName = configuration.name();
+FinalValueClassModel.java,String updaterName = configuration.name();,if (configuration != null ) String updaterName = configuration.name();
+FinalValueClassModel.java,AbstractJClass unwrappedUsedValueClassType = valueClass.narrow(valueClass.typeParams());,if (valueClass != null ) AbstractJClass unwrappedUsedValueClassType = valueClass.narrow(valueClass.typeParams());
+FinalValueClassModel.java,AbstractJClass usedAcceptingInterfaceType = acceptingInterface.narrow(valueClass.typeParams());,if (acceptingInterface != null ) AbstractJClass usedAcceptingInterfaceType = acceptingInterface.narrow(valueClass.typeParams());
+FinalValueClassModel.java,typeParams[i] = valueClass.owner().wildcard();,if (valueClass != null ) typeParams[i] = valueClass.owner().wildcard();
+FinalValueClassModel.java,AbstractJClass unwrappedUsedValueClassType = valueClass.narrow(valueClass.typeParams());,if (valueClass != null ) AbstractJClass unwrappedUsedValueClassType = valueClass.narrow(valueClass.typeParams());
+FinalValueClassModel.java,AbstractJClass usedAcceptorType = acceptingInterface.narrow(valueClass.typeParams());,if (acceptingInterface != null ) AbstractJClass usedAcceptorType = acceptingInterface.narrow(valueClass.typeParams());
+Stage1ValueClassModel.java,FinalValueClassModel.MethodBuilder methodBuilder = result.createMethodBuilder(visitorInterface.serialization());,if (result != null ) FinalValueClassModel.MethodBuilder methodBuilder = result.createMethodBuilder(visitorInterface.serialization());
+Stage1ValueClassModel.java,AbstractJClass extendsClass = visitorInterface.valueClassExtends();,if (visitorInterface != null ) AbstractJClass extendsClass = visitorInterface.valueClassExtends();
+Stage1ValueClassModel.java,JTypeVar visitorResultType = visitorInterface.getResultTypeParameter();,if (visitorInterface != null ) JTypeVar visitorResultType = visitorInterface.getResultTypeParameter();
+Stage1ValueClassModel.java,JTypeVar visitorExceptionType = visitorInterface.getExceptionTypeParameter();,if (visitorInterface != null ) JTypeVar visitorExceptionType = visitorInterface.getExceptionTypeParameter();
+ValueClassConfiguration.java,List<JTypeVar> generatedTypeParameters = typeParameters.getValueTypeParameters();,if (typeParameters != null ) List<JTypeVar> generatedTypeParameters = typeParameters.getValueTypeParameters();
+ValueClassConfiguration.java,String visitorName = jVisitorModel.name();,if (jVisitorModel != null ) String visitorName = jVisitorModel.name();
+ValueClassConfiguration.java,AbstractJType methodType = method.type();,if (method != null ) AbstractJType methodType = method.type();
+ValueClassConfiguration.java,Collection<AbstractJClass> exceptions = method.getThrows();,if (method != null ) Collection<AbstractJClass> exceptions = method.getThrows();
+ValueClassConfiguration.java,AbstractJClass exception = exceptions.iterator().next();,if (exceptions != null ) AbstractJClass exception = exceptions.iterator().next();
+ValueClassConfiguration.java,AbstractJClass result = narrowedType.erasure();,if (narrowedType != null ) AbstractJClass result = narrowedType.erasure();
+Stage0ValueClassModel.java,ValueVisitorInterfaceModel visitorInterface = visitorModelResult.result();,if (visitorModelResult != null ) ValueVisitorInterfaceModel visitorInterface = visitorModelResult.result();
+Stage0ValueClassModelFactory.java,ValueVisitorInterfaceModel visitorModel = visitorModelResult.result();,if (visitorModelResult != null ) ValueVisitorInterfaceModel visitorModel = visitorModelResult.result();
+ValueVisitorInterfaceModel.java,ValueVisitorTypeParameters typeParameters = typeParametersResult.result();,if (typeParametersResult != null ) ValueVisitorTypeParameters typeParameters = typeParametersResult.result();
+CompareToMethod.java,VariableNameSource localNames = nameSource.forBlock();,if (nameSource != null ) VariableNameSource localNames = nameSource.forBlock();
+EqualsMethod.java,VariableNameSource localNames = nameSource.forBlock();,if (nameSource != null ) VariableNameSource localNames = nameSource.forBlock();
+FinalValueClassModel.java,JTypeVar typeParameter = factoryClass.generify(visitorTypeParameter.name());,if (factoryClass != null ) JTypeVar typeParameter = factoryClass.generify(visitorTypeParameter.name());
+FinalValueClassModel.java,JTypeVar typeParameter = caseClass.generify(visitorTypeParameter.name());,if (caseClass != null ) JTypeVar typeParameter = caseClass.generify(visitorTypeParameter.name());
+ValueVisitorInterfaceModel.java,className = valueClass.name();,if (valueClass != null ) className = valueClass.name();
+ValueVisitorInterfaceModel.java,JTypeVar[] typeParameters = wrapperClass.typeParams();,if (wrapperClass != null ) JTypeVar[] typeParameters = wrapperClass.typeParams();
+FieldReader.java,String annotationClassName = annotationUsage.getAnnotationClass().fullName();,if (annotationUsage != null ) String annotationClassName = annotationUsage.getAnnotationClass().fullName();
+FieldReader.java,getterName = param.name();,if (param != null ) getterName = param.name();
+FieldReader.java,String annotationClassName = annotationUsage.getAnnotationClass().fullName();,if (annotationUsage != null ) String annotationClassName = annotationUsage.getAnnotationClass().fullName();
+Source.java,String annotationClassName = annotationUse.getAnnotationClass().fullName();,if (annotationUse != null ) String annotationClassName = annotationUse.getAnnotationClass().fullName();
+ValueVisitorInterfaceModel.java,String visitorName = jVisitorModel.name();,if (jVisitorModel != null ) String visitorName = jVisitorModel.name();
+FinalValueClassModel.java,AbstractJClass usedValueClassType = valueClass.narrow(factoryMethod.typeParams());,if (valueClass != null ) AbstractJClass usedValueClassType = valueClass.narrow(factoryMethod.typeParams());
+FinalValueClassModel.java,AbstractJClass usedValueClassType = valueClass.narrow(factoryClass.typeParams());,if (valueClass != null ) AbstractJClass usedValueClassType = valueClass.narrow(factoryClass.typeParams());
+FinalValueClassModel.java,AbstractJClass usedValueClassType = valueClass.narrow(caseClass.typeParams());,if (valueClass != null ) AbstractJClass usedValueClassType = valueClass.narrow(caseClass.typeParams());
+FinalValueClassModel.java,AbstractJClass usedValueClassType = valueClass.narrow(valueClass.typeParams());,if (valueClass != null ) AbstractJClass usedValueClassType = valueClass.narrow(valueClass.typeParams());
+FinalValueClassModel.java,AbstractJClass usedValueClassType = valueClass.narrow(valueClass.typeParams());,if (valueClass != null ) AbstractJClass usedValueClassType = valueClass.narrow(valueClass.typeParams());
+FinalValueClassModel.java,AbstractJClass usedValueClassType = valueClass.narrow(constructorMethod.typeParams());,if (valueClass != null ) AbstractJClass usedValueClassType = valueClass.narrow(constructorMethod.typeParams());
+FinalValueClassModel.java,AbstractJClass usedValueClassType = valueClass.narrow(valueClass.typeParams());,if (valueClass != null ) AbstractJClass usedValueClassType = valueClass.narrow(valueClass.typeParams());
+FinalValueClassModel.java,AbstractJClass usedValueClassType = valueClass.narrow(valueClass.typeParams());,if (valueClass != null ) AbstractJClass usedValueClassType = valueClass.narrow(valueClass.typeParams());
+GenerateValueClassForVisitorProcessor.java,"JCodeModelJavaxLangModelAdapter adapter = new JCodeModelJavaxLangModelAdapter(jCodeModel, processingEnv.getElementUtils());","if (processingEnv != null ) JCodeModelJavaxLangModelAdapter adapter = new JCodeModelJavaxLangModelAdapter(jCodeModel, processingEnv.getElementUtils());"
+ValueClassModel.java,Caching hashCode = visitorInterface.hashCodeCaching();,if (visitorInterface != null ) Caching hashCode = visitorInterface.hashCodeCaching();
+ValueClassModel.java,AbstractJType usedAcceptingInterfaceType = acceptingInterface.narrow(valueClass.typeParams());,if (acceptingInterface != null ) AbstractJType usedAcceptingInterfaceType = acceptingInterface.narrow(valueClass.typeParams());
+ValueClassModel.java,AbstractJClass usedValueClassType = valueClass.narrow(factoryMethod.typeParams());,if (valueClass != null ) AbstractJClass usedValueClassType = valueClass.narrow(factoryMethod.typeParams());
+ValueClassModel.java,AbstractJClass usedValueClassType = valueClass.narrow(factoryClass.typeParams());,if (valueClass != null ) AbstractJClass usedValueClassType = valueClass.narrow(factoryClass.typeParams());
+ValueClassModel.java,JMethod constructorMethod = constructorMethods.get(interfaceMethod.name());,if (constructorMethods != null ) JMethod constructorMethod = constructorMethods.get(interfaceMethod.name());
+ValueClassModel.java,JVar param = interfaceMethod.varParam();,if (interfaceMethod != null ) JVar param = interfaceMethod.varParam();
+ValueClassModel.java,AbstractJClass usedAcceptingInterfaceType = acceptingInterface.narrow(caseClass.typeParams());,if (acceptingInterface != null ) AbstractJClass usedAcceptingInterfaceType = acceptingInterface.narrow(caseClass.typeParams());
+ValueClassModel.java,AbstractJClass usedValueClassType = valueClass.narrow(caseClass.typeParams());,if (valueClass != null ) AbstractJClass usedValueClassType = valueClass.narrow(caseClass.typeParams());
+ValueClassModel.java,"JVar argument = constructor.param(paramType, param.name());","if (param != null ) JVar argument = constructor.param(paramType, param.name());"
+ValueClassModel.java,JVar param = interfaceMethod.varParam();,if (interfaceMethod != null ) JVar param = interfaceMethod.varParam();
+ValueClassModel.java,"JVar argument = constructor.varParam(paramType, param.name());","if (param != null ) JVar argument = constructor.varParam(paramType, param.name());"
+ValueClassModel.java,JTypeVar visitorResultType = visitorInterface.getResultTypeParameter();,if (visitorInterface != null ) JTypeVar visitorResultType = visitorInterface.getResultTypeParameter();
+ValueClassModel.java,JTypeVar visitorExceptionType = visitorInterface.getExceptionTypeParameter();,if (visitorInterface != null ) JTypeVar visitorExceptionType = visitorInterface.getExceptionTypeParameter();
+ValueClassModel.java,AbstractJClass usedValueClassType = valueClass.narrow(valueClass.typeParams());,if (valueClass != null ) AbstractJClass usedValueClassType = valueClass.narrow(valueClass.typeParams());
+ValueClassModel.java,JVar param = interfaceMethod.varParam();,if (interfaceMethod != null ) JVar param = interfaceMethod.varParam();
+ValueClassModel.java,AbstractJClass usedValueClassType = valueClass.narrow(valueClass.typeParams());,if (valueClass != null ) AbstractJClass usedValueClassType = valueClass.narrow(valueClass.typeParams());
+ValueClassModel.java,JVar param = interfaceMethod.varParam();,if (interfaceMethod != null ) JVar param = interfaceMethod.varParam();
+ValueClassModel.java,boolean isSerializable = serialization.isSerializable();,if (serialization != null ) boolean isSerializable = serialization.isSerializable();
+ValueClassModel.java,AbstractJClass usedValueClassType = valueClass.narrow(valueClass.typeParams());,if (valueClass != null ) AbstractJClass usedValueClassType = valueClass.narrow(valueClass.typeParams());
+ValueClassModel.java,JTypeVar visitorResultType = visitorInterface.getResultTypeParameter();,if (visitorInterface != null ) JTypeVar visitorResultType = visitorInterface.getResultTypeParameter();
+ValueClassModel.java,JTypeVar visitorExceptionType = visitorInterface.getExceptionTypeParameter();,if (visitorInterface != null ) JTypeVar visitorExceptionType = visitorInterface.getExceptionTypeParameter();
+ValueClassModel.java,AbstractJClass usedValueClassType = valueClass.narrow(valueClass.typeParams());,if (valueClass != null ) AbstractJClass usedValueClassType = valueClass.narrow(valueClass.typeParams());
+ValueClassModel.java,JInvocation invocation = acceptorField.invoke(visitorInterface.acceptMethodName());,if (acceptorField != null ) JInvocation invocation = acceptorField.invoke(visitorInterface.acceptMethodName());
+ValueClassModel.java,AbstractJClass usedValueClassType = valueClass.narrow(constructorMethod.typeParams());,if (valueClass != null ) AbstractJClass usedValueClassType = valueClass.narrow(constructorMethod.typeParams());
+ValueClassModel.java,JVar param = interfaceMethod.varParam();,if (interfaceMethod != null ) JVar param = interfaceMethod.varParam();
+ValueClassModel.java,String getterName = configuration.name();,if (configuration != null ) String getterName = configuration.name();
+ValueClassModel.java,String updaterName = configuration.name();,if (configuration != null ) String updaterName = configuration.name();
+ValueClassModel.java,AbstractJClass usedValueClassType = valueClass.narrow(valueClass.typeParams());,if (valueClass != null ) AbstractJClass usedValueClassType = valueClass.narrow(valueClass.typeParams());
+ValueClassModel.java,typeParams[i] = valueClass.owner().wildcard();,if (valueClass != null ) typeParams[i] = valueClass.owner().wildcard();
+ValueClassModel.java,AbstractJClass usedValueClassType = valueClass.narrow(valueClass.typeParams());,if (valueClass != null ) AbstractJClass usedValueClassType = valueClass.narrow(valueClass.typeParams());
+ValueClassModel.java,AbstractJClass usedAcceptorType = acceptingInterface.narrow(valueClass.typeParams());,if (acceptingInterface != null ) AbstractJClass usedAcceptorType = acceptingInterface.narrow(valueClass.typeParams());
+ValueClassModel.java,body = compareToMethodModel.createBody();,if (compareToMethodModel != null ) body = compareToMethodModel.createBody();
+ValueClassModel.java,body = compareToMethodModel.createBody();,if (compareToMethodModel != null ) body = compareToMethodModel.createBody();
+ValueClassModel.java,JBlock body = method.body();,if (method != null ) JBlock body = method.body();
+ValueClassModelFactory.java,JTypeVar visitorResultType = visitorInterface.getResultTypeParameter();,if (visitorInterface != null ) JTypeVar visitorResultType = visitorInterface.getResultTypeParameter();
+ValueClassModelFactory.java,JTypeVar visitorExceptionType = visitorInterface.getExceptionTypeParameter();,if (visitorInterface != null ) JTypeVar visitorExceptionType = visitorInterface.getExceptionTypeParameter();
+ValueClassModelFactory.java,AbstractJClass usedValueClassType = valueClass.narrow(valueClass.typeParams());,if (valueClass != null ) AbstractJClass usedValueClassType = valueClass.narrow(valueClass.typeParams());
+ValueClassModelFactory.java,Types types = Types.createInstance(jpackage.owner());,if (Types != null ) Types types = Types.createInstance(jpackage.owner());
+ValueClassModelFactory.java,AbstractJType type = param.type();,if (param != null ) AbstractJType type = param.type();
+ValueClassModelFactory.java,JVar param = interfaceMethod.varParam();,if (interfaceMethod != null ) JVar param = interfaceMethod.varParam();
+ValueClassModelFactory.java,AbstractJType type = param.type();,if (param != null ) AbstractJType type = param.type();
+ValueClassModelFactory.java,AbstractJType type = param.type();,if (param != null ) AbstractJType type = param.type();
+ValueClassModelFactory.java,JVar param = interfaceMethod.varParam();,if (interfaceMethod != null ) JVar param = interfaceMethod.varParam();
+ValueClassModelFactory.java,AbstractJType type = param.type();,if (param != null ) AbstractJType type = param.type();
+ValueClassModelFactory.java,AbstractJClass extendsClass = visitorInterface.valueClassExtends();,if (visitorInterface != null ) AbstractJClass extendsClass = visitorInterface.valueClassExtends();
+ValueClassModelFactory.java,ValueClassModel.MethodBuilder methodBuilder = result.createMethodBuilder(visitorInterface.serialization());,if (result != null ) ValueClassModel.MethodBuilder methodBuilder = result.createMethodBuilder(visitorInterface.serialization());
+Source.java,Collection<AbstractJAnnotationValue> interfaceJArray = jarray.getAllAnnotations();,if (jarray != null ) Collection<AbstractJAnnotationValue> interfaceJArray = jarray.getAllAnnotations();
+Source.java,Iterator<AbstractJAnnotationValue> iterator = interfaceJArray.iterator();,if (interfaceJArray != null ) Iterator<AbstractJAnnotationValue> iterator = interfaceJArray.iterator();
+Source.java,"result[i] = castAnnotationArgument(iterator.next(), klass.getComponentType());","if (klass != null ) result[i] = castAnnotationArgument(iterator.next(), klass.getComponentType());"
+ValueClassModel.java,JVar param = interfaceMethod.listVarParam();,if (interfaceMethod != null ) JVar param = interfaceMethod.listVarParam();
+ValueClassModel.java,JVar param = interfaceMethod.listVarParam();,if (interfaceMethod != null ) JVar param = interfaceMethod.listVarParam();
+ValueClassModel.java,JVar param = interfaceMethod.listVarParam();,if (interfaceMethod != null ) JVar param = interfaceMethod.listVarParam();
+ValueClassModel.java,JVar param = interfaceMethod.listVarParam();,if (interfaceMethod != null ) JVar param = interfaceMethod.listVarParam();
+ValueClassModel.java,JVar param = interfaceMethod.listVarParam();,if (interfaceMethod != null ) JVar param = interfaceMethod.listVarParam();
+ValueClassModelFactory.java,JVar param = interfaceMethod.listVarParam();,if (interfaceMethod != null ) JVar param = interfaceMethod.listVarParam();
+ValueClassModelFactory.java,JVar param = interfaceMethod.listVarParam();,if (interfaceMethod != null ) JVar param = interfaceMethod.listVarParam();
+PredicatesReader.java,Collection<JAnnotationUse> annotations = values.annotations();,if (values != null ) Collection<JAnnotationUse> annotations = values.annotations();
+ValueClassModelFactory.java,String visitorName = jVisitorModel.name();,if (jVisitorModel != null ) String visitorName = jVisitorModel.name();
+ValueClassModelFactory.java,AbstractJClass marker = jCodeModel.ref(annotation.baseInterface());,if (jCodeModel != null ) AbstractJClass marker = jCodeModel.ref(annotation.baseInterface());
+ValueClassModelFactory.java,AbstractJClass marker = jCodeModel.ref(annotation.baseClass());,if (jCodeModel != null ) AbstractJClass marker = jCodeModel.ref(annotation.baseClass());
+ValueVisitorInterfaceModel.java,ImplementationCustomization implementationCustomization = new ImplementationCustomization(annotation.hashCodeCaching());,if (ImplementationCustomization(annotation != null ) ImplementationCustomization implementationCustomization = new ImplementationCustomization(annotation.hashCodeCaching());
+ValueClassModel.java,MethodEvaluation hashCode = visitorInterface.hashCodeEvaluation();,if (visitorInterface != null ) MethodEvaluation hashCode = visitorInterface.hashCodeEvaluation();
+ValueVisitorInterfaceModel.java,ImplementationCustomization implementationCustomization = new ImplementationCustomization(annotation.hashCodeEvaluation());,if (ImplementationCustomization(annotation != null ) ImplementationCustomization implementationCustomization = new ImplementationCustomization(annotation.hashCodeEvaluation());
+ValueClassModel.java,getterName = param.name();,if (param != null ) getterName = param.name();
+ValueClassModel.java,getterName = param.name();,if (param != null ) getterName = param.name();
+FilerCodeWriter.java,OutputStream stream = fileObject.openOutputStream();,if (fileObject != null ) OutputStream stream = fileObject.openOutputStream();
+JCodeModelJavaxLangModelAdapter.java,Element enclosingElement = element.getEnclosingElement();,if (element != null ) Element enclosingElement = element.getEnclosingElement();
+JCodeModelJavaxLangModelAdapter.java,EClassType classType = toClassType(element.getKind());,if (toClassType(element != null ) EClassType classType = toClassType(element.getKind());
+JCodeModelJavaxLangModelAdapter.java,int modifiers = toJMod(element.getModifiers());,if (toJMod(element != null ) int modifiers = toJMod(element.getModifiers());
+JCodeModelJavaxLangModelAdapter.java,Element enclosingElement = element.getEnclosingElement();,if (element != null ) Element enclosingElement = element.getEnclosingElement();
+JCodeModelJavaxLangModelAdapter.java,EClassType classType = toClassType(element.getKind());,if (toClassType(element != null ) EClassType classType = toClassType(element.getKind());
+JCodeModelJavaxLangModelAdapter.java,int modifiers = toJMod(element.getModifiers());,if (toJMod(element != null ) int modifiers = toJMod(element.getModifiers());
+JCodeModelJavaxLangModelAdapter.java,Element enclosingElement = element.getEnclosingElement();,if (element != null ) Element enclosingElement = element.getEnclosingElement();
+JCodeModelJavaxLangModelAdapter.java,TypeElement element = (TypeElement)t.asElement();,if ((TypeElement)t != null ) TypeElement element = (TypeElement)t.asElement();
+JCodeModelJavaxLangModelAdapter.java,TypeMirror superclass = element.getSuperclass();,if (element != null ) TypeMirror superclass = element.getSuperclass();
+JCodeModelJavaxLangModelAdapter.java,TypeEnvironment methodEnvironment = environment.enclosed();,if (environment != null ) TypeEnvironment methodEnvironment = environment.enclosed();
+JCodeModelJavaxLangModelAdapter.java,String parameterName = variable.getSimpleName().toString();,if (variable != null ) String parameterName = variable.getSimpleName().toString();
+JCodeModelJavaxLangModelAdapter.java,TypeMirror parameterTypeMirror = variable.asType();,if (variable != null ) TypeMirror parameterTypeMirror = variable.asType();
+JCodeModelJavaxLangModelAdapter.java,Object value = annotationValueAssignment.getValue().getValue();,if (annotationValueAssignment != null ) Object value = annotationValueAssignment.getValue().getValue();
+JCodeModelJavaxLangModelAdapter.java,AnnotationValue firstElementValue = iterator.next();,if (iterator != null ) AnnotationValue firstElementValue = iterator.next();
+JCodeModelJavaxLangModelAdapter.java,Object element = firstElementValue.getValue();,if (firstElementValue != null ) Object element = firstElementValue.getValue();
+JCodeModelJavaxLangModelAdapter.java,elements[i] = (String)elementValue.getValue();,if ((String)elementValue != null ) elements[i] = (String)elementValue.getValue();
+JCodeModelJavaxLangModelAdapter.java,elements[i] = (Integer)elementValue.getValue();,if ((Integer)elementValue != null ) elements[i] = (Integer)elementValue.getValue();
+JCodeModelJavaxLangModelAdapter.java,elements[i] = (Long)elementValue.getValue();,if ((Long)elementValue != null ) elements[i] = (Long)elementValue.getValue();
+JCodeModelJavaxLangModelAdapter.java,elements[i] = (Short)elementValue.getValue();,if ((Short)elementValue != null ) elements[i] = (Short)elementValue.getValue();
+JCodeModelJavaxLangModelAdapter.java,elements[i] = (Float)elementValue.getValue();,if ((Float)elementValue != null ) elements[i] = (Float)elementValue.getValue();
+JCodeModelJavaxLangModelAdapter.java,elements[i] = (Double)elementValue.getValue();,if ((Double)elementValue != null ) elements[i] = (Double)elementValue.getValue();
+JCodeModelJavaxLangModelAdapter.java,elements[i] = (Byte)elementValue.getValue();,if ((Byte)elementValue != null ) elements[i] = (Byte)elementValue.getValue();
+JCodeModelJavaxLangModelAdapter.java,elements[i] = (Character)elementValue.getValue();,if ((Character)elementValue != null ) elements[i] = (Character)elementValue.getValue();
+JCodeModelJavaxLangModelAdapter.java,elements[i] = (Boolean)elementValue.getValue();,if ((Boolean)elementValue != null ) elements[i] = (Boolean)elementValue.getValue();
+JCodeModelJavaxLangModelAdapter.java,elements[i] = (Class<?>)elementValue.getValue();,if ((Class<?>)elementValue != null ) elements[i] = (Class<?>)elementValue.getValue();
+JCodeModelJavaxLangModelAdapter.java,TypeElement enumClassElement = (TypeElement)variableElement.getEnclosingElement();,if ((TypeElement)variableElement != null ) TypeElement enumClassElement = (TypeElement)variableElement.getEnclosingElement();
+ValueClassModel.java,CompareToMethod.Body body = compareToMethodModel.createBody();,if (compareToMethodModel != null ) CompareToMethod.Body body = compareToMethodModel.createBody();
+ValueClassModel.java,AbstractJClass usedValueClassType = valueClass.narrow(valueClass.typeParams());,if (valueClass != null ) AbstractJClass usedValueClassType = valueClass.narrow(valueClass.typeParams());
+ValueVisitorInterfaceModel.java,result = result.narrow(dataTypeArgumentIterator.next());,if (result != null ) result = result.narrow(dataTypeArgumentIterator.next());
+ValueClassModelFactory.java,Set<String> predicates = result.getPredicates();,if (result != null ) Set<String> predicates = result.getPredicates();
+JCodeModelJavaxLangModelAdapter.java,TypeMirror superclass = element.getSuperclass();,if (element != null ) TypeMirror superclass = element.getSuperclass();
+JCodeModelJavaxLangModelAdapter.java,TypeEnvironment methodEnvironment = environment.enclosed();,if (environment != null ) TypeEnvironment methodEnvironment = environment.enclosed();
+JCodeModelJavaxLangModelAdapter.java,String parameterName = variable.getSimpleName().toString();,if (variable != null ) String parameterName = variable.getSimpleName().toString();
+JCodeModelJavaxLangModelAdapter.java,TypeMirror parameterTypeMirror = variable.asType();,if (variable != null ) TypeMirror parameterTypeMirror = variable.asType();
+ValueClassModel.java,AbstractJClass usedFactoryType = factory.narrow(factoryMethod.typeParams());,if (factory != null ) AbstractJClass usedFactoryType = factory.narrow(factoryMethod.typeParams());
+ValueClassModel.java,AbstractJClass usedValueClassType = valueClass.narrow(valueClass.typeParams());,if (valueClass != null ) AbstractJClass usedValueClassType = valueClass.narrow(valueClass.typeParams());
+ValueClassModel.java,CompareToMethod.Body body = compareToMethodModel.createBody();,if (compareToMethodModel != null ) CompareToMethod.Body body = compareToMethodModel.createBody();
+ValueClassModel.java,AbstractJClass usedValueClassType = valueClass.narrow(valueClass.typeParams());,if (valueClass != null ) AbstractJClass usedValueClassType = valueClass.narrow(valueClass.typeParams());
+ValueClassModel.java,AbstractJClass usedValueClassType = valueClass.narrow(valueClass.typeParams());,if (valueClass != null ) AbstractJClass usedValueClassType = valueClass.narrow(valueClass.typeParams());
+ValueClassModel.java,AbstractJClass usedValueClassType = valueClass.narrow(valueClass.typeParams());,if (valueClass != null ) AbstractJClass usedValueClassType = valueClass.narrow(valueClass.typeParams());
+ValueClassModel.java,String updaterName = configuration.name();,if (configuration != null ) String updaterName = configuration.name();
+ValueClassModel.java,AbstractJClass usedValueClassType = valueClass.narrow(valueClass.typeParams());,if (valueClass != null ) AbstractJClass usedValueClassType = valueClass.narrow(valueClass.typeParams());
+ValueClassModel.java,AbstractJClass usedValueClassType = valueClass.narrow(valueClass.typeParams());,if (valueClass != null ) AbstractJClass usedValueClassType = valueClass.narrow(valueClass.typeParams());
+ValueClassModel.java,AbstractJClass usedAcceptingInterfaceType = acceptingInterface.narrow(proxyClass.typeParams());,if (acceptingInterface != null ) AbstractJClass usedAcceptingInterfaceType = acceptingInterface.narrow(proxyClass.typeParams());
+ValueClassModel.java,AbstractJClass usedValueClassType = valueClass.narrow(proxyClass.typeParams());,if (valueClass != null ) AbstractJClass usedValueClassType = valueClass.narrow(proxyClass.typeParams());
+ValueClassModel.java,JTypeVar visitorResultType = visitorInterface.getResultTypeParameter();,if (visitorInterface != null ) JTypeVar visitorResultType = visitorInterface.getResultTypeParameter();
+ValueClassModel.java,JTypeVar visitorExceptionType = visitorInterface.getExceptionTypeParameter();,if (visitorInterface != null ) JTypeVar visitorExceptionType = visitorInterface.getExceptionTypeParameter();
+ValueClassModel.java,AbstractJClass usedProxyClassType = proxyClass.narrow(valueClass.typeParams());,if (proxyClass != null ) AbstractJClass usedProxyClassType = proxyClass.narrow(valueClass.typeParams());
+ValueClassModel.java,AbstractJType usedAcceptingInterfaceType = acceptingInterface.narrow(valueClass.typeParams());,if (acceptingInterface != null ) AbstractJType usedAcceptingInterfaceType = acceptingInterface.narrow(valueClass.typeParams());
+ValueClassModel.java,AbstractJClass usedValueClassType = valueClass.narrow(valueClass.typeParams());,if (valueClass != null ) AbstractJClass usedValueClassType = valueClass.narrow(valueClass.typeParams());
+ValueClassModel.java,AbstractJClass usedProxyClassType = proxyClass.narrow(valueClass.typeParams());,if (proxyClass != null ) AbstractJClass usedProxyClassType = proxyClass.narrow(valueClass.typeParams());
+ValueClassModel.java,JTypeVar visitorResultType = visitorInterface.getResultTypeParameter();,if (visitorInterface != null ) JTypeVar visitorResultType = visitorInterface.getResultTypeParameter();
+ValueClassModel.java,JTypeVar visitorExceptionType = visitorInterface.getExceptionTypeParameter();,if (visitorInterface != null ) JTypeVar visitorExceptionType = visitorInterface.getExceptionTypeParameter();
+ValueClassModel.java,AbstractJClass usedValueClassType = valueClass.narrow(valueClass.typeParams());,if (valueClass != null ) AbstractJClass usedValueClassType = valueClass.narrow(valueClass.typeParams());
+ValueClassModel.java,AbstractJClass usedValueClassType = valueClass.narrow(constructorMethod.typeParams());,if (valueClass != null ) AbstractJClass usedValueClassType = valueClass.narrow(constructorMethod.typeParams());
+ValueClassModel.java,JVar param = interfaceMethod.listVarParam();,if (interfaceMethod != null ) JVar param = interfaceMethod.listVarParam();
+ValueClassModel.java,String getterName = configuration.name();,if (configuration != null ) String getterName = configuration.name();
+ValueClassModel.java,AbstractJClass usedValueClassType = valueClass.narrow(valueClass.typeParams());,if (valueClass != null ) AbstractJClass usedValueClassType = valueClass.narrow(valueClass.typeParams());
+ValueClassModelFactory.java,JFieldVar acceptorField = result.buildAcceptorField();,if (result != null ) JFieldVar acceptorField = result.buildAcceptorField();
+ValueClassModel.java,AbstractJClass usedValueClassType = valueClass.narrow(valueClass.typeParams());,if (valueClass != null ) AbstractJClass usedValueClassType = valueClass.narrow(valueClass.typeParams());
+ValueClassModel.java,AbstractJClass usedValueClassType = valueClass.narrow(valueClass.typeParams());,if (valueClass != null ) AbstractJClass usedValueClassType = valueClass.narrow(valueClass.typeParams());
+ValueClassModel.java,VariableNameSource localNames = nameSource.forBlock();,if (nameSource != null ) VariableNameSource localNames = nameSource.forBlock();
+ValueClassModel.java,VariableNameSource localNames = nameSource.forBlock();,if (nameSource != null ) VariableNameSource localNames = nameSource.forBlock();
+ValueClassModel.java,String getterParamName = map.get(method.name());,if (map != null ) String getterParamName = map.get(method.name());
+ValueClassModel.java,VariableNameSource localNames = nameSource.forBlock();,if (nameSource != null ) VariableNameSource localNames = nameSource.forBlock();
+ValueClassModelFactory.java,Collection<AbstractJClass> exceptions = method.getThrows();,if (method != null ) Collection<AbstractJClass> exceptions = method.getThrows();
+ValueClassModelFactory.java,AbstractJClass exception = exceptions.iterator().next();,if (exceptions != null ) AbstractJClass exception = exceptions.iterator().next();
+ValueVisitorInterfaceModel.java,result = result.narrow(dataTypeArgumentIterator.next());,if (result != null ) result = result.narrow(dataTypeArgumentIterator.next());
+ValueClassModelFactory.java,valueClassName = annotation.valueClassName();,if (annotation != null ) valueClassName = annotation.valueClassName();
+ValueClassModel.java,JTypeVar visitorResultType = visitorInterface.getResultTypeParameter();,if (visitorInterface != null ) JTypeVar visitorResultType = visitorInterface.getResultTypeParameter();
+ValueClassModel.java,JTypeVar visitorExceptionType = visitorInterface.getExceptionTypeParameter();,if (visitorInterface != null ) JTypeVar visitorExceptionType = visitorInterface.getExceptionTypeParameter();
+ValueClassModel.java,AbstractJClass usedValueClassType = valueClass.narrow(valueClass.typeParams());,if (valueClass != null ) AbstractJClass usedValueClassType = valueClass.narrow(valueClass.typeParams());
+ValueClassModel.java,AbstractJType type = param.type();,if (param != null ) AbstractJType type = param.type();
+ValueClassModel.java,AbstractJType type = param.type();,if (param != null ) AbstractJType type = param.type();
+ValueClassModel.java,String valueClassName = visitorInterface.getValueClassName();,if (visitorInterface != null ) String valueClassName = visitorInterface.getValueClassName();
+ValueClassModel.java,JFieldVar acceptorField = result.buildAcceptorField();,if (result != null ) JFieldVar acceptorField = result.buildAcceptorField();
+ValueVisitorInterfaceModel.java,String visitorName = visitorInterfaceModel.name();,if (visitorInterfaceModel != null ) String visitorName = visitorInterfaceModel.name();
+ValueClassModelBuilder.java,Object value = annotationValueAssignment.getValue().getValue();,if (annotationValueAssignment != null ) Object value = annotationValueAssignment.getValue().getValue();
+ValueClassModelBuilder.java,AbstractJType componentType = toJType(t.getComponentType());,if (toJType(t != null ) AbstractJType componentType = toJType(t.getComponentType());
+Types.java,AbstractJClass klass = (AbstractJClass)type.erasure();,if ((AbstractJClass)type != null ) AbstractJClass klass = (AbstractJClass)type.erasure();
+ValueClassModel.java,JTypeVar typeParameter = acceptingInterface.generify(visitorTypeParameter.name());,if (acceptingInterface != null ) JTypeVar typeParameter = acceptingInterface.generify(visitorTypeParameter.name());
+ValueClassModel.java,JTypeVar resultType = acceptMethod.generify(visitorResultType.name());,if (acceptMethod != null ) JTypeVar resultType = acceptMethod.generify(visitorResultType.name());
+ValueClassModel.java,exceptionType = acceptMethod.generify(visitorExceptionType.name());,if (acceptMethod != null ) exceptionType = acceptMethod.generify(visitorExceptionType.name());
+ValueClassModel.java,boolean isSerializable = visitorInterface.shouldBeSerializable();,if (visitorInterface != null ) boolean isSerializable = visitorInterface.shouldBeSerializable();
+ValueClassModel.java,JTypeVar typeParameter = valueClass.generify(visitorTypeParameter.name());,if (valueClass != null ) JTypeVar typeParameter = valueClass.generify(visitorTypeParameter.name());
+ValueClassModel.java,JTypeVar typeArgument = proxyClass.generify(visitorTypeParameter.name());,if (proxyClass != null ) JTypeVar typeArgument = proxyClass.generify(visitorTypeParameter.name());
+ValueClassModel.java,JTypeVar resultType = acceptMethod.generify(visitorResultType.name());,if (acceptMethod != null ) JTypeVar resultType = acceptMethod.generify(visitorResultType.name());
+ValueClassModel.java,exceptionType = acceptMethod.generify(visitorExceptionType.name());,if (acceptMethod != null ) exceptionType = acceptMethod.generify(visitorExceptionType.name());
+ValueClassModel.java,JTypeVar resultType = acceptMethod.generify(visitorResultType.name());,if (acceptMethod != null ) JTypeVar resultType = acceptMethod.generify(visitorResultType.name());
+ValueClassModel.java,exceptionType = acceptMethod.generify(visitorExceptionType.name());,if (acceptMethod != null ) exceptionType = acceptMethod.generify(visitorExceptionType.name());
+ValueClassModel.java,JTypeVar typeParameter = factoryMethod.generify(visitorTypeParameter.name());,if (factoryMethod != null ) JTypeVar typeParameter = factoryMethod.generify(visitorTypeParameter.name());
+ValueClassModel.java,JTypeVar typeParameter = factoryClass.generify(visitorTypeParameter.name());,if (factoryClass != null ) JTypeVar typeParameter = factoryClass.generify(visitorTypeParameter.name());
+ValueClassModel.java,JTypeVar typeParameter = constructorMethod.generify(visitorTypeParameter.name());,if (constructorMethod != null ) JTypeVar typeParameter = constructorMethod.generify(visitorTypeParameter.name());
+ValueClassModel.java,JTypeVar typeArgument = caseClass.generify(visitorTypeParameter.name());,if (caseClass != null ) JTypeVar typeArgument = caseClass.generify(visitorTypeParameter.name());
+ValueClassModel.java,JTypeVar resultType = acceptMethod.generify(visitorResultType.name());,if (acceptMethod != null ) JTypeVar resultType = acceptMethod.generify(visitorResultType.name());
+ValueClassModel.java,exceptionType = acceptMethod.generify(visitorExceptionType.name());,if (acceptMethod != null ) exceptionType = acceptMethod.generify(visitorExceptionType.name());
+ValueClassModel.java,JVar param = iterator.next();,if (iterator != null ) JVar param = iterator.next();
+ValueClassModel.java,param = iterator.next();,if (iterator != null ) param = iterator.next();
+ValueClassModel.java,"AbstractJClass usedValueClassType = Types.narrow(valueClass, valueClass.typeParams());","if (valueClass != null ) AbstractJClass usedValueClassType = Types.narrow(valueClass, valueClass.typeParams());"
+ValueClassModel.java,"AbstractJType usedAcceptingInterfaceType = Types.narrow(acceptingInterface, valueClass.typeParams());","if (valueClass != null ) AbstractJType usedAcceptingInterfaceType = Types.narrow(acceptingInterface, valueClass.typeParams());"
+ValueClassModel.java,"AbstractJClass usedValueClassType = Types.narrow(valueClass, valueClass.typeParams());","if (valueClass != null ) AbstractJClass usedValueClassType = Types.narrow(valueClass, valueClass.typeParams());"
+ValueClassModel.java,"AbstractJClass usedProxyClassType = Types.narrow(proxyClass, valueClass.typeParams());","if (valueClass != null ) AbstractJClass usedProxyClassType = Types.narrow(proxyClass, valueClass.typeParams());"
+ValueClassModel.java,"AbstractJClass usedAcceptingInterfaceType = Types.narrow(acceptingInterface, proxyClass.typeParams());","if (proxyClass != null ) AbstractJClass usedAcceptingInterfaceType = Types.narrow(acceptingInterface, proxyClass.typeParams());"
+ValueClassModel.java,"AbstractJClass usedValueClassType = Types.narrow(valueClass, proxyClass.typeParams());","if (proxyClass != null ) AbstractJClass usedValueClassType = Types.narrow(valueClass, proxyClass.typeParams());"
+ValueClassModel.java,"AbstractJClass usedValueClassType = Types.narrow(valueClass, valueClass.typeParams());","if (valueClass != null ) AbstractJClass usedValueClassType = Types.narrow(valueClass, valueClass.typeParams());"
+ValueClassModel.java,"AbstractJClass usedValueClassType = Types.narrow(valueClass, factoryMethod.typeParams());","if (factoryMethod != null ) AbstractJClass usedValueClassType = Types.narrow(valueClass, factoryMethod.typeParams());"
+ValueClassModel.java,"AbstractJClass usedFactoryType = Types.narrow(factory, factoryMethod.typeParams());","if (factoryMethod != null ) AbstractJClass usedFactoryType = Types.narrow(factory, factoryMethod.typeParams());"
+ValueClassModel.java,"AbstractJClass usedValueClassType = Types.narrow(valueClass, factoryClass.typeParams());","if (factoryClass != null ) AbstractJClass usedValueClassType = Types.narrow(valueClass, factoryClass.typeParams());"
+ValueClassModel.java,"AbstractJClass usedValueClassType = Types.narrow(valueClass, constructorMethod.typeParams());","if (constructorMethod != null ) AbstractJClass usedValueClassType = Types.narrow(valueClass, constructorMethod.typeParams());"
+ValueClassModel.java,"AbstractJClass usedAcceptingInterfaceType = Types.narrow(acceptingInterface, caseClass.typeParams());","if (caseClass != null ) AbstractJClass usedAcceptingInterfaceType = Types.narrow(acceptingInterface, caseClass.typeParams());"
+ValueClassModel.java,"AbstractJClass usedValueClassType = Types.narrow(valueClass, caseClass.typeParams());","if (caseClass != null ) AbstractJClass usedValueClassType = Types.narrow(valueClass, caseClass.typeParams());"
+ValueClassModel.java,"AbstractJClass usedValueClassType = Types.narrow(valueClass, valueClass.typeParams());","if (valueClass != null ) AbstractJClass usedValueClassType = Types.narrow(valueClass, valueClass.typeParams());"
+ValueClassModel.java,"AbstractJClass usedValueClassType = Types.narrow(valueClass, valueClass.typeParams());","if (valueClass != null ) AbstractJClass usedValueClassType = Types.narrow(valueClass, valueClass.typeParams());"
+ValueClassModel.java,"AbstractJClass usedValueClassType = Types.narrow(valueClass, valueClass.typeParams());","if (valueClass != null ) AbstractJClass usedValueClassType = Types.narrow(valueClass, valueClass.typeParams());"
+ValueClassModel.java,"AbstractJClass usedValueClassType = Types.narrow(valueClass, valueClass.typeParams());","if (valueClass != null ) AbstractJClass usedValueClassType = Types.narrow(valueClass, valueClass.typeParams());"
+ValueClassModel.java,"AbstractJClass usedValueClassType = Types.narrow(valueClass, valueClass.typeParams());","if (valueClass != null ) AbstractJClass usedValueClassType = Types.narrow(valueClass, valueClass.typeParams());"
+ValueClassModel.java,"AbstractJClass usedValueClassType = Types.narrow(valueClass, valueClass.typeParams());","if (valueClass != null ) AbstractJClass usedValueClassType = Types.narrow(valueClass, valueClass.typeParams());"
+ValueClassModel.java,"AbstractJClass usedValueClassType = Types.narrow(valueClass, valueClass.typeParams());","if (valueClass != null ) AbstractJClass usedValueClassType = Types.narrow(valueClass, valueClass.typeParams());"
+ValueClassModel.java,"AbstractJClass usedValueClassType = Types.narrow(valueClass, valueClass.typeParams());","if (valueClass != null ) AbstractJClass usedValueClassType = Types.narrow(valueClass, valueClass.typeParams());"
+ValueClassModel.java,"AbstractJClass usedValueClassType = Types.narrow(valueClass, valueClass.typeParams());","if (valueClass != null ) AbstractJClass usedValueClassType = Types.narrow(valueClass, valueClass.typeParams());"
+Types.java,AbstractJClass klass = (AbstractJClass)type.erasure();,if ((AbstractJClass)type != null ) AbstractJClass klass = (AbstractJClass)type.erasure();
+ValueClassModelBuilder.java,AbstractJType componentType = toJType(t.getComponentType());,if (toJType(t != null ) AbstractJType componentType = toJType(t.getComponentType());
+ValueClassModelBuilder.java,TypeElement element = (TypeElement)t.asElement();,if ((TypeElement)t != null ) TypeElement element = (TypeElement)t.asElement();
+ValueClassModel.java,"JClass usedValueClassType = Types.narrow(valueClass, valueClass.typeParams());","if (valueClass != null ) JClass usedValueClassType = Types.narrow(valueClass, valueClass.typeParams());"
+ValueClassModel.java,"JType usedAcceptingInterfaceType = Types.narrow(acceptingInterface, valueClass.typeParams());","if (valueClass != null ) JType usedAcceptingInterfaceType = Types.narrow(acceptingInterface, valueClass.typeParams());"
+ValueClassModel.java,"JClass usedValueClassType = Types.narrow(valueClass, valueClass.typeParams());","if (valueClass != null ) JClass usedValueClassType = Types.narrow(valueClass, valueClass.typeParams());"
+ValueClassModel.java,"JClass usedProxyClassType = Types.narrow(proxyClass, valueClass.typeParams());","if (valueClass != null ) JClass usedProxyClassType = Types.narrow(proxyClass, valueClass.typeParams());"
+ValueClassModel.java,"JClass usedAcceptingInterfaceType = Types.narrow(acceptingInterface, proxyClass.typeParams());","if (proxyClass != null ) JClass usedAcceptingInterfaceType = Types.narrow(acceptingInterface, proxyClass.typeParams());"
+ValueClassModel.java,"JClass usedValueClassType = Types.narrow(valueClass, proxyClass.typeParams());","if (proxyClass != null ) JClass usedValueClassType = Types.narrow(valueClass, proxyClass.typeParams());"
+ValueClassModel.java,"JClass usedValueClassType = Types.narrow(valueClass, valueClass.typeParams());","if (valueClass != null ) JClass usedValueClassType = Types.narrow(valueClass, valueClass.typeParams());"
+ValueClassModel.java,"JClass usedValueClassType = Types.narrow(valueClass, factoryMethod.typeParams());","if (factoryMethod != null ) JClass usedValueClassType = Types.narrow(valueClass, factoryMethod.typeParams());"
+ValueClassModel.java,"JClass usedFactoryType = Types.narrow(factory, factoryMethod.typeParams());","if (factoryMethod != null ) JClass usedFactoryType = Types.narrow(factory, factoryMethod.typeParams());"
+ValueClassModel.java,"JClass usedValueClassType = Types.narrow(valueClass, factoryClass.typeParams());","if (factoryClass != null ) JClass usedValueClassType = Types.narrow(valueClass, factoryClass.typeParams());"
+ValueClassModel.java,"JClass usedValueClassType = Types.narrow(valueClass, constructorMethod.typeParams());","if (constructorMethod != null ) JClass usedValueClassType = Types.narrow(valueClass, constructorMethod.typeParams());"
+ValueClassModel.java,"JClass usedAcceptingInterfaceType = Types.narrow(acceptingInterface, caseClass.typeParams());","if (caseClass != null ) JClass usedAcceptingInterfaceType = Types.narrow(acceptingInterface, caseClass.typeParams());"
+ValueClassModel.java,"JClass usedValueClassType = Types.narrow(valueClass, caseClass.typeParams());","if (caseClass != null ) JClass usedValueClassType = Types.narrow(valueClass, caseClass.typeParams());"
+ValueClassModel.java,"JClass usedValueClassType = Types.narrow(valueClass, valueClass.typeParams());","if (valueClass != null ) JClass usedValueClassType = Types.narrow(valueClass, valueClass.typeParams());"
+ValueClassModel.java,"JClass usedValueClassType = Types.narrow(valueClass, valueClass.typeParams());","if (valueClass != null ) JClass usedValueClassType = Types.narrow(valueClass, valueClass.typeParams());"
+ValueClassModelBuilder.java,ClassType classType = toClassType(element.getKind());,if (toClassType(element != null ) ClassType classType = toClassType(element.getKind());
+ValueClassModelBuilder.java,JType componentType = toJType(t.getComponentType());,if (toJType(t != null ) JType componentType = toJType(t.getComponentType());
+ValueVisitorInterfaceModel.java,Iterator<JClass> dataTypeArgumentIterator = usedDataType.getTypeParameters().iterator();,if (usedDataType != null ) Iterator<JClass> dataTypeArgumentIterator = usedDataType.getTypeParameters().iterator();
+FilerCodeWriter.java,OutputStream stream = fileObject.openOutputStream();,if (fileObject != null ) OutputStream stream = fileObject.openOutputStream();
+ADTClassModel.java,"JClass usedValueClassType = JExprExt.narrow(valueClass, valueClass.typeParams());","if (valueClass != null ) JClass usedValueClassType = JExprExt.narrow(valueClass, valueClass.typeParams());"
+ADTClassModel.java,"JType usedAcceptingInterfaceType = JExprExt.narrow(acceptingInterface, valueClass.typeParams());","if (valueClass != null ) JType usedAcceptingInterfaceType = JExprExt.narrow(acceptingInterface, valueClass.typeParams());"
+ADTClassModel.java,"JClass usedValueClassType = JExprExt.narrow(valueClass, valueClass.typeParams());","if (valueClass != null ) JClass usedValueClassType = JExprExt.narrow(valueClass, valueClass.typeParams());"
+ADTClassModel.java,"JClass usedAcceptingInterfaceType = JExprExt.narrow(acceptingInterface, valueClass.typeParams());","if (valueClass != null ) JClass usedAcceptingInterfaceType = JExprExt.narrow(acceptingInterface, valueClass.typeParams());"
+ADTClassModel.java,"JClass usedValueClassType = JExprExt.narrow(valueClass, valueClass.typeParams());","if (valueClass != null ) JClass usedValueClassType = JExprExt.narrow(valueClass, valueClass.typeParams());"
+ADTClassModel.java,"JClass usedValueClassType = JExprExt.narrow(valueClass, factoryMethod.typeParams());","if (factoryMethod != null ) JClass usedValueClassType = JExprExt.narrow(valueClass, factoryMethod.typeParams());"
+ADTClassModel.java,"JClass usedFactoryType = JExprExt.narrow(factory, factoryMethod.typeParams());","if (factoryMethod != null ) JClass usedFactoryType = JExprExt.narrow(factory, factoryMethod.typeParams());"
+ADTClassModel.java,"JClass usedValueClassType = JExprExt.narrow(valueClass, factoryClass.typeParams());","if (factoryClass != null ) JClass usedValueClassType = JExprExt.narrow(valueClass, factoryClass.typeParams());"
+ADTClassModel.java,"JClass usedValueClassType = JExprExt.narrow(valueClass, constructorMethod.typeParams());","if (constructorMethod != null ) JClass usedValueClassType = JExprExt.narrow(valueClass, constructorMethod.typeParams());"
+ADTClassModel.java,"JClass usedAcceptingInterfaceType = JExprExt.narrow(acceptingInterface, caseClass.typeParams());","if (caseClass != null ) JClass usedAcceptingInterfaceType = JExprExt.narrow(acceptingInterface, caseClass.typeParams());"
+ADTClassModel.java,"JClass usedValueClassType = JExprExt.narrow(valueClass, caseClass.typeParams());","if (caseClass != null ) JClass usedValueClassType = JExprExt.narrow(valueClass, caseClass.typeParams());"
+ADTClassModel.java,"JClass usedValueClassType = JExprExt.narrow(valueClass, valueClass.typeParams());","if (valueClass != null ) JClass usedValueClassType = JExprExt.narrow(valueClass, valueClass.typeParams());"
+ADTClassModel.java,"JClass usedValueClassType = JExprExt.narrow(valueClass, valueClass.typeParams());","if (valueClass != null ) JClass usedValueClassType = JExprExt.narrow(valueClass, valueClass.typeParams());"
+ADTVisitorInterfaceModel.java,String visitorName = visitorInterfaceModel.name();,if (visitorInterfaceModel != null ) String visitorName = visitorInterfaceModel.name();
+ADTClassModel.java,String visitorName = visitorInterface.getSimpleName();,if (visitorInterface != null ) String visitorName = visitorInterface.getSimpleName();
+ADTClassModel.java,JTypeVar typeParameter = acceptingInterface.generify(visitorTypeParameter.name());,if (acceptingInterface != null ) JTypeVar typeParameter = acceptingInterface.generify(visitorTypeParameter.name());
+ADTClassModel.java,"JClass usedAcceptingInterfaceType = JExprExt.narrow(acceptingInterface, acceptingInterface.typeParams());","if (acceptingInterface != null ) JClass usedAcceptingInterfaceType = JExprExt.narrow(acceptingInterface, acceptingInterface.typeParams());"
+ADTClassModel.java,"JClass usedAcceptingInterfaceType = JExprExt.narrow(acceptingInterface, factoryMethod.typeParams());","if (factoryMethod != null ) JClass usedAcceptingInterfaceType = JExprExt.narrow(acceptingInterface, factoryMethod.typeParams());"
+ADTClassModel.java,"JClass usedAcceptingInterfaceType = JExprExt.narrow(acceptingInterface, factoryClass.typeParams());","if (factoryClass != null ) JClass usedAcceptingInterfaceType = JExprExt.narrow(acceptingInterface, factoryClass.typeParams());"
+ADTClassModel.java,"JClass usedAcceptingInterfaceType = JExprExt.narrow(acceptingInterface, constructorMethod.typeParams());","if (constructorMethod != null ) JClass usedAcceptingInterfaceType = JExprExt.narrow(acceptingInterface, constructorMethod.typeParams());"
+ADTClassModel.java,JTypeVar typeParameter = baseCaseClass.generify(visitorTypeParameter.name());,if (baseCaseClass != null ) JTypeVar typeParameter = baseCaseClass.generify(visitorTypeParameter.name());
+ADTClassModel.java,JTypeVar typeArgument = caseClass.generify(visitorTypeParameter.name());,if (caseClass != null ) JTypeVar typeArgument = caseClass.generify(visitorTypeParameter.name());
+ADTClassModel.java,"JClass usedBaseCaseClassType = JExprExt.narrow(baseCaseClass, caseClass.typeParams());","if (caseClass != null ) JClass usedBaseCaseClassType = JExprExt.narrow(baseCaseClass, caseClass.typeParams());"
+ADTClassModel.java,"JClass usedAcceptingInterfaceType = JExprExt.narrow(acceptingInterface, caseClass.typeParams());","if (caseClass != null ) JClass usedAcceptingInterfaceType = JExprExt.narrow(acceptingInterface, caseClass.typeParams());"
+ADTClassModel.java,JTypeVar visitorResultType = visitorInterface.getResultTypeParameter();,if (visitorInterface != null ) JTypeVar visitorResultType = visitorInterface.getResultTypeParameter();
+ADTClassModel.java,JTypeVar resultType = acceptMethod.generify(visitorResultType.name());,if (acceptMethod != null ) JTypeVar resultType = acceptMethod.generify(visitorResultType.name());
+ADTClassModel.java,JTypeVar visitorExceptionType = visitorInterface.getExceptionTypeParameter();,if (visitorInterface != null ) JTypeVar visitorExceptionType = visitorInterface.getExceptionTypeParameter();
+ADTClassModel.java,exceptionType = acceptMethod.generify(visitorExceptionType.name());,if (acceptMethod != null ) exceptionType = acceptMethod.generify(visitorExceptionType.name());
+ADTClassModel.java,"JClass usedAcceptingInterfaceType = JExprExt.narrow(acceptingInterface, baseCaseClass.typeParams());","if (baseCaseClass != null ) JClass usedAcceptingInterfaceType = JExprExt.narrow(acceptingInterface, baseCaseClass.typeParams());"
+ADTClassModel.java,"JClass usedAcceptingInterfaceType = JExprExt.narrow(acceptingInterface, baseCaseClass.typeParams());","if (baseCaseClass != null ) JClass usedAcceptingInterfaceType = JExprExt.narrow(acceptingInterface, baseCaseClass.typeParams());"
+ADTClassModel.java,JCodeModel model = baseCaseClass.owner();,if (baseCaseClass != null ) JCodeModel model = baseCaseClass.owner();
+ADTClassModel.java,JCodeModel model = baseCaseClass.owner();,if (baseCaseClass != null ) JCodeModel model = baseCaseClass.owner();
+ADTClassModel.java,JTypeVar typeParameter = baseCaseClass.generify(visitorTypeParameter.name());,if (baseCaseClass != null ) JTypeVar typeParameter = baseCaseClass.generify(visitorTypeParameter.name());
+ADTClassModel.java,JInvocation staticInvoke = utilsClass.staticInvoke(interfaceMethod.name());,if (utilsClass != null ) JInvocation staticInvoke = utilsClass.staticInvoke(interfaceMethod.name());
+ADTClassModel.java,JTypeVar typeParameter = caseClass.generify(visitorTypeParameter.name());,if (caseClass != null ) JTypeVar typeParameter = caseClass.generify(visitorTypeParameter.name());
+ADTClassModel.java,"JClass usedBaseCaseClassType = JExprExt.narrow(baseCaseClass, caseClass.typeParams());","if (caseClass != null ) JClass usedBaseCaseClassType = JExprExt.narrow(baseCaseClass, caseClass.typeParams());"
+ADTClassModel.java,"JClass usedAcceptingInterfaceType = JExprExt.narrow(acceptingInterface, caseClass.typeParams());","if (caseClass != null ) JClass usedAcceptingInterfaceType = JExprExt.narrow(acceptingInterface, caseClass.typeParams());"
+ADTClassModel.java,JTypeVar visitorResultType = visitorInterface.getResultTypeParameter();,if (visitorInterface != null ) JTypeVar visitorResultType = visitorInterface.getResultTypeParameter();
+ADTClassModel.java,JTypeVar resultType = acceptMethod.generify(visitorResultType.name());,if (acceptMethod != null ) JTypeVar resultType = acceptMethod.generify(visitorResultType.name());
+ADTClassModel.java,JTypeVar visitorExceptionType = visitorInterface.getExceptionTypeParameter();,if (visitorInterface != null ) JTypeVar visitorExceptionType = visitorInterface.getExceptionTypeParameter();
+ADTClassModel.java,exceptionType = acceptMethod.generify(visitorExceptionType.name());,if (acceptMethod != null ) exceptionType = acceptMethod.generify(visitorExceptionType.name());
+ADTClassModel.java,"JClass usedAcceptingInterfaceType = JExprExt.narrow(acceptingInterface, baseCaseClass.typeParams());","if (baseCaseClass != null ) JClass usedAcceptingInterfaceType = JExprExt.narrow(acceptingInterface, baseCaseClass.typeParams());"
+ADTClassModel.java,"JClass usedAcceptingInterfaceType = JExprExt.narrow(acceptingInterface, baseCaseClass.typeParams());","if (baseCaseClass != null ) JClass usedAcceptingInterfaceType = JExprExt.narrow(acceptingInterface, baseCaseClass.typeParams());"
+ADTClassModel.java,JCodeModel model = baseCaseClass.owner();,if (baseCaseClass != null ) JCodeModel model = baseCaseClass.owner();
+ADTClassModel.java,JCodeModel model = baseCaseClass.owner();,if (baseCaseClass != null ) JCodeModel model = baseCaseClass.owner();
+ADTClassModel.java,String packageName = visitorInterface.getPackageName();,if (visitorInterface != null ) String packageName = visitorInterface.getPackageName();
+ADTClassModel.java,JTypeVar typeParameter = definedClass.generify(visitorTypeParameter.name());,if (definedClass != null ) JTypeVar typeParameter = definedClass.generify(visitorTypeParameter.name());
+ADTClassModel.java,JTypeVar visitorResultType = visitorInterface.getResultTypeParameter();,if (visitorInterface != null ) JTypeVar visitorResultType = visitorInterface.getResultTypeParameter();
+ADTClassModel.java,JTypeVar resultType = acceptRecursiveMethod.generify(visitorResultType.name());,if (acceptRecursiveMethod != null ) JTypeVar resultType = acceptRecursiveMethod.generify(visitorResultType.name());
+ADTClassModel.java,JTypeVar visitorExceptionType = visitorInterface.getExceptionTypeParameter();,if (visitorInterface != null ) JTypeVar visitorExceptionType = visitorInterface.getExceptionTypeParameter();
+ADTClassModel.java,exceptionType = acceptRecursiveMethod.generify(visitorExceptionType.name());,if (acceptRecursiveMethod != null ) exceptionType = acceptRecursiveMethod.generify(visitorExceptionType.name());
+ADTClassModel.java,JInvocation staticInvoke = definedClass.staticInvoke(interfaceMethod.name());,if (definedClass != null ) JInvocation staticInvoke = definedClass.staticInvoke(interfaceMethod.name());
+ADTClassModel.java,JCodeModel model = definedClass.owner();,if (definedClass != null ) JCodeModel model = definedClass.owner();
+ADTClassModel.java,JCodeModel model = definedClass.owner();,if (definedClass != null ) JCodeModel model = definedClass.owner();
+ClassWriter.java,CodeWriter codeWriter = new FileCodeWriter(sourcesDirectory.toFile());,if (FileCodeWriter(sourcesDirectory != null ) CodeWriter codeWriter = new FileCodeWriter(sourcesDirectory.toFile());
+ClassWriter.java,String quelifiedName = definedClass.getQualifiedName();,if (definedClass != null ) String quelifiedName = definedClass.getQualifiedName();
+ClassBuilder.java,JClass componentType = toJClass(t.getComponentType());,if (toJClass(t != null ) JClass componentType = toJClass(t.getComponentType());
+ClassBuilder.java,String visitorName = visitorInterface.getSimpleName();,if (visitorInterface != null ) String visitorName = visitorInterface.getSimpleName();
+ClassBuilder.java,String packageName = visitorInterface.getPackageName();,if (visitorInterface != null ) String packageName = visitorInterface.getPackageName();
+ClassBuilder.java,JTypeVar typeParameter = definedClass.generify(visitorTypeParameter.name());,if (definedClass != null ) JTypeVar typeParameter = definedClass.generify(visitorTypeParameter.name());
+ClassBuilder.java,JDefinedClass factoryClass = result.buildFactoryClass();,if (result != null ) JDefinedClass factoryClass = result.buildFactoryClass();
+DefinedClass.java,JTypeVar typeParameter = result.generify(visitorTypeParameter.name());,if (result != null ) JTypeVar typeParameter = result.generify(visitorTypeParameter.name());
+DefinedClass.java,Iterator<JClass> typeArgumentsIterator = typeArguments.iterator();,if (typeArguments != null ) Iterator<JClass> typeArgumentsIterator = typeArguments.iterator();
+DefinedClass.java,JClass typeArgument = typeArgumentsIterator.next();,if (typeArgumentsIterator != null ) JClass typeArgument = typeArgumentsIterator.next();
+DefinedClass.java,typeArgument = typeArgumentsIterator.next();,if (typeArgumentsIterator != null ) typeArgument = typeArgumentsIterator.next();
+DefinedClass.java,JInvocation factoryExpression = definedClass.staticInvoke(factoryMethodNameInInvokation.toString());,if (definedClass != null ) JInvocation factoryExpression = definedClass.staticInvoke(factoryMethodNameInInvokation.toString());
+DefinedClass.java,"JInvocation invocation = JExpr.invoke(factoryExpression, interfaceMethod.name());","if (interfaceMethod != null ) JInvocation invocation = JExpr.invoke(factoryExpression, interfaceMethod.name());"
+ClassBuilder.java,JTypeVar typeParameter = constructorMethod.generify(visitorTypeParameter.name());,if (constructorMethod != null ) JTypeVar typeParameter = constructorMethod.generify(visitorTypeParameter.name());
+ClassBuilder.java,"JInvocation invocation = JExpr.invoke(factoryExpression, interfaceMethod.name());","if (interfaceMethod != null ) JInvocation invocation = JExpr.invoke(factoryExpression, interfaceMethod.name());"
+ClassBuilder.java,JTypeVar visitorResultType = visitorInterface.getResultTypeParameter();,if (visitorInterface != null ) JTypeVar visitorResultType = visitorInterface.getResultTypeParameter();
+ClassBuilder.java,JTypeVar resultType = acceptMethod.generify(visitorResultType.name());,if (acceptMethod != null ) JTypeVar resultType = acceptMethod.generify(visitorResultType.name());
+ClassBuilder.java,JTypeVar visitorExceptionType = visitorInterface.getExceptionTypeParameter();,if (visitorInterface != null ) JTypeVar visitorExceptionType = visitorInterface.getExceptionTypeParameter();
+ClassBuilder.java,exceptionType = acceptMethod.generify(visitorExceptionType.name());,if (acceptMethod != null ) exceptionType = acceptMethod.generify(visitorExceptionType.name());
+ClassBuilder.java,JTypeVar typeParameter = factoryMethod.generify(visitorTypeParameter.name());,if (factoryMethod != null ) JTypeVar typeParameter = factoryMethod.generify(visitorTypeParameter.name());
+ClassBuilder.java,JTypeVar typeParameter = factoryClass.generify(visitorTypeParameter.name());,if (factoryClass != null ) JTypeVar typeParameter = factoryClass.generify(visitorTypeParameter.name());
+ClassBuilder.java,JTypeVar visitorResultType = visitorInterface.getResultTypeParameter();,if (visitorInterface != null ) JTypeVar visitorResultType = visitorInterface.getResultTypeParameter();
+ClassBuilder.java,JTypeVar resultType = acceptMethod.generify(visitorResultType.name());,if (acceptMethod != null ) JTypeVar resultType = acceptMethod.generify(visitorResultType.name());
+ClassBuilder.java,JTypeVar visitorExceptionType = visitorInterface.getExceptionTypeParameter();,if (visitorInterface != null ) JTypeVar visitorExceptionType = visitorInterface.getExceptionTypeParameter();
+ClassBuilder.java,exceptionType = acceptMethod.generify(visitorExceptionType.name());,if (acceptMethod != null ) exceptionType = acceptMethod.generify(visitorExceptionType.name());
